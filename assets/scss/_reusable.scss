@@ -12,15 +12,18 @@ a {
   margin-bottom: 30px;
 }
 
+
+@mixin horizontal-gradient($from, $to, $stop: 67%) {
+  /* fallback/image non-cover color */
+  background-color: $from;
+  /* Standard */
+  background: linear-gradient(to right, $from 0%, $to $stop);
+}
+
 .sidebar_bg {
   background: #cecece;
-  background: -moz-linear-gradient(left, rgba(252, 252, 252, 1) 0%, rgba(255, 255, 255, 1) 66.6%, rgba(206, 206, 206, 1) 66.7%, rgba(206, 206, 206, 1) 100%);
-  background: -webkit-gradient(linear, left top, right top, color-stop(0%, rgba(252, 252, 252, 1)), color-stop(66.6%, rgba(255, 255, 255, 1)), color-stop(66.7%, rgba(206, 206, 206, 1)), color-stop(100%, rgba(206, 206, 206, 1)));
-  background: -webkit-linear-gradient(left, rgba(252, 252, 252, 1) 0%, rgba(255, 255, 255, 1) 66.6%, rgba(206, 206, 206, 1) 66.7%, rgba(206, 206, 206, 1) 100%);
-  background: -o-linear-gradient(left, rgba(252, 252, 252, 1) 0%, rgba(255, 255, 255, 1) 66.6%, rgba(206, 206, 206, 1) 66.7%, rgba(206, 206, 206, 1) 100%);
-  background: -ms-linear-gradient(left, rgba(252, 252, 252, 1) 0%, rgba(255, 255, 255, 1) 66.6%, rgba(206, 206, 206, 1) 66.7%, rgba(206, 206, 206, 1) 100%);
-  background: linear-gradient(to right, rgba(252, 252, 252, 1) 0%, rgba(255, 255, 255, 1) 66.6%, rgba(206, 206, 206, 1) 66.7%, rgba(206, 206, 206, 1) 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f2fcfcfc', endColorstr='#cecece',GradientType=1 );
+  /*@include linear-gradient(#fcfcfc 0%, #ffffff 66.6%, #cecece 67%);*/
+  @include horizontal-gradient(#fcfcfc, #cecece);
   margin-bottom: 60px;
   .wrapper {
     margin-top: 0px;
