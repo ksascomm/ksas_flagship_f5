@@ -1,0 +1,322 @@
+a.field {
+  color: #FFF;
+  p {
+    color: #FFF;
+  }
+}
+
+div.field {
+  min-height: 355px;
+  margin-bottom: 30px;
+  max-width: 305px;
+  min-width: 240px;
+}
+
+.field .floatright {
+  margin-left: 0;
+}
+
+#interdisciplinary {
+  background: #24135f;
+}
+
+#arts {
+  background: #8e3a80;
+}
+
+.disciplines {
+  height: 35px;
+}
+
+.ribbon {
+  margin-left: 10px;
+  float: right;
+}
+
+#humanities {
+  width: 30px;
+  height: 14px;
+  padding: 5px 0;
+  position: relative;
+  &::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    width: 0;
+    height: 0;
+    border: 15px solid #dbb003;
+    left: 0;
+    border-bottom-color: transparent;
+  }
+}
+
+#natural {
+  width: 30px;
+  height: 14px;
+  padding: 5px 0;
+  position: relative;
+  &::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    width: 0;
+    height: 0;
+    border: 15px solid #cc6600;
+    left: 0;
+    border-bottom-color: transparent;
+  }
+}
+
+#social {
+  width: 30px;
+  height: 14px;
+  padding: 5px 0;
+  position: relative;
+  &::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    width: 0;
+    height: 0;
+    border: 15px solid $skyblue;
+    left: 0;
+    border-bottom-color: transparent;
+  }
+}
+
+.isotope-item {
+  z-index: 2;
+}
+
+.isotope-hidden.isotope-item {
+  pointer-events: none;
+  z-index: 1;
+}
+
+.isotope {
+  /* change duration value to whatever you like */
+  -webkit-transition-duration: 0.8s;
+  -moz-transition-duration: 0.8s;
+  -ms-transition-duration: 0.8s;
+  -o-transition-duration: 0.8s;
+  transition-duration: 0.8s;
+  .isotope-item {
+    /* change duration value to whatever you like */
+    -webkit-transition-duration: 0.8s;
+    -moz-transition-duration: 0.8s;
+    -ms-transition-duration: 0.8s;
+    -o-transition-duration: 0.8s;
+    transition-duration: 0.8s;
+    -webkit-transition-property: -webkit-transform, opacity;
+    -moz-transition-property: -moz-transform, opacity;
+    -ms-transition-property: -ms-transform, opacity;
+    -o-transition-property: -o-transform, opacity;
+    transition-property: transform, opacity;
+  }
+  -webkit-transition-property: height, width;
+  -moz-transition-property: height, width;
+  -ms-transition-property: height, width;
+  -o-transition-property: height, width;
+  transition-property: height, width;
+}
+
+#fields_search {
+  fieldset {
+    background: #CCC;
+    background: rgba(0, 0, 0, 0.15);
+    padding-bottom: 5px;
+    border: none;
+  }
+  h5 {
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+  input {
+    &[type="text"] {
+      height: 40px;
+      margin-bottom: 10px;
+      -webkit-border-top-right-radius: 7px;
+      -webkit-border-bottom-right-radius: 7px;
+      -moz-border-radius-topright: 7px;
+      -moz-border-radius-bottomright: 7px;
+      border-top-right-radius: 7px;
+      border-bottom-right-radius: 7px;
+      display: inline;
+      float: left;
+      width: 83%;
+      background: #666;
+      color: #ccc;
+      font-family: 'gentona-book', Arial, sans-serif;
+      font-weight: 400;
+      font-size: 16px;
+      border: none;
+    }
+    &[type="submit"] {
+      background: #2c2c33;
+      height: 40px;
+      width: 45px;
+      font-family: 'flagship';
+      -webkit-border-top-left-radius: 7px;
+      -webkit-border-bottom-left-radius: 7px;
+      -moz-border-radius-topleft: 7px;
+      -moz-border-radius-bottomleft: 7px;
+      border-top-left-radius: 7px;
+      border-bottom-left-radius: 7px;
+      font-size: 26px;
+      border: none;
+      float: left;
+      padding: 0;
+      color: #ccc;
+    }
+  }
+}
+
+.button {
+  a.selected {
+    text-shadow: 1px 1px 1px #000;
+  }
+  &.radio {
+    font-size: 14px;
+    opacity: 1;
+    padding: 6px;
+    margin-right: 0;
+    background-color: $blue;
+    a {
+      color: #2c2c33;
+      padding: 5px;
+      &.selected, &:hover {
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        -ms-border-radius: 5px;
+        -o-border-radius: 5px;
+        border-radius: 5px;
+        background-color: $skyblue;
+        color: #FFF;
+      }
+    }
+  }
+}
+
+/******* LANDING PAGES ******/
+
+#field_image {
+  font-family: 'gentona-book', Arial, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  p {
+    line-height: 1.7em;
+  }
+  h3 {
+    font-size: 30px;
+    margin: 30px 0 15px 0;
+  }
+  min-height: 280px;
+  .black_bg {
+    min-height: 280px;
+  }
+}
+
+.field h3 {
+  font-size: 24px;
+}
+
+#landing {
+  h2, h3, a {
+    color: $skyblue;
+  }
+}
+
+p.contact, #landing p.contact a {
+  font-size: 14px;
+  margin-bottom: 25px;
+  color: #000;
+  line-height: 2em;
+}
+
+p.contact {
+  span {
+    margin-right: 20px;
+  }
+  [class^="icon-"]:before, [class*=" icon-"]:before {
+    vertical-align: middle;
+    font-size: 18px;
+    color: $skyblue;
+    margin-right: 0px;
+  }
+}
+
+.field p.contact {
+  font-size: 13px;
+  margin-bottom: 10px;
+}
+
+ul.nav {
+  list-style: none;
+  li {
+    border-top: 1px solid #999;
+    font-size: 16px;
+    padding: 10px 0 8px 30px;
+    letter-spacing: 1px;
+    [class^="icon-"]:before, [class*="icon-"]:before {
+      margin-right: 10px;
+      color: #999;
+      vertical-align: middle;
+    }
+  }
+}
+
+.sidebar_bg ul.nav li a {
+  font-family: 'gentona-book', Arial, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: $blue;
+}
+
+ul.nav:last-child {
+  border-bottom: 1px solid #999;
+}
+
+.jumpmenu {
+  form {
+    margin: 0 0 30px 30px;
+  }
+  select {
+    background-color: $skyblue;
+    border: #666;
+    color: #FFF;
+    font-size: inherit;
+    text-indent: 15px;
+    height: 35px;
+    option {
+      &:nth-child(1) {
+        color: #FFF;
+      }
+      color: #000;
+    }
+  }
+}
+
+#landing .grey_bg {
+  h3 {
+    margin: 5px 15px;
+    color: #fff;
+    font-size: 16px;
+  }
+  p {
+    margin: 5px 15px;
+    padding-bottom: 15px;
+    color: #fff;
+    font-size: 12px;
+  }
+}
+
+.content {
+  li {
+    padding-left: 15px;
+    text-indent: -15px;
+  }
+  ul.tabs-content li {
+    padding-left: 0px;
+    text-indent: 0px;
+  }
+}

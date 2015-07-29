@@ -1,0 +1,37 @@
+#bioTab h6 {
+  margin-bottom: 20px;
+}
+
+.single-people .tabs {
+  margin-top: 40px;
+}
+
+#directory {
+  list-style: none;
+  li:nth-child(odd) {
+    background: #f7f7f7;
+    background: rgba(0, 0, 0, 0.05);
+  }
+  p {
+    margin-top: 20px;
+  }
+}
+
+li.person {
+  margin-bottom: 15px;
+  width: 100%;
+  min-height: 95px;
+  padding-left: 20px;
+  padding-top: 3px;
+  img {
+    max-width: 90px;
+    clear: left;
+    float: left;
+  }
+}
+
+.tabs {
+    dd.active, li.active {
+      border-top: 3px solid $blue;
+    }
+  }

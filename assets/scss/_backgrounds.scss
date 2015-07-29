@@ -1,0 +1,55 @@
+.no-gutter {
+  padding: 0;
+}
+
+#sidebar_header {
+  padding: 15px 15px;
+  h5 {
+    color: #FFF;
+  }
+  &.rust_bg {
+    padding: 5px 15px;
+    margin-bottom: 20px;
+    h5 {
+      margin: 0;
+    }
+  }
+}
+
+aside .photo-page-right {
+  margin-top: 0;
+}
+
+body.home, #sidebar_header a:hover {
+  color: #FFF;
+}
+
+body {
+  &.academics, &.single-studyfields {
+    background: #000 url('../images/bg-fieldsofstudy.jpg') no-repeat fixed top center;
+  }
+  &.news-events, &.single-post {
+    background: #000 url('../images/bg-news.jpg') no-repeat fixed top center;
+  }
+  &.research {
+    background: #000 url('../images/bg-research.jpg') no-repeat fixed top center;
+  }
+  &.giving {
+    background: #000 url('../images/bg-giving.jpg') no-repeat fixed top center;
+  }
+  &.admissions {
+    background: #000 url('../images/bg-admissions.jpg') no-repeat fixed top center;
+  }
+  &.about, &.single-people {
+    background: #000 url('../images/bg-about.jpg') no-repeat fixed top center;
+  }
+  &.home {
+    h1, h2, h3, h4 {
+      color: #F7f7f7;
+    }
+  }
+}
+
+.isotope h3 {
+  color: #F7f7f7;
+}

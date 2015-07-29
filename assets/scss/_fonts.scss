@@ -1,0 +1,100 @@
+body {
+  font-family: $font-stack;
+  font-weight: 300;
+  font-style: normal;
+  background: #000 url('../images/bg-giving.jpg') no-repeat fixed top center;
+  font: 100%/1.618;
+}
+
+h1, h2, .semibold {
+  color: $skyblue;
+}
+
+h3, h4, h5, h6 {
+  font-family: $font-subhead-light;
+  color: $skyblue;
+  font-weight: 200;
+  font-style: normal;
+}
+
+//strong, b, .bold
+%extend_1 {
+  font-family: $font-subhead-book;
+  font-weight: 400;
+  font-style: normal;
+}
+
+//.b.em, .strong.em
+%extend_2 {
+  font-family: $font-stack;
+  font-weight: 300;
+  font-style: italic;
+}
+
+table {
+  thead tr th, tfoot tr td {
+    @extend %extend_1;
+    color: $skyblue;
+  }
+}
+
+em, i {
+ @extend %extend_2;
+}
+
+
+blockquote {
+ @extend %extend_2;
+  p {
+    @extend %extend_2;
+  }
+}
+
+.italic {
+  font-family: $font-stack;
+  font-weight: 300;
+  font-style: italic;
+}
+strong {
+  @extend %extend_1;
+}
+b {
+  @extend %extend_1;
+}
+.bold {
+  @extend %extend_1;
+}
+.b.em {
+  @extend %extend_2;
+}
+.strong.em {
+  @extend %extend_2;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.iconfont {
+  font-family: 'flagship-icon';
+}
+
+.copy h2 {
+  color:$blue;
+}
+
+h6, time {
+  font-size: 10px;
+  color: #666;
+  font-family: $font-subhead-book;
+  font-weight: 400;
+  font-style: normal;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 3px;
+}
+
+aside p {
+  font-size:.9em;
+  color: $black;
+}

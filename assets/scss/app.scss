@@ -1,0 +1,94 @@
+@import "settings";
+@import "foundation";
+
+// Fonts
+@font-face {
+  font-family: 'quadon';
+  src: url('../fonts/quadon/Quadon-Medium.eot');
+  src: url('../fonts/quadon/Quadon-Medium.eot?#iefix') format("embedded-opentype"), url('../fonts/quadon/Quadon-Medium.woff') format("woff"), url('../fonts/quadon/Quadon-Medium.ttf') format("truetype");
+}
+
+
+@font-face {
+  font-family: 'gentona-book';
+  src: url('../fonts/gentona/Gentona-Book.eot');
+  src: url('../fonts/gentona/Gentona-Book.eot?#iefix') format("embedded-opentype"), url('../fonts/gentona/Gentona-Book.woff') format("woff"), url('../fonts/gentona/Gentona-Book.ttf') format("truetype");
+}
+
+
+@font-face {
+  font-family: 'gentona-semibold';
+  src: url('../fonts/gentona/Gentona-SemiBold.eot');
+  src: url('../fonts/gentona/Gentona-SemiBold.eot?#iefix') format("embedded-opentype"), url('../fonts/gentona/Gentona-SemiBold.woff') format("woff"), url('../fonts/gentona/Gentona-SemiBold.ttf') format("truetype");
+}
+
+
+@font-face {
+  font-family: 'gentona-light';
+  src: url('../fonts/gentona/Gentona-Light.eot');
+  src: url('../fonts/gentona/Gentona-Light.eot?#iefix') format("embedded-opentype"), url('../fonts/gentona/Gentona-Light.woff') format("woff"), url('../fonts/gentona/Gentona-Light.ttf') format("truetype");
+}
+
+@font-face {
+  font-family: 'gentona-extralight';
+  src: url('../fonts/gentona/Gentona-ExtraLight.eot');
+  src: url('../fonts/gentona/Gentona-ExtraLight.eot?#iefix') format("embedded-opentype"), url('../fonts/gentona/Gentona-ExtraLight.woff') format("woff"), url('../fonts/gentona/Gentona-ExtraLight.ttf') format("truetype");
+}
+
+// My Custom Styling
+@import "variables";
+@import "reusable";
+@import "fonts";
+@import "navigation";
+@import "header";
+@import "footer";
+@import "backgrounds";
+@import "calendar";
+@import "icons";
+@import "pages/about";
+@import "pages/academics";
+@import "pages/fieldsofstudy";
+@import "pages/home";
+@import "pages/newsevents";
+@import "pages/people";
+@import "pages/research";
+@import "mediaquery";
+
+
+// Or selectively include components
+// @import
+//   "foundation/components/accordion",
+//   "foundation/components/alert-boxes",
+//   "foundation/components/block-grid",
+//   "foundation/components/breadcrumbs",
+//   "foundation/components/button-groups",
+//   "foundation/components/buttons",
+//   "foundation/components/clearing",
+//   "foundation/components/dropdown",
+//   "foundation/components/dropdown-buttons",
+//   "foundation/components/flex-video",
+//   "foundation/components/forms",
+//   "foundation/components/grid",
+//   "foundation/components/inline-lists",
+//   "foundation/components/joyride",
+//   "foundation/components/keystrokes",
+//   "foundation/components/labels",
+//   "foundation/components/magellan",
+//   "foundation/components/orbit",
+//   "foundation/components/pagination",
+//   "foundation/components/panels",
+//   "foundation/components/pricing-tables",
+//   "foundation/components/progress-bars",
+//   "foundation/components/reveal",
+//   "foundation/components/side-nav",
+//   "foundation/components/split-buttons",
+//   "foundation/components/sub-nav",
+//   "foundation/components/switches",
+//   "foundation/components/tables",
+//   "foundation/components/tabs",
+//   "foundation/components/thumbs",
+//   "foundation/components/tooltips",
+//   "foundation/components/top-bar",
+//   "foundation/components/type",
+//   "foundation/components/offcanvas",
+//   "foundation/components/visibility";

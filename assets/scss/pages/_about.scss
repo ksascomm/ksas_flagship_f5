@@ -1,0 +1,61 @@
+.number {
+  summary {
+    position: absolute;
+    bottom: 15px;
+    width: 100%;
+    opacity: .9;
+  }
+  img {
+    margin-bottom: 0;
+  }
+  h3 {
+    font-size: 80px;
+    margin-bottom: 0;
+    letter-spacing: -5px;
+  }
+  h5 {
+    margin-top: 0;
+  }
+}
+
+#newsletter {
+  clear: both;
+  margin-right: -45px;
+  margin-left: 0px;
+  p {
+    margin-bottom: 0;
+    color: #fff;
+    font-size: 12px;
+    line-height: 1em;
+  }
+  h5 {
+    margin-bottom: 7px;
+    margin-top: 7px;
+  }
+  h6 {
+    font-size: 116%;
+    letter-spacing: normal;
+    .floatright {
+      font-size: 70%;
+    }
+  }
+  img {
+    margin: 0;
+    padding: 0;
+  }
+}
+
+#menu-dean-links {
+  margin-bottom: 20px;
+  li {
+    border-top: none;
+    font-size: .9em;
+    padding: 0px 0 4px 20px;
+    a {
+      color: #000;
+    }
+  }
+  &:last-child {
+    border-bottom: none;
+  }
+}

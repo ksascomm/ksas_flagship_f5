@@ -1,0 +1,155 @@
+.SEClear {
+  float: left;
+}
+
+#SECalendarListWrapper {
+  max-width: 300px;
+  table {
+    border: none;
+    margin: 0;
+    background: transparent;
+    tbody tr {
+      &.even, &:nth-child(even) {
+        background: none;
+      }
+    }
+    thead tr th, tfoot tr th, tbody tr td, tr td, tfoot tr td {
+      display: block;
+    }
+  }
+  .SECalendarEventLocation:before {
+    content: 'Location: ';
+    color: #cc6600;
+  }
+  .SECalendarEventTime:before {
+    content: 'Time: ';
+    color: #cc6600;
+  }
+  .SECalendarEventLocation, .SECalendarNoEvent {
+    margin-bottom: 20px;
+  }
+  table tbody tr td {
+    padding: 0 10px 4px 10px;
+  }
+  .SECalendarEventDate {
+    color: #6f2c3f;
+    font-size: 20px;
+    margin-bottom: 10px;
+    font-family: 'gentona-bold', Arial, sans-serif;
+    font-weight: 700;
+  }
+  .SECalendarEventTime, .SECalendarEventLocation {
+    color: #2c2c33;
+    font-size: 10px;
+    font-weight: normal;
+    font-family: 'gentona-book', Arial, sans-serif;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  .SECalendarEventName, .SECalendarNoEvent, .SECalendarEventName a {
+    color: #418fde;
+    font-size: 14px;
+    font-family: 'gentona-book', Arial, sans-serif;
+    font-weight: 400;
+  }
+}
+
+.SECalendarEventName h3 {
+  font-family: 'gentona-bold', Arial, sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.SECalendarEventDetails {
+  border-color: transparent;
+  background: none;
+  padding-bottom: 40px;
+  .SECalendarProperty {
+    margin-bottom: 8px;
+  }
+}
+
+#SECalendarListWrapper .SECalendarPropertyLabel {
+  font-family: 'gentona-bold', Arial, sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  float: left;
+  margin-right: 10px;
+}
+
+.SEbuttons {
+  padding-top: 10px;
+}
+
+.SECalendarEventDetails p {
+  margin-bottom: 0;
+}
+
+#SECalendarWrapper {
+  width: 100%;
+  table {
+    width: 100%;
+  }
+}
+
+#SECalendarTable td {
+  border: 1px solid #ddd;
+  width: 14.28%;
+  height: 138px;
+}
+
+#SECalendarNav {
+  margin: 10px auto 20px auto;
+  div {
+    display: inline;
+    vertical-align: middle;
+  }
+}
+
+a.rssLink {
+  display: none;
+}
+
+#SECalendarNav .SECalendarMonth {
+  font-family: 'gentona-book', Arial, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 28px;
+  margin-top: 5px;
+}
+
+#SECalendar {
+  padding-bottom: 50px;
+}
+
+.SECalendarNextPrevText {
+  color: #FFF;
+}
+
+.SECalendarMonth {
+  color: #000;
+  font-size: 18px;
+  text-align: center;
+}
+
+.SECalendarDay a, .showMoreEvents a, .moreEvents a {
+  color: #000;
+}
+
+.SECalendarPropertyContainer span {
+  display: block;
+  &.SECalendarPropertyLabel {
+    font-weight: bold;
+  }
+}
+
+#calendar_container iframe {
+  height: 785px !important;
+}
+
+#SECalendarTable td {
+  border: 1px solid #ddd;
+  width: 14.28%;
+  height: 138px;
+}
