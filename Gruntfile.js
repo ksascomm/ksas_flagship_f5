@@ -22,16 +22,18 @@ module.exports = function(grunt) {
           sourceMap: true,
         },
         files: {
-          'assets/css/app-min.css': 'assets/scss/app.scss'
+          'assets/css/app.min.css': 'assets/scss/app.scss'
         }
       }
     },
 
     //Autoprefixer
-    autoprefixer: {
-      options: {
-         browsers: ['last 2 versions', 'ie 8', 'ie 9', '> 1%'],
-         map: true,
+      postcss: {
+        options: {
+          map: true,
+          processors: [
+            require('autoprefixer-core')({browsers: ['last 2 versions', 'ie 8', 'ie 9', '> 1%']})
+          ]
       },
       //prefix all files
       multiple_files: {
@@ -52,7 +54,7 @@ module.exports = function(grunt) {
       },
       sass: {
         files: 'assets/scss/**/*.scss',
-        tasks: ['sass', 'autoprefixer'],
+        tasks: ['sass', 'postcss'],
       },
       livereload: {
           options: { livereload: true },
@@ -64,7 +66,7 @@ module.exports = function(grunt) {
 
   grunt.loadNpmTasks('grunt-sass');
   grunt.loadNpmTasks('grunt-contrib-watch');
-  grunt.loadNpmTasks('grunt-autoprefixer');
+  grunt.loadNpmTasks('grunt-postcss');
   grunt.registerTask('build', ['sass']);
   grunt.registerTask('default', ['build','watch']);
 }
