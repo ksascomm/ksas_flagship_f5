@@ -7541,13 +7541,15 @@ body.research .orbit-wrapper {
   h6 {
     font-size: 1rem; } }
 
-@media only screen and (min-width: 64.063em) {
+@media only screen and (max-width: 1023px) {
+  #desktop-nav {
+    display: none; } }
+
+@media only screen and (min-width: 1023px) {
   #mobile-nav {
     display: none; } }
 
 @media only screen and (max-width: 1024px) {
-  #desktop-nav {
-    display: none; }
   #search-bar input[type="submit"], #field_search input[type="submit"] {
     -webkit-border-top-left-radius: 0px;
     -webkit-border-bottom-left-radius: 0px;

@@ -57,7 +57,7 @@ if( is_page() ) {
 	
 		<div id="desktop-nav">
 			<div class="row hide-for-print">
-				<div id="search-bar" class="small-12 large-4 large-offset-8 columns" role="search">
+				<div id="search-bar" class="small-12 medium-4 medium-offset-8 columns" role="search">
 					<div class="row">
 						<div class="small-6 columns">
 							<form method="GET" action="<?php echo site_url('/search'); ?>" role="search">
