@@ -1,4 +1,4 @@
-#main_nav li.logo, .mobile-logo {
+#main_nav li.logo {
   width: 237px;
   height: 135px;
   padding: 0;
@@ -23,25 +23,21 @@
 }
 
 .mobile-logo {
+  position: relative;
+  margin: 0 auto;
+  img {
+   display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    padding: 20px 0;
+  }
   a {
-    background-image: url('../images/jhu.png');
-    background-position: top;
-    background-repeat: no-repeat;
-    background-color: $blue;
-    -webkit-border-bottom-right-radius: 10px;
-    -moz-border-radius-bottomright: 10px;
-    border-bottom-right-radius: 10px;
-    -webkit-border-bottom-left-radius: 10px;
-    -moz-border-radius-bottomleft: 10px;
-    border-bottom-left-radius: 10px;
-    width: 237px;
-    height: 155px;
-    margin-top: -99px;
-    text-indent: -9999px;
-    position: absolute;
     margin-top: 0;
   }
-  margin: 0 auto;
+  &:hover {
+  background: none;
+  }
 }
 
 #main_nav ul li.logo.current_page_item a {
@@ -131,4 +127,5 @@
 #mobile-nav {
   padding-top: 4%;
   margin-bottom: 10%;
+  background: $blue;
 }

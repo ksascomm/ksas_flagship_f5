@@ -146,7 +146,7 @@ div.field {
       width: 83%;
       background: #666;
       color: #ccc;
-      font-family: 'gentona-book', Arial, sans-serif;
+      font-family: $font-subhead-book;
       font-weight: 400;
       font-size: 16px;
       border: none;
@@ -155,7 +155,7 @@ div.field {
       background: #2c2c33;
       height: 40px;
       width: 45px;
-      font-family: 'flagship';
+      font-family: $flagship_icon;
       -webkit-border-top-left-radius: 7px;
       -webkit-border-bottom-left-radius: 7px;
       -moz-border-radius-topleft: 7px;

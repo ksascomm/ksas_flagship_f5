@@ -12,18 +12,10 @@ a {
   margin-bottom: 30px;
 }
 
-
-@mixin horizontal-gradient($from, $to, $stop: 67%) {
-  /* fallback/image non-cover color */
-  background-color: $from;
-  /* Standard */
-  background: linear-gradient(to right, $from 0%, $to $stop);
-}
-
 .sidebar_bg {
   background: #cecece;
-  /*@include linear-gradient(#fcfcfc 0%, #ffffff 66.6%, #cecece 67%);*/
-  @include horizontal-gradient(#fcfcfc, #cecece);
+  background: linear-gradient(to right, rgba(252,252,252,1) 0%,rgba(255,255,255,1) 67%,rgba(206,206,206,1) 67%,rgba(206,206,206,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fcfcfc', endColorstr='#cecece', GradientType=1 );
   margin-bottom: 60px;
   .wrapper {
     margin-top: 0px;
@@ -377,7 +369,7 @@ blockquote {
   }
   &:before {
     content: "\e011";
-    font-family: 'flagship';
+    font-family: $flagship_icon;
     font-style: normal;
     speak: none;
     font-weight: normal;

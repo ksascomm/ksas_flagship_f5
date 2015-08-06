@@ -133,10 +133,6 @@ nav ul {
   }
 }
 
-.mobile-logo:hover {
-  background: none;
-}
-
 #main_nav {
   li {
     &.active, &.current_page_parent, &.current_page_ancestor {
@@ -170,7 +166,7 @@ nav ul {
 li.external {
   a::after {
     content: "\e007";
-    font-family: 'flagship';
+    font-family: $flagship_icon;
     font-style: normal;
     speak: none;
     font-weight: normal;

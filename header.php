@@ -50,7 +50,7 @@ if( is_page() ) {
 		<div id="mobile-nav">
 	  		<div class="row">
 		        <div class="small-12 columns">
-		  			<div class="mobile-logo"><a href="<?php echo network_site_url(); ?>"><img src="<?php echo get_template_directory_uri() ?>/assets/images/jhu.png" alt="jhu logo"></a></div>
+		  			<div class="mobile-logo centered"><a href="<?php echo network_site_url(); ?>"><img src="<?php echo get_template_directory_uri() ?>/assets/images/ksas-logo-horizontal.png" alt="jhu logo"></a></div>
 		  		</div>
 	  		</div>
 		</div>
