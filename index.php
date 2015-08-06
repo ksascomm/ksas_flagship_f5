@@ -22,7 +22,7 @@ $flagship_news_archive_query = new WP_Query(array(
 					if ( false === $format ) { $format = 'standard'; }
 					if ( $format == 'standard' ) { ?>
 
-					<article class="small-4 columns">
+					<article class="medium-6 columns">
 						<a href="<?php the_permalink(); ?>">
 							<?php the_post_thumbnail('bullet', array('class' => 'floatleft')); ?>								
 							<time><?php echo get_the_date(); ?></time>
@@ -32,7 +32,7 @@ $flagship_news_archive_query = new WP_Query(array(
 					</article>
 					
 				<?php } if ( $format == 'video' ) { ?>
-					<article class="small-4 columns">
+					<article class="medium-6 columns">
 					<a href="#" data-reveal-id="modal_home_<?php the_id(); ?>_video">
 						<div class="video_thumb archive">
 							<?php the_post_thumbnail('bullet', array('class' => 'floatleft')); ?>
@@ -44,7 +44,7 @@ $flagship_news_archive_query = new WP_Query(array(
 					</article>
 					
 				<?php } if ( $format == 'image' ) { ?>
-					<article class="small-4 columns">
+					<article class="medium-6 columns">
 						<a href="#" data-reveal-id="modal_home_<?php the_id(); ?>_image">
 							<?php the_post_thumbnail('bullet', array('class' => 'floatleft')); ?>
 							<time><?php echo get_the_date(); ?></time>

@@ -29,7 +29,7 @@ Template Name: Video Archive
 			<h2>Video Library</h2>
 			<?php locate_template('parts-archive-navigation.php', true, false); ?>
 			<?php while ($flagship_video_archive_query->have_posts()) : $flagship_video_archive_query->the_post(); ?>
-				<article class="small-4 columns mobile-four">
+				<article class="medium-4 columns mobile-four">
 				<a href="#" data-reveal-id="modal_home_<?php the_id(); ?>_video" onclick="ga('send', 'event', 'Video', 'Play', '<?php the_title(); ?>');">
 					<div class="video_thumb archive">
 						<?php the_post_thumbnail('bullet', array('class' => 'floatleft')); ?>

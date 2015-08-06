@@ -2,22 +2,19 @@
 
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 <section class="row wrapper radius10">
-	<div class="small-12 columns">
-		<div class="row">
-			<div class="small-6 columns photo-page-left">
+			<div class="small-12 medium-6 columns photo-page-left">
 				<?php the_post_thumbnail('full',array(
 						'class'	=> "radius-topleft")); ?>
 			</div>
 			
-			<div class="small-6 columns">
+			<div class="small-12 medium-6 columns">
 				<h2 class="blue"><?php the_title(); ?></h2>
 				<?php the_content(); ?>
 			</div>
-		</div>
 <?php endwhile; endif; ?>
 		
 		<div class="row">
-			<div class="small-4 columns" id="links">
+			<div class="small-12 medium-4 columns" id="links">
 				<dl class="tabs contained" data-tab>
 					<dd class="active blue_bg semibold">Academic Resources</dd>
 				</dl>
@@ -33,16 +30,16 @@
 				</div>
 			</div>
 			
-			<div class="small-8 columns tan_bg radius10">
+			<div class="small-12 medium-8 columns tan_bg radius10">
 				<div class="row">
-					<div class="small-offset-1 columns">
+					<div class="medium-offset-1 columns">
 						<a href="<?php echo site_url('/news/archive/student-voices'); ?>"><h3 class="blue">Student Voices</h3></a>
 						<p><i>Hear what current students have to say about Johns Hopkins and their academic experience</i></p>
 					</div>	
 				</div>
 				
 				<div class="row" id="video_scroll">
-				<div class="small-1 columns spacer"></div>
+				<div class="medium-1 columns spacer"></div>
 					<?php $student_voice_query = new WP_Query(array(
 							'post_type' => array('deptextra', 'post'),
 							'category_name' => 'voices',
@@ -53,7 +50,7 @@
 						if ( $student_voice_query->have_posts() ) : while ( $student_voice_query->have_posts() ) : $student_voice_query->the_post(); 
 
 				 ?>
-					<article class="small-3 columns rust_bg no-gutter voices">
+					<article class="small-12 medium-3 columns rust_bg no-gutter voices">
 						<a href="#" data-reveal-id="modal_home_<?php the_id(); ?>_video" onclick="ga('send', 'event', 'Video', 'Play', '<?php the_title(); ?>');">
 							<div class="video_thumb small">
 								<span class="icon-play"></span><?php the_post_thumbnail('full'); ?>
@@ -77,11 +74,10 @@
 						</a>
 					</article>
 					<?php endwhile; endif; ?>
-					<div class="small-1 columns spacer"></div>
+					<div class="medium-1 columns spacer"></div>
 				</div>
 			</div>
 		</div>
-	</div>
 </section>
 
 

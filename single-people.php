@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 <div class="row wrapper radius10" id="page" role="main">
-	<div class="small-12 columns radius-left offset-topgutter">	
+	<div class="radius-left offset-topgutter">	
 		
 		<section class="content">
 			<div class="row">

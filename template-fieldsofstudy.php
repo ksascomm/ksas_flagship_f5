@@ -78,7 +78,7 @@ Template Name: Fields of Study
 	?>
 		
 		<!-- Set classes for isotype.js filter buttons -->
-		<div class="small-4 columns  mobile-field <?php echo $discipline[0] . ' '; if ( isset($discipline[1] )) { echo $discipline[1] . ' ';  } if ( isset($discipline[2] )) { echo $discipline[2] . ' ';  } echo get_post_meta($post->ID, 'ecpt_structure', true);?> <?php echo $program_type_name; ?>">
+		<div class="medium-6 large-4 columns  mobile-field <?php echo $discipline[0] . ' '; if ( isset($discipline[1] )) { echo $discipline[1] . ' ';  } if ( isset($discipline[2] )) { echo $discipline[2] . ' ';  } echo get_post_meta($post->ID, 'ecpt_structure', true);?> <?php echo $program_type_name; ?>">
 		
 			<a href="<?php the_permalink();?>" title="<?php the_title(); ?>" class="field">
 				<div class="small-12 columns field" id="<?php echo get_post_meta($post->ID, 'ecpt_structure', true); ?>">

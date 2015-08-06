@@ -23,7 +23,6 @@ Template Name: Photo Archive
 			}	?>
 
 <section class="row wrapper radius10">
-	<div class="small-12 columns">
 		<div class="row">
 			<div class="small-12 columns" id="archive">
 			<h2>This Week on Campus</h2>
@@ -35,7 +34,7 @@ Template Name: Photo Archive
 				$caption = get_the_content();
 				$clean_caption = strip_tags($caption);
 			?>
-					<li class="small-4 columns">
+					<li class="medium-5 columns">
 						<a href="<?php echo $full_image_url[0]; ?>">
 								<img src="<?php echo $thumbnail_url[0]; ?>" class="floatleft" data-caption="<?php echo $clean_caption; ?>" >
 								<time><?php echo get_the_date(); ?></time>
@@ -50,7 +49,6 @@ Template Name: Photo Archive
 		<div class="row">
 			<?php flagship_pagination($flagship_photo_archive_query->max_num_pages); ?>		
 		</div>
-	</div>
 </section>
 
 <?php get_footer(); ?>

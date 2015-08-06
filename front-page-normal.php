@@ -13,7 +13,7 @@ Template Name: Front Page Normal
 ?>		
 
 <div class="row">
-	<section class="small-12 large-7 columns end offset-top" id="evergreen" role="main">
+	<section class="small-12 large-7 columns end offset-top hide-for-small" id="evergreen" role="main">
 		<?php while ($flagship_evergreen_query->have_posts()) : $flagship_evergreen_query->the_post(); ?>
 			<!-- Set background image. Resolution varies based on size -- Desktop, Tablet, Mobile -->
 				<style>

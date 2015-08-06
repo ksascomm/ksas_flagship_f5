@@ -27,17 +27,16 @@ Template Name: Dean's Directory
 					'posts_per_page' => '-1'));
 					set_transient( 'flagship_dean_staff_query', $flagship_dean_staff_query, 2592000 ); }		 ?>
 <div class="row wrapper radius10">
-<div class="small-12 columns">
 	<section class="row">
 	
-		<div class="small-5 columns copy">
+		<div class="medium-5 columns copy">
 		<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 			<h2><?php the_title();?></h2>
 			<p><?php the_content(); ?></p>
 		<?php endwhile; endif; ?>
 		</div>
 		
-		<div class="small-7 columns" id="fields_search">
+		<div class="medium-7 columns" id="fields_search">
 			<form action="#">
 				<fieldset class="radius10">
 					<div class="row">
@@ -55,7 +54,7 @@ Template Name: Dean's Directory
 	</section>
 	
 	<section class="row" id="fields_container">
-		<ul class="small-12 columns" id="directory">
+		<ul class="large-12 columns" id="directory">
 		<?php while ($flagship_leadership_query->have_posts()) : $flagship_leadership_query->the_post(); ?>
 				<li class="person">
 					<div class="row">
@@ -75,7 +74,7 @@ Template Name: Dean's Directory
 							<?php if ( get_post_meta($post->ID, 'ecpt_email', true) ) : ?><span class="icon-mail"><a href="mailto:<?php echo get_post_meta($post->ID, 'ecpt_email', true); ?>"> <?php echo get_post_meta($post->ID, 'ecpt_email', true); ?></a></span><?php endif; ?>
 							<?php if ( get_post_meta($post->ID, 'ecpt_office', true) ) : ?><span class="icon-location"><?php echo get_post_meta($post->ID, 'ecpt_office', true); ?></span><?php endif; ?>
 						</p>
-						
+						</div>	
 					</div>
 				</li>		
 	<?php endwhile; ?>
@@ -108,6 +107,5 @@ Template Name: Dean's Directory
 </section>
 
 
-</div>
 </div> <!-- End content wrapper -->
 <?php get_footer(); ?>

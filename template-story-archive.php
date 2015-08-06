@@ -29,7 +29,7 @@ Template Name: Article Archive
 			<h2>News Articles</h2>
 			<?php locate_template('parts-archive-navigation.php', true, false); ?>			
 			<?php while ($flagship_article_archive_query->have_posts()) : $flagship_article_archive_query->the_post(); ?>
-					<article class="small-4 columns mobile-four">
+					<article class="medium-4 columns">
 						<a href="<?php the_permalink(); ?>">
 						<?php if (has_post_thumbnail()) {
 								 the_post_thumbnail('bullet', array('class' => 'floatleft')); 

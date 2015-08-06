@@ -1,15 +1,13 @@
 <?php get_header(); ?>
 
 <div class="row wrapper radius10" role="main">
-	<div class="small-12 columns">
-		<div class="row">
-			<div class="small-6 columns">
+			<div class="small-12 medium-6 columns">
 		<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 			<h2><?php the_title();?></h2>
 			<p><?php the_content(); ?></p>
 		<?php endwhile; endif; ?>
 			</div>
-			<div class="small-6 columns">	
+			<div class="small-12 medium-6 columns">	
 				<ul id="slider" data-orbit data-options="animation_speed:2000; timer:true; slide_number: false; timer_speed:3000; navigation_arrows:false; bullets:false;" class="no-gutter photo-page-right">
 					<?php if ( false === ( $by_the_numbers_query = get_transient( 'by_the_numbers_query' ) ) ) {
 				// It wasn't there, so regenerate the data and save the transient
@@ -30,8 +28,6 @@
 					</div> <!-- End number -->
 			<?php endwhile; endif; ?>
 				</div> <!-- End slider -->
-			</div>
 		</div>		
-	</div>
 </div> <!-- End Wrapper -->
 <?php get_footer(); ?>
