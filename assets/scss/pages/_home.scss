@@ -17,6 +17,9 @@ body.home .reveal-modal {
   .inline-list{
     > li {
     margin-left: .9em;
+      &.cta {
+        font-size: 1rem;
+      }
     }
   }
   dd {
@@ -34,10 +37,6 @@ body.home .reveal-modal {
       margin-bottom: 15px;
       background: rgb(255, 255, 255);
       background: rgba(255, 255, 255, 0.2);
-      -webkit-border-top-right-radius: 7px;
-      -webkit-border-bottom-right-radius: 7px;
-      -moz-border-radius-topright: 7px;
-      -moz-border-radius-bottomright: 7px;
       border-top-right-radius: 7px;
       border-bottom-right-radius: 7px;
       display: inline;
@@ -50,10 +49,6 @@ body.home .reveal-modal {
       height: 35px;
       width: 38px;
       font-family: $flagship_icon;
-      -webkit-border-top-left-radius: 7px;
-      -webkit-border-bottom-left-radius: 7px;
-      -moz-border-radius-topleft: 7px;
-      -moz-border-radius-bottomleft: 7px;
       border-top-left-radius: 7px;
       border-bottom-left-radius: 7px;
       font-size: 16px;
@@ -68,10 +63,6 @@ body.home .reveal-modal {
     dd.active, li.active {
       border-top: none;
       margin-top: 0;
-      -webkit-border-top-left-radius: 7px;
-      -webkit-border-top-right-radius: 7px;
-      -moz-border-radius-topleft: 7px;
-      -moz-border-radius-topright: 7px;
       border-top-left-radius: 7px;
       border-top-right-radius: 7px;
       height: 40px;
@@ -87,10 +78,6 @@ body.home .reveal-modal {
   div.tabs-content.contained {
     background: rgb(0, 0, 0);
     background: rgba(0, 0, 0, 0.75);
-    -webkit-border-radius: 7px;
-    -webkit-border-top-left-radius: 0;
-    -moz-border-radius: 7px;
-    -moz-border-radius-topleft: 0;
     border-radius: 7px;
     border-top-left-radius: 0;
     border: none;

@@ -47,51 +47,26 @@ p, ul, ol, dl {
 
 @media only screen and (max-width: 1024px) {
   #search-bar input[type="submit"], #field_search input[type="submit"] {
-    -webkit-border-top-left-radius: 0px;
-    -webkit-border-bottom-left-radius: 0px;
-    -moz-border-radius-topleft: 0px;
-    -moz-border-radius-bottomleft: 0px;
     border-top-left-radius: 0px;
     border-bottom-left-radius: 0px;
     border-radius: 0px !important;
-    -webkit-border-radius: 0px !important;
-    -moz-border-radius: 0px !important;
     -webkit-appearance: none;
   }
   #search-bar {
-    -webkit-border-top-left-radius: 0px;
-    -webkit-border-bottom-left-radius: 0px;
-    -moz-border-radius-topleft: 0px;
-    -moz-border-radius-bottomleft: 0px;
     border-top-left-radius: 0px;
     border-bottom-left-radius: 0px;
     border-radius: 0px !important;
-    -webkit-border-radius: 0px !important;
-    -moz-border-radius: 0px !important;
-    -webkit-appearance: none;
     input[type="text"] {
-      -webkit-border-top-left-radius: 0px;
-      -webkit-border-bottom-left-radius: 0px;
-      -moz-border-radius-topleft: 0px;
-      -moz-border-radius-bottomleft: 0px;
       border-top-left-radius: 0px;
       border-bottom-left-radius: 0px;
       border-radius: 0px !important;
-      -webkit-border-radius: 0px !important;
-      -moz-border-radius: 0px !important;
       -webkit-appearance: none;
     }
   }
   #field_search input[type="text"] {
-    -webkit-border-top-left-radius: 0px;
-    -webkit-border-bottom-left-radius: 0px;
-    -moz-border-radius-topleft: 0px;
-    -moz-border-radius-bottomleft: 0px;
     border-top-left-radius: 0px;
     border-bottom-left-radius: 0px;
     border-radius: 0px !important;
-    -webkit-border-radius: 0px !important;
-    -moz-border-radius: 0px !important;
     -webkit-appearance: none;
   }
   #search-bar input[type="text"], #fields_search input[type="text"] {
@@ -140,15 +115,15 @@ p, ul, ol, dl {
   li.logo {
     display: none;
   }
-    #fields_search input[type="submit"] {
+  #fields_search input[type="submit"] {
     width: 35px;
   }
-   ul.breadcrumbs {
+  ul.breadcrumbs {
     li {
       margin-left: 0px;
     }
    }
-   p.contact {
+  p.contact {
     span {
       margin-right: 2px;
     }
@@ -175,6 +150,17 @@ p, ul, ol, dl {
   }
   .tabs-content {
     width: 130%;
+  }
+  #field_search {
+    .inline-list{
+      width: 80%;
+      margin-left: 0px;
+    }
+  }
+  .mobile-logo {
+    img {
+      width: 75%;
+    }
   }
 }
 

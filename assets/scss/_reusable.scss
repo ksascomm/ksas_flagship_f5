@@ -145,9 +145,6 @@ button, .button {
   margin-bottom: 10px;
   opacity: .8;
   font-weight: normal;
-  -webkit-box-shadow: none;
-  -moz-box-shadow: none;
-  box-shadow: none;
   display: inline-block;
   *display: inline;
     &:hover {
@@ -187,32 +184,20 @@ li.gallery-item {
 }
 
 .radius-left {
-  -webkit-border-top-left-radius: 10px;
-  -webkit-border-bottom-left-radius: 10px;
-  -moz-border-radius-topleft: 10px;
-  -moz-border-radius-bottomleft: 10px;
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
 }
 
 .radius-topright {
-  -webkit-border-top-right-radius: 10px;
-  -moz-border-radius-topright: 10px;
   border-top-right-radius: 10px;
 }
 
 .radius-topleft {
-  -webkit-border-top-left-radius: 10px;
-  -moz-border-radius-topleft: 10px;
   border-top-left-radius: 10px;
 }
 
 .radius-top {
-  -webkit-border-top-right-radius: 10px;
-  -moz-border-radius-topright: 10px;
   border-top-right-radius: 10px;
-  -webkit-border-top-left-radius: 10px;
-  -moz-border-radius-topleft: 10px;
   border-top-left-radius: 10px;
 }
 

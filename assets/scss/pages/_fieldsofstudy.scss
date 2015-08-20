@@ -95,28 +95,12 @@ div.field {
 
 .isotope {
   /* change duration value to whatever you like */
-  -webkit-transition-duration: 0.8s;
-  -moz-transition-duration: 0.8s;
-  -ms-transition-duration: 0.8s;
-  -o-transition-duration: 0.8s;
   transition-duration: 0.8s;
   .isotope-item {
     /* change duration value to whatever you like */
-    -webkit-transition-duration: 0.8s;
-    -moz-transition-duration: 0.8s;
-    -ms-transition-duration: 0.8s;
-    -o-transition-duration: 0.8s;
     transition-duration: 0.8s;
-    -webkit-transition-property: -webkit-transform, opacity;
-    -moz-transition-property: -moz-transform, opacity;
-    -ms-transition-property: -ms-transform, opacity;
-    -o-transition-property: -o-transform, opacity;
     transition-property: transform, opacity;
   }
-  -webkit-transition-property: height, width;
-  -moz-transition-property: height, width;
-  -ms-transition-property: height, width;
-  -o-transition-property: height, width;
   transition-property: height, width;
 }
 
@@ -135,10 +119,6 @@ div.field {
     &[type="text"] {
       height: 40px;
       margin-bottom: 10px;
-      -webkit-border-top-right-radius: 7px;
-      -webkit-border-bottom-right-radius: 7px;
-      -moz-border-radius-topright: 7px;
-      -moz-border-radius-bottomright: 7px;
       border-top-right-radius: 7px;
       border-bottom-right-radius: 7px;
       display: inline;
@@ -156,10 +136,6 @@ div.field {
       height: 40px;
       width: 45px;
       font-family: $flagship_icon;
-      -webkit-border-top-left-radius: 7px;
-      -webkit-border-bottom-left-radius: 7px;
-      -moz-border-radius-topleft: 7px;
-      -moz-border-radius-bottomleft: 7px;
       border-top-left-radius: 7px;
       border-bottom-left-radius: 7px;
       font-size: 26px;
@@ -185,10 +161,6 @@ div.field {
       color: #2c2c33;
       padding: 5px;
       &.selected, &:hover {
-        -webkit-border-radius: 5px;
-        -moz-border-radius: 5px;
-        -ms-border-radius: 5px;
-        -o-border-radius: 5px;
         border-radius: 5px;
         background-color: $skyblue;
         color: #FFF;

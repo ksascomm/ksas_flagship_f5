@@ -21,8 +21,6 @@ nav ul {
     list-style-type: none;
     background: rgb(0, 0, 0);
     background: rgba(0, 0, 0, 0.75);
-    -webkit-border-radius: 10px;
-    -moz-border-radius: 10px;
     border-radius: 10px;
     z-index: 100;
     width: 100%;
@@ -33,10 +31,6 @@ nav ul {
       line-height: 62px;
       padding: 0 25px;
       &:nth-child(1):hover {
-        -webkit-border-top-left-radius: 10px;
-        -webkit-border-bottom-left-radius: 10px;
-        -moz-border-radius-topleft: 10px;
-        -moz-border-radius-bottomleft: 10px;
         border-top-left-radius: 10px;
         border-bottom-left-radius: 10px;
       }
@@ -44,10 +38,6 @@ nav ul {
   }
   #menu-item-808 {
     &.current_page_item, &.current_page_ancestor {
-      -webkit-border-top-left-radius: 10px;
-      -webkit-border-bottom-left-radius: 10px;
-      -moz-border-radius-topleft: 10px;
-      -moz-border-radius-bottomleft: 10px;
       border-top-left-radius: 10px;
       border-bottom-left-radius: 10px;
     }
