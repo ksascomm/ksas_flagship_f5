@@ -6,7 +6,7 @@
 		<!-- ************START NEWS & FEATURED VIDEO SECTION************* -->
 		<div class="small-12 large-4 columns" id="news_section">
 			<!-- ************START NEWS -->
-			<div class="banner blue_bg offset-gutter offset-topgutter radius-topleft"><h3><a href="/news-events/articles" class="dark_blue_bg radius-topleft">Arts &amp; Sciences News</a></h3></div>
+			<div class="banner blue_bg offset-gutter radius-topleft" style="margin-top: -3px"><h3><a href="/news-events/articles" class="dark_blue_bg radius-topleft">Arts &amp; Sciences News</a></h3></div>
 					<?php 
 						if ( false === ( $flagship_news_query = get_transient( 'flagship_news_query' ) ) ) {
 				// It wasn't there, so regenerate the data and save the transient
