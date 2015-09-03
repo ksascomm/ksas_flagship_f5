@@ -38,7 +38,7 @@ Template Name: Fields of Study
 					<div class="row">
 						<h5>Search by keyword:</h5>		
 						<input type="submit" class="icon-search" placeholder="Search by major/minor, interests, department name..."value="&#xe004;" />
-						<input type="text" name="search" value="<?php if (isset($_POST['home_search'])) { echo($_POST['home_search']); } ?>" id="id_search" aria-label="Search"  /> 
+						<input type="text" name="search" value="<?php if (isset($_POST['home_search'])) { echo($_POST['home_search']); } ?>" id="id_search" aria-label="Search" placeholder="Enter major/minor, area of study, or description keyword"  /> 
 					</div>
 					
 					<div class="row hide-for-mobile">
