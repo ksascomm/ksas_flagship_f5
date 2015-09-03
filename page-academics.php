@@ -2,20 +2,20 @@
 
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 <section class="row wrapper radius10">
-			<div class="small-12 medium-6 columns photo-page-left">
+			<div class="large-6 columns show-for-large-up photo-page-left">
 				<?php the_post_thumbnail('full',array(
 						'class'	=> "radius-topleft")); ?>
 			</div>
 			
-			<div class="small-12 medium-6 columns">
+			<div class="small-12 large-6 columns">
 				<h2 class="blue"><?php the_title(); ?></h2>
 				<?php the_content(); ?>
 			</div>
 <?php endwhile; endif; ?>
 		
 		<div class="row">
-			<div class="small-12 medium-4 columns" id="links">
-				<dl class="tabs contained" data-tab>
+			<div class="small-12 large-4 columns" id="links">
+				<dl class="tabs contained" data-tab style="margin-left: 18px">
 					<dd class="active blue_bg semibold">Academic Resources</dd>
 				</dl>
 			
@@ -30,7 +30,7 @@
 				</div>
 			</div>
 			
-			<div class="small-12 medium-8 columns tan_bg radius10">
+			<div class="small-12 large-8 columns tan_bg radius10">
 				<div class="row">
 					<div class="medium-offset-1 columns">
 						<a href="<?php echo site_url('/news/archive/student-voices'); ?>"><h3 class="blue">Student Voices</h3></a>

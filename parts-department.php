@@ -3,14 +3,14 @@
 	#field_image { background: #000 url('<?php echo get_post_meta($post->ID, 'ecpt_image', true); ?>') no-repeat top center; }
 </style>
 <div class="row radius10 hide-for-small" id="field_image">
-	<div class="small-4 columns black_bg offset-by-eight radius-topright">
+	<div class="small-4 small-offset-8 columns black_bg  radius-topright">
 		<?php if ( get_post_meta($post->ID, 'ecpt_headline', true) ) : ?><h3 class="sky_blue"><?php echo get_post_meta($post->ID, 'ecpt_headline', true) ?></h3><?php endif;?>
 		<?php if ( get_post_meta($post->ID, 'ecpt_subhead', true) ) : ?><p class="white"><?php echo get_post_meta($post->ID, 'ecpt_subhead', true) ?></p><?php endif;?>
 	</div>
 </div>
 
 <div class="row sidebar_bg radius10" id="landing">
-	<div class="small-12 medium-8 columns wrapper radius-left offset-top">		
+	<div class="small-12 medium-8 columns wrapper radius-left">		
 		<section class="content" itemscope itemtype="http://schema.org/EducationalOrganization">
 				<h2 itemprop="name"><?php the_title();?></h2>
 				<span class="hide" itemprop="brand">Johns Hopkins University</span>
