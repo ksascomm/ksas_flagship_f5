@@ -1,3 +1,14 @@
+@font-face {
+  font-family: $flagship_icon;
+  src: $flagship-icon_url_0;
+}
+@font-face {
+  font-family: $flagship_icon;
+  src: $flagship-icon_url_1 format('embedded-opentype'), $flagship-icon_url_2 format('svg'), $flagship-icon_url_3 format('woff'), $flagship-icon_url_4 format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 body {
   font-family: $font-stack;
   font-weight: 300;

@@ -1,15 +1,16 @@
 @media only screen and (min-width: 108em) {
-p, ul, ol, dl {
-  font-size: 1.175rem;
-} 
+  p, ul, ol, dl {
+    font-size: 1.2rem;
+  } 
 } 
 
 @media only screen and (min-width: 86em) {
-p, ul, ol, dl {
-  font-size: 1.15rem;
-}
+  p, ul, ol, dl {
+    font-size: 1.1rem;
+  }
  h1, h2, h3, h4, h5, h6 {
-    line-height: 1.4; }
+    line-height: 1.4; 
+  }
 
   h1 {
     font-size: 2.5rem; }
@@ -27,7 +28,7 @@ p, ul, ol, dl {
     font-size: 1.125rem; }
 
   h6 {
-    font-size: 1rem; } 
+    font-size: 1.05rem; } 
 }
 
 @media only screen and (max-width: 1023px) {
@@ -146,6 +147,12 @@ p, ul, ol, dl {
     img {
       height: auto;
       width: 84%;
+    }
+  }
+  
+  #links {
+    .tabs-content {
+      width: 100%
     }
   }
   .tabs-content {

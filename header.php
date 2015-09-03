@@ -11,8 +11,7 @@
   <link rel="apple-touch-icon-precomposed" sizes="72x72" href="<?php echo get_template_directory_uri() ?>/assets/images/apple-touch-icon-72x72-precomposed.png" />
   <link rel="apple-touch-icon-precomposed" href="<?php echo get_template_directory_uri() ?>/assets/images/apple-touch-icon-57x57-precomposed.png" />
   <!-- CSS Files: All pages -->
-  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="<?php echo get_template_directory_uri() ?>/assets/css/app.css">
+  <link rel="stylesheet" href="<?php echo get_template_directory_uri() ?>/assets/css/app.min.css">
 
   <!-- CSS Files: Conditionals -->
   
@@ -45,7 +44,7 @@ if( is_page() ) {
     <script src="http://ie7-js.googlecode.com/svn/version/2.1(beta4)/IE9.js"></script>
     <script src="<?php echo get_template_directory_uri() ?>/assets/js/lte-ie7.js"></script>
   <![endif]-->
-<body <?php body_class($ancestorslug); ?>>
+<body <?php body_class($ancestorslug); ?> onLoad="viewport()">
 	<header>
 		<div id="mobile-nav">
 	  		<div class="row">
