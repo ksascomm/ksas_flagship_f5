@@ -13,6 +13,8 @@ Template Name: Fields of Study
 					'order' => 'ASC',
 					'posts_per_page' => '-1'));
 					set_transient( 'flagship_studyfields_query', $flagship_studyfields_query, 2592000 ); } ?>
+
+		
 <div class="row wrapper radius10">
 <div class="small-12 columns">
 	<section class="row">
@@ -23,7 +25,6 @@ Template Name: Fields of Study
 			<p><?php the_content(); ?></p>
 		<?php endwhile; endif; ?>
 		</div>
-		
 		<div class="small-12 medium-7 columns" id="fields_search" role="search">
 			<form action="#">
 				<fieldset class="radius10">
@@ -58,8 +59,7 @@ Template Name: Fields of Study
 				</fieldset>
 			</form>	
 		</div>
-	</section>
-
+</section>
 <section class="row" id="fields_container" role="main">
 	<?php while ($flagship_studyfields_query->have_posts()) : $flagship_studyfields_query->the_post(); 
 		//Pull discipline array (humanities, natural, social)
@@ -76,8 +76,20 @@ Template Name: Fields of Study
 				$program_type_name = join( " ", $program_type_names );
 			endif;
 	?>
-		
-		<!-- Set classes for isotype.js filter buttons -->
+	<?php if(is_mobile()) {  ?>	
+		<!-- Set mobile classes for isotype.js filter buttons -->
+		<div class="medium-6 large-4 columns mobile-field <?php echo $discipline[0] . ' '; if ( isset($discipline[1] )) { echo $discipline[1] . ' ';  } if ( isset($discipline[2] )) { echo $discipline[2] . ' ';  } echo get_post_meta($post->ID, 'ecpt_structure', true);?> <?php echo $program_type_name; ?>">
+			<a href="<?php the_permalink();?>" title="<?php the_title(); ?>" class="field">
+				<ul class="field" style="color:#005eb8">
+				<!-- Display ribbons for discipline taxonomy -->
+					<li class="blue"><p style="color:#005eb8"><?php the_title(); ?></p>
+					<span class="hide"><?php echo get_post_meta($post->ID, 'ecpt_keywords', true); ?></span>
+					</li>
+				</ul>
+			</a>
+		</div>
+	<?php } else { ?>
+		<!-- Set desktop classes for isotype.js filter buttons -->
 		<div class="medium-6 large-4 columns  mobile-field <?php echo $discipline[0] . ' '; if ( isset($discipline[1] )) { echo $discipline[1] . ' ';  } if ( isset($discipline[2] )) { echo $discipline[2] . ' ';  } echo get_post_meta($post->ID, 'ecpt_structure', true);?> <?php echo $program_type_name; ?>">
 		
 			<a href="<?php the_permalink();?>" title="<?php the_title(); ?>" class="field">
@@ -117,6 +129,7 @@ Template Name: Fields of Study
 				</div>
 			</a>
 		</div>
+	<?php } ?>	
 	<?php endwhile; ?>
 	
 	<div class="row" id="noresults">

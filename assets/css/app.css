@@ -9468,7 +9468,11 @@ body.research .orbit-wrapper {
     display: none; }
   .mobile-field {
     clear: left;
-    float: none; } }
+    float: none; }
+  li.blue {
+    color: #005eb8; }
+    li.blue p {
+      color: #005eb8; } }
 
 @media only screen and (max-width: 975px) {
   #main_nav ul li {
@@ -9481,6 +9485,8 @@ body.research .orbit-wrapper {
       font-size: 15px !important; } }
 
 @media only screen and (max-width: 767px) {
+  body {
+    background: none !important; }
   .sidebar_bg {
     background: #cecece !important; }
   #main_nav ul {

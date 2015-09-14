@@ -80,6 +80,12 @@
     clear: left;
     float: none;
   }
+  li.blue {
+  color: $blue;
+  p {
+    color:$blue;
+  }
+}
 }
 
 @media only screen and (max-width: 975px) {
@@ -98,6 +104,9 @@
 }
 
 @media only screen and (max-width: 767px) {
+  body {
+    background: none !important;
+  }
   .sidebar_bg {
     background: #cecece !important;
   }
