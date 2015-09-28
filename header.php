@@ -2,7 +2,8 @@
 <html lang="en" class="no-js"> 
 
 <head>
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />  
+  <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
   <title><?php create_page_title(); ?></title>
   <link rel="shortcut icon" href="<?php echo get_template_directory_uri() ?>/assets/images/favicon.ico" />
@@ -11,7 +12,7 @@
   <link rel="apple-touch-icon-precomposed" sizes="72x72" href="<?php echo get_template_directory_uri() ?>/assets/images/apple-touch-icon-72x72-precomposed.png" />
   <link rel="apple-touch-icon-precomposed" href="<?php echo get_template_directory_uri() ?>/assets/images/apple-touch-icon-57x57-precomposed.png" />
   <!-- CSS Files: All pages -->
-  <link rel="stylesheet" href="<?php echo get_template_directory_uri() ?>/assets/css/app.min.css">
+  <link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri() ?>/assets/css/app.min.css">
 
   <!-- CSS Files: Conditionals -->
   
@@ -39,11 +40,13 @@ if( is_page() ) {
 
 ?>
   <!-- Make IE a modern browser -->
-  <!--[if lt IE 9]>
+  <!--[if lt IE 10]>
     <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <script src="http://ie7-js.googlecode.com/svn/version/2.1(beta4)/IE9.js"></script>
-    <script src="<?php echo get_template_directory_uri() ?>/assets/js/lte-ie7.js"></script>
-  <![endif]-->
+	<script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+	<script src="<?php echo get_template_directory_uri() ?>/assets/vendor/js/lte-ie7.js"></script>
+	<link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri() ?>/assets/css/app.ie.css">
+<![endif]-->
 <body <?php body_class($ancestorslug); ?> onLoad="viewport()">
 	<header>
 		<div id="mobile-nav">

@@ -9544,4 +9544,13 @@ body.research .orbit-wrapper {
     display: none !important; }
   #quicklinks li.has-flyout {
     width: 100%; } }
+
+/*IE9 Queries*/
+@media (min-width: 1023px) {
+  #mobile-nav {
+    display: none !important; } }
+
+@media (max-width: 1023px) {
+  #desktop-nav {
+    display: none; } }
 /*# sourceMappingURL=app.css.map */

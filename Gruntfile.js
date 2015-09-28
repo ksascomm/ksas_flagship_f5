@@ -22,7 +22,8 @@ module.exports = function(grunt) {
           sourceMap: true,
         },
         files: {
-          'assets/css/app.min.css': 'assets/scss/app.scss'
+          'assets/css/app.min.css': 'assets/scss/app.scss',
+          'assets/css/app.ie.css': 'assets/scss/app.scss'
         }
       }
     },
