@@ -135,7 +135,7 @@ div.field {
       background: #2c2c33;
       height: 40px;
       width: 45px;
-      font-family: $flagship_icon;
+      font-family: $flagship-icon;
       border-top-left-radius: 7px;
       border-bottom-left-radius: 7px;
       font-size: 26px;
@@ -172,7 +172,7 @@ div.field {
 /******* LANDING PAGES ******/
 
 #field_image {
-  font-family: 'gentona-book', Arial, sans-serif;
+  font-family: $font-subhead-book;
   font-weight: 400;
   font-style: normal;
   p {
@@ -244,7 +244,7 @@ ul.nav {
 }
 
 .sidebar_bg ul.nav li a {
-  font-family: 'gentona-book', Arial, sans-serif;
+  font-family: $font-subhead-book;
   font-weight: 400;
   font-style: normal;
   color: $blue;
@@ -297,4 +297,57 @@ ul.nav:last-child {
     padding-left: 0px;
     text-indent: 0px;
   }
+}
+
+.callout-card { 
+  border: 1px solid $black; 
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); 
+  margin: 1rem 0; 
+  overflow: hidden;
+  font-size: .75em;
+  .card-label {
+      border-color: transparent $black transparent transparent;
+      border-color: rgba(255,255,255,0) $black rgba(255,255,255,0) rgba(255,255,255,0);
+    }
+  &.skyblue {
+    border-color: $skyblue; 
+    .card-label {
+      border-color: transparent $skyblue transparent transparent;
+      border-color: rgba(255,255,255,0) $skyblue rgba(255,255,255,0) rgba(255,255,255,0);
+    }
+  }
+  
+  .card-label { 
+    border-style: solid; 
+    border-width: 0 70px 40px 0;  
+    float:right; 
+    height: 0px; 
+    width: 0px;
+    transform:rotate(360deg);
+  }
+  
+  .callout-card-content{
+    padding: 0.5rem 1.5rem 0.875rem;
+  }
+  
+  &.radius {
+    border-radius: 0.6rem;
+  }
+
+  .label-text {
+    color: #fff; 
+    font-size: 0.75rem; 
+    font-weight: bold; 
+    position: relative; 
+    right: -40px; 
+    top: 2px; 
+    white-space: nowrap;
+    transform: rotate(30deg);
+  } 
+}
+.callout-card-content > ul > li {
+  > a {
+    font-size: 1rem;
+  }
+  font-size: .9rem;
 }

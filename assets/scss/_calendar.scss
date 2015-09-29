@@ -35,14 +35,14 @@
     color: #6f2c3f;
     font-size: 20px;
     margin-bottom: 10px;
-    font-family: 'gentona-bold', Arial, sans-serif;
+    font-family: $font-subhead-book;
     font-weight: 700;
   }
   .SECalendarEventTime, .SECalendarEventLocation {
     color: #2c2c33;
     font-size: 10px;
     font-weight: normal;
-    font-family: 'gentona-book', Arial, sans-serif;
+    font-family: $font-subhead-book;
     font-weight: 400;
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -50,13 +50,13 @@
   .SECalendarEventName, .SECalendarNoEvent, .SECalendarEventName a {
     color: #418fde;
     font-size: 14px;
-    font-family: 'gentona-book', Arial, sans-serif;
+    font-family: $font-subhead-book;
     font-weight: 400;
   }
 }
 
 .SECalendarEventName h3 {
-  font-family: 'gentona-bold', Arial, sans-serif;
+  font-family: $font-subhead-book;
   font-weight: 700;
   font-size: 18px;
 }
@@ -71,7 +71,7 @@
 }
 
 #SECalendarListWrapper .SECalendarPropertyLabel {
-  font-family: 'gentona-bold', Arial, sans-serif;
+  font-family: $font-subhead-book;
   font-weight: 700;
   font-style: normal;
   float: left;
@@ -112,7 +112,7 @@ a.rssLink {
 }
 
 #SECalendarNav .SECalendarMonth {
-  font-family: 'gentona-book', Arial, sans-serif;
+  font-family: $font-subhead-book;
   font-weight: 400;
   font-style: normal;
   font-size: 28px;

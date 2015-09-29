@@ -156,7 +156,7 @@ nav ul {
 li.external {
   a::after {
     content: "\e007";
-    font-family: $flagship_icon;
+    font-family: $flagship-icon;
     font-style: normal;
     speak: none;
     font-weight: normal;
@@ -219,7 +219,7 @@ a.meanmenu-reveal {
     font-size: 16px;
     line-height: 22px;
     display: block;
-    font-family: 'gentona-book', Arial, sans-serif;
+    font-family: $font-subhead-book;
     font-weight: 400;
     text-align: left;
     h3 {

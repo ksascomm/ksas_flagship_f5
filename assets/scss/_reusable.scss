@@ -135,7 +135,7 @@ button, .button {
   -webkit-border-radius: 7px;
   -moz-border-radius: 7px;
   border-radius: 7px;
-  font-family: 'gentona-book', Arial, sans-serif;
+  font-family: $font-subhead-book;
   font-weight: 400;
   font-style: normal;
   color: #FFF;
@@ -289,7 +289,7 @@ ul, ol {
   font-size: 1em;
     &:before {
       content: "\25FC";
-      font-family: $flagship_icon;
+      font-family: $flagship-icon;
       padding-right: 3px;
       vertical-align: middle;
     }
@@ -311,7 +311,7 @@ ul, ol {
     color: #2c2c33;
   }
   p, ul {
-    font-family: 'gentona-book', Arial, sans-serif;
+    font-family: $font-subhead-book;
     font-weight: 400;
     font-style: normal;
   }
@@ -354,7 +354,7 @@ blockquote {
   }
   &:before {
     content: "\e011";
-    font-family: $flagship_icon;
+    font-family: $flagship-icon;
     font-style: normal;
     speak: none;
     font-weight: normal;

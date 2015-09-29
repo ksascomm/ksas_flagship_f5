@@ -7700,6 +7700,13 @@ th.hide-for-touch {
   src: url('../fonts/gentona/Gentona-ExtraLight.eot');
   src: url('../fonts/gentona/Gentona-ExtraLight.eot?#iefix') format("embedded-opentype"), url('../fonts/gentona/Gentona-ExtraLight.woff') format("woff"), url('../fonts/gentona/Gentona-ExtraLight.ttf') format("truetype"); }
 
+@font-face {
+  font-family: 'flagship-icon';
+  src: url('../fonts/flagship-icon/flagship-icon-webfont.eot');
+  src: url('../fonts/flagship-icon/flagship-icon-webfont.eot?#iefix') format("embedded-opentype"), url('../fonts/flagship-icon/flagship-icon-webfont.woff2') format("woff2"), url('../fonts/flagship-icon/flagship-icon-webfont.woff') format("woff"), url('../fonts/flagship-icon/flagship-icon-webfont.ttf') format("truetype"), url('../fonts/flagship-icon/flagship-icon-webfont.svg#flagship-iconicon') format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
 a {
   color: #005eb8;
   text-decoration: none;
@@ -7927,7 +7934,7 @@ ul, ol {
     font-size: 1em; }
     .panel li:before {
       content: "\25FC";
-      font-family: flagship-icon;
+      font-family: 'flagship-icon', 'gentona-light', Arial, sans-serif;
       padding-right: 3px;
       vertical-align: middle; }
 
@@ -7978,7 +7985,7 @@ blockquote {
     font-size: 16px; }
   blockquote:before {
     content: "\e011";
-    font-family: flagship-icon;
+    font-family: 'flagship-icon', 'gentona-light', Arial, sans-serif;
     font-style: normal;
     speak: none;
     font-weight: normal;
@@ -8037,16 +8044,6 @@ p.lead, .lead {
 
 #sponsored small {
   margin-left: 7px; }
-
-@font-face {
-  font-family: flagship-icon;
-  src: url(../fonts/flagship-icon.eot); }
-
-@font-face {
-  font-family: flagship-icon;
-  src: url(../fonts/flagship-icon.eot?#iefix) format('embedded-opentype'), url(../fonts/flagship-icon.svg#flagship-icon) format('svg'), url(../fonts/flagship-icon.woff) format('woff'), url(../fonts/flagship-icon.ttf) format('truetype');
-  font-weight: normal;
-  font-style: normal; }
 
 body {
   font-family: 'gentona-light', Arial, sans-serif;
@@ -8220,7 +8217,7 @@ nav ul {
 
 li.external a::after {
   content: "\e007";
-  font-family: flagship-icon;
+  font-family: 'flagship-icon', 'gentona-light', Arial, sans-serif;
   font-style: normal;
   speak: none;
   font-weight: normal;
@@ -8440,7 +8437,7 @@ a.meanmenu-reveal {
     background: #666;
     height: 31px;
     width: 30px;
-    font-family: 'flagship-icon';
+    font-family: 'flagship-icon', 'gentona-light', Arial, sans-serif;
     border-top-left-radius: 7px;
     border-bottom-left-radius: 7px;
     font-size: 16px;
@@ -8596,7 +8593,7 @@ body.home h1, body.home h2, body.home h3, body.home h4 {
     color: #6f2c3f;
     font-size: 20px;
     margin-bottom: 10px;
-    font-family: 'gentona-bold', Arial, sans-serif;
+    font-family: 'gentona-book', Arial, sans-serif;
     font-weight: 700; }
   #SECalendarListWrapper .SECalendarEventTime, #SECalendarListWrapper .SECalendarEventLocation {
     color: #2c2c33;
@@ -8613,7 +8610,7 @@ body.home h1, body.home h2, body.home h3, body.home h4 {
     font-weight: 400; }
 
 .SECalendarEventName h3 {
-  font-family: 'gentona-bold', Arial, sans-serif;
+  font-family: 'gentona-book', Arial, sans-serif;
   font-weight: 700;
   font-size: 18px; }
 
@@ -8625,7 +8622,7 @@ body.home h1, body.home h2, body.home h3, body.home h4 {
     margin-bottom: 8px; }
 
 #SECalendarListWrapper .SECalendarPropertyLabel {
-  font-family: 'gentona-bold', Arial, sans-serif;
+  font-family: 'gentona-book', Arial, sans-serif;
   font-weight: 700;
   font-style: normal;
   float: left;
@@ -8690,8 +8687,11 @@ a.rssLink {
   width: 14.28%;
   height: 138px; }
 
+.iconfont {
+  font-family: 'flagship-icon', 'gentona-light', Arial, sans-serif; }
+
 .icon-calendar, .icon-printer, .icon-home, .icon-search, .icon-user, .icon-new-tab, .icon-new-tab2, .icon-facebook, .icon-vimeo, .icon-mail, .icon-share, .icon-download, .icon-file-pdf, .icon-file-word, .icon-file-excel, .icon-file-zip, .icon-play, .icon-mobile, .icon-phone, .icon-youtube, .icon-arrow-right-2, .icon-comments, .icon-camera, .icon-video, .icon-newspaper, .icon-calendar-2, .icon-globe, .icon-location, .icon-arrow-right {
-  font-family: flagship-icon;
+  font-family: 'flagship-icon', 'gentona-light', Arial, sans-serif;
   speak: none;
   font-style: normal;
   font-weight: normal;
@@ -9003,7 +9003,7 @@ div.field {
   background: #2c2c33;
   height: 40px;
   width: 45px;
-  font-family: flagship-icon;
+  font-family: 'flagship-icon', 'gentona-light', Arial, sans-serif;
   border-top-left-radius: 7px;
   border-bottom-left-radius: 7px;
   font-size: 26px;
@@ -9121,6 +9121,50 @@ ul.nav:last-child {
   padding-left: 0px;
   text-indent: 0px; }
 
+.callout-card {
+  border: 1px solid #2C2C33;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  margin: 1rem 0;
+  overflow: hidden;
+  font-size: .75em; }
+  .callout-card .card-label {
+    border-color: transparent #2C2C33 transparent transparent;
+    border-color: rgba(255, 255, 255, 0) #2C2C33 rgba(255, 255, 255, 0) rgba(255, 255, 255, 0); }
+  .callout-card.skyblue {
+    border-color: #418fde; }
+    .callout-card.skyblue .card-label {
+      border-color: transparent #418fde transparent transparent;
+      border-color: rgba(255, 255, 255, 0) #418fde rgba(255, 255, 255, 0) rgba(255, 255, 255, 0); }
+  .callout-card .card-label {
+    border-style: solid;
+    border-width: 0 70px 40px 0;
+    float: right;
+    height: 0px;
+    width: 0px;
+    -webkit-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+            transform: rotate(360deg); }
+  .callout-card .callout-card-content {
+    padding: 0.5rem 1.5rem 0.875rem; }
+  .callout-card.radius {
+    border-radius: 0.6rem; }
+  .callout-card .label-text {
+    color: #fff;
+    font-size: 0.75rem;
+    font-weight: bold;
+    position: relative;
+    right: -40px;
+    top: 2px;
+    white-space: nowrap;
+    -webkit-transform: rotate(30deg);
+        -ms-transform: rotate(30deg);
+            transform: rotate(30deg); }
+
+.callout-card-content > ul > li {
+  font-size: .9rem; }
+  .callout-card-content > ul > li > a {
+    font-size: 1rem; }
+
 body.home .reveal-modal {
   background: black;
   background: rgba(0, 0, 0, 0.75);
@@ -9162,7 +9206,7 @@ body.home .reveal-modal {
     background: #2c2c33;
     height: 35px;
     width: 38px;
-    font-family: flagship-icon;
+    font-family: 'flagship-icon', 'gentona-light', Arial, sans-serif;
     border-top-left-radius: 7px;
     border-bottom-left-radius: 7px;
     font-size: 16px;
