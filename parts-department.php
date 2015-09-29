@@ -41,11 +41,18 @@
 				</p> <!-- End Contact info line -->
 				
 				<?php if ( get_post_meta($post->ID, 'ecpt_title', true) || get_post_meta($post->ID, 'ecpt_content', true) ) : ?>
-					<div class="panel radius10 small-12 medium-6 columns floatleft" itemprop="owns">
-						<?php if ( get_post_meta($post->ID, 'ecpt_title', true) ) : ?>
-							<h5 class="white"><?php echo get_post_meta($post->ID, 'ecpt_title', true);?></h5>  
-						<?php endif; ?>
-						<?php if ( get_post_meta($post->ID, 'ecpt_content', true) ) :  echo get_post_meta($post->ID, 'ecpt_content', true);  endif; ?>
+					<div class="small-12 medium-6 columns floatleft" itemprop="owns">
+				        <div class="callout-card skyblue radius">
+							<?php if ( get_post_meta($post->ID, 'ecpt_title', true) ) : ?>
+								 <div class="card-label">
+						            <div class="label-text">&nbsp;</div>
+						         </div>
+							<?php endif; ?>
+							 <div class="callout-card-content">
+							 	<h5 class="black"><?php echo get_post_meta($post->ID, 'ecpt_title', true);?></h5>  
+									<?php if ( get_post_meta($post->ID, 'ecpt_content', true) ) :  echo get_post_meta($post->ID, 'ecpt_content', true);  endif; ?>
+							</div>
+						</div>
 					</div>
 				<?php endif; ?>
 				
