@@ -110,20 +110,29 @@
 			<div class="row">
 			<!-- ************CALENDAR SECTION************* -->
 				<div class="small-12 medium-6 columns" id="calendar_section">
-					<div class="banner blue_bg offset-gutter"><h3><a class="dark_blue_bg" href="/news-events/archive/student-voices/">Student Voices</a></h3></div>
+					<div class="banner blue_bg offset-gutter">
+						<h3>
+							<a class="dark_blue_bg" href="/news-events/events">Today's Events</a>
+						</h3>
+					</div>
+					<div class="button bright_blue_bg">
+						<a href="/news-events/events">View Full Calendar</a>
+					</div>
+					<div id="calendar_container"></div>
+						<!-- Uncomment when ready for filter calendars
+							<h6>View full calendars</h6>
+							<div class="button yellow_bg small"><a href="/news/events/cal_humanities">Humanities</a></div>
+							<div class="button orange_bg"><a href="/news/events/cal_sciences">Sciences</a></div>
+							<div class="button bright_blue_bg"><a href="/news/events/cal_interdisciplinary">Interdisciplinary</a></div>
+						-->
+					<div class="banner blue_bg offset-gutter">
+						<h3>
+							<a class="dark_blue_bg" href="/news-events/archive/student-voices/">Student Voices</a>
+						</h3>
+					</div>
 						<?php // Get RSS Feed(s)
 						include_once(ABSPATH . WPINC . '/feed.php'); 
-						locate_template('parts-student-feeds.php', true, false); ?>
-
-					<div class="banner blue_bg offset-gutter"><h3><a class="dark_blue_bg" href="/news-events/events">Today's Events</a></h3></div>
-					<div class="button bright_blue_bg"><a href="/news-events/events">View Full Calendar</a></div>
-					<div id="calendar_container" style="height: 450px!important"></div>
-					<!-- Uncomment when ready for filter calendars
-						<h6>View full calendars</h6>
-						<div class="button yellow_bg small"><a href="/news/events/cal_humanities">Humanities</a></div>
-						<div class="button orange_bg"><a href="/news/events/cal_sciences">Sciences</a></div>
-						<div class="button bright_blue_bg"><a href="/news/events/cal_interdisciplinary">Interdisciplinary</a></div>
-					-->
+						locate_template('parts-student-feeds.php', true, false); ?>	
 				</div>
 			<!-- ************END CALENDAR SECTION************* -->	
 			
@@ -156,39 +165,6 @@
 		</div>	
 	
 	</div>
-	
-	<!-- ************MAGAZINE SECTION************* -->
-	<div class="row">
-		<div class="small-12 columns" id="magazine_section">
-			<div class="banner blue_bg offset-gutter"><h3><a class="dark_blue_bg" href="http://krieger.jhu.edu/magazine/category/exclusive">Web Exclusives from Arts &amp; Sciences Magazine</a></h3></div>
-				<?php // Get RSS Feed(s)
-					// Get a SimplePie feed object from the specified feed source.
-						$rss = fetch_feed('http://krieger.jhu.edu/magazine/exclusives-feed?2');
-					if (!is_wp_error( $rss ) ) : // Checks that the object is created correctly 
-					    // Figure out how many total items there are, but limit it to 3. 
-					    $maxitems = $rss->get_item_quantity(3); 
-					
-					    // Build an array of all the items, starting with element 0 (first element).
-					    $rss_items = $rss->get_items(0, $maxitems); 
-									
-					endif; ?>
-					
-					    <?php foreach ( $rss_items as $item ) : 
-						    $thumb = $item->get_enclosure();
-						    $thumb_address = $thumb->get_link();
-					    ?>
-					    <article class="small-12 large-4 columns">
-					        <a href="<?php echo esc_url( $item->get_permalink() ); ?>">
-					        	<img src="<?php echo $thumb_address; ?>" />
-					        	<h4><?php echo esc_html( $item->get_title() ); ?></h4>
-					        	<?php echo $item->get_description(); ?>
-					        </a>
-					    </article>
-					    <?php endforeach; ?>
-					
-		</div>
-	</div>
-	<!-- ************END MAGAZINE SECTION************* -->
 </div>
 </div> <!-- End wrapper -->
 
