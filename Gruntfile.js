@@ -99,11 +99,7 @@ module.exports = function(grunt) {
       sass: {
         files: 'assets/scss/**/*.scss',
         tasks: ['sass', 'postcss', 'imagemin'],
-      },
-      //livereload: {
-       //  options: { livereload: true },
-        //  files: ['assets/scss/**/*.scss', 'assets/js/*.js', '**/*.php', 'assets/images/**/*.{png,jpg,jpeg,gif,webp,svg}']
-     // }
+      }
     }
   });
 
