@@ -45,20 +45,29 @@ body.news-events .wp-post-image {
 }
 
 #photo_section {
-  background: #252b32;
   h4 {
     padding: 0px 10px;
-    font-size: 30px;
-    color: #FFF;
+    font-size: 1.75rem;
+    color: $black;
     margin-right: 25px;
     vertical-align: bottom;
     display: inline-block;
   }
   p {
     padding: 0px 10px;
-    color: #FFF;
+    color: $black;
     font-size: 18px;
     line-height: 1.3;
+  }
+  img {
+    display: inline-block;
+    vertical-align: middle;
+    width: auto;
+    height: auto;
+    margin: 0 0 5px 0;
+    padding: 0;
+    min-width: 667px;
+    border-top-right-radius: 10px;
   }
 }
 
