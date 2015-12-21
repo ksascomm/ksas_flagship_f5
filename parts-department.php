@@ -4,7 +4,7 @@
 </style>
 <div class="row radius10 hide-for-small" id="field_image">
 	<div class="small-4 small-offset-8 columns black_bg  radius-topright">
-		<?php if ( get_post_meta($post->ID, 'ecpt_headline', true) ) : ?><h3 class="sky_blue"><?php echo get_post_meta($post->ID, 'ecpt_headline', true) ?></h3><?php endif;?>
+		<?php if ( get_post_meta($post->ID, 'ecpt_headline', true) ) : ?><h3 class="white"><?php echo get_post_meta($post->ID, 'ecpt_headline', true) ?></h3><?php endif;?>
 		<?php if ( get_post_meta($post->ID, 'ecpt_subhead', true) ) : ?><p class="white"><?php echo get_post_meta($post->ID, 'ecpt_subhead', true) ?></p><?php endif;?>
 	</div>
 </div>
@@ -40,22 +40,6 @@
 					<?php endif; ?>
 				</p> <!-- End Contact info line -->
 				
-				<?php if ( get_post_meta($post->ID, 'ecpt_title', true) || get_post_meta($post->ID, 'ecpt_content', true) ) : ?>
-					<div class="small-12 medium-6 columns floatleft" itemprop="owns">
-				        <div class="callout-card skyblue radius">
-							<?php if ( get_post_meta($post->ID, 'ecpt_title', true) ) : ?>
-								 <div class="card-label">
-						            <div class="label-text">&nbsp;</div>
-						         </div>
-							<?php endif; ?>
-							 <div class="callout-card-content">
-							 	<h5 class="black"><?php echo get_post_meta($post->ID, 'ecpt_title', true);?></h5>  
-									<?php if ( get_post_meta($post->ID, 'ecpt_content', true) ) :  echo get_post_meta($post->ID, 'ecpt_content', true);  endif; ?>
-							</div>
-						</div>
-					</div>
-				<?php endif; ?>
-				
 				<span itemprop="description"><?php if ( get_post_meta($post->ID, 'ecpt_section1', true) ) :  echo get_post_meta($post->ID, 'ecpt_section1', true);  endif; ?></span>
 				
 				<?php if ( get_post_meta($post->ID, 'ecpt_section2heading', true) ) : ?><h3><?php echo get_post_meta($post->ID, 'ecpt_section2heading', true) ?></h3><?php else : ?>
@@ -73,39 +57,17 @@
 		</section>
 	</div>	<!-- End main content (left) section -->
 	
-	<div class="small-12 medium-4 columns"> <!-- Begin Sidebar -->
-	<!--Begin Jump to department -->
-		<div class="row jumpmenu">
-			<form name="jump" class="small-10 columns no-gutter">
-				<h6>Jump to department</h6>
-				<select onchange="window.open(this.options[this.selectedIndex].value,'_top')">
-					<option>--<?php the_title(); ?></option>
-					<?php if ( false === ( $jump_menu_query = get_transient( 'jump_menu_query' ) ) ) {
-						// It wasn't there, so regenerate the data and save the transient
-						$jump_menu_query = new WP_Query(array(
-								'post_type' => 'studyfields',
-								'orderby' => 'title',
-								'order' => 'ASC',
-								'posts_per_page' => '-1',
-								'meta_query' => array(
-									array(
-									    'key' => 'ecpt_structure',
-									    'value' => 'department',
-									    'compare' => 'IN'
-									))
-							));
-							set_transient( 'jump_menu_query', $jump_menu_query, 2592000 ); } ?>
-					<?php while ($jump_menu_query->have_posts()) : $jump_menu_query->the_post(); ?>				
-						<option value="<?php the_permalink() ?>"><?php the_title(); ?></option>
-					<?php endwhile; ?>
-				</select>
-			</form>
-		</div><!--End jump-menu -->
+	<div class="small-12 medium-4 columns" id="sidebar"> <!-- Begin Sidebar -->
+			<a href="/admissions" class="button expand blue_bg cta">Apply Now!</a>
 		
 		<!--Begin Department Navigation Links -->
+			<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+		<div class="blue_bg offset-gutter" id="sidebar_header">
+				<h5>Explore <?php the_title();?></h5>
+		</div>	
 		<div class="row">
 			<ul class="nav">
-			<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+		
 				<?php if ( get_post_meta($post->ID, 'ecpt_homepage', true) ) : ?>
 					<li><span class="icon-arrow-right-2"></span><a href="http://<?php echo get_post_meta($post->ID, 'ecpt_homepage', true); ?>" onclick="ga('send','event','Outgoing Links','<?php echo get_post_meta($post->ID, 'ecpt_homepage', true); ?>')">Department Website</a></li>
 				<?php endif; ?>
@@ -134,6 +96,47 @@
 			</ul>
 		</div> <!--End Dept Nav Links -->
 		
+		<div class="blue_bg offset-gutter" id="sidebar_header">
+			<h5><?php echo get_post_meta($post->ID, 'ecpt_title', true);?></h5>
+		</div>	
+		<div class="row">
+			<div class="small-12 columns">
+				<?php if ( get_post_meta($post->ID, 'ecpt_content', true) ) :  echo get_post_meta($post->ID, 'ecpt_content', true);  endif; ?>
+			</div>		
+		</div>
+	
+		<div class="blue_bg offset-gutter" id="sidebar_header">
+			<h5>Explore Other Departments</h5>
+		</div>	
+
+		<div class="row jumpmenu">
+			<form name="jump" class="small-10 columns no-gutter">
+				<select onchange="window.open(this.options[this.selectedIndex].value,'_top')">
+					<option>--<?php the_title(); ?></option>
+					<?php if ( false === ( $jump_menu_query = get_transient( 'jump_menu_query' ) ) ) {
+						// It wasn't there, so regenerate the data and save the transient
+						$jump_menu_query = new WP_Query(array(
+								'post_type' => 'studyfields',
+								'orderby' => 'title',
+								'order' => 'ASC',
+								'posts_per_page' => '-1',
+								'meta_query' => array(
+									array(
+									    'key' => 'ecpt_structure',
+									    'value' => 'department',
+									    'compare' => 'IN'
+									))
+							));
+							set_transient( 'jump_menu_query', $jump_menu_query, 2592000 ); } ?>
+					<?php while ($jump_menu_query->have_posts()) : $jump_menu_query->the_post(); ?>				
+						<option value="<?php the_permalink() ?>"><?php the_title(); ?></option>
+					<?php endwhile; ?>
+				</select>
+			</form>
+		</div><!--End jump-menu -->
+
+			<a href="/academics/fields" class="button blue_bg cta">Explore All Our Fields of Study</a>
+
 		<?php
 			//Query department extras for that slug
 			$dept_extra_query = new WP_Query(array(
@@ -152,8 +155,10 @@
 				if ( $format == 'quote' ) : locate_template('parts-extras-quote.php', true, false); endif;
 				if ( $format == 'standard' ) : locate_template('parts-extras-news.php', true, false); endif;
 		?>
-<?php endwhile; else : ?>
-		</div> 
+		<?php endwhile; else : ?>
+			<!--Begin Jump to department -->
+		
+
 	</div> <!-- End Sidebar -->
 </div> <!-- End #landing -->
 <?php endif; ?>
