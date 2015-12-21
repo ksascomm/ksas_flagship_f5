@@ -14,7 +14,21 @@
       margin: 0;
     }
   }
+  &.blue_bg {
+    padding: 5px 15px;
+    margin-bottom: 20px;
+    h5 {
+      margin: 0;
+    }
+  }
 }
+
+a.button.cta {
+  font-size:18px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
 
 aside .photo-page-right {
   margin-top: 0;

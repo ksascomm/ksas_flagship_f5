@@ -13,9 +13,9 @@ a {
 }
 
 .sidebar_bg {
-  background: #cecece;
-  background: linear-gradient(to right, rgba(252,252,252,1) 0%,rgba(255,255,255,1) 67%,rgba(206,206,206,1) 67%,rgba(206,206,206,1) 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fcfcfc', endColorstr='#cecece', GradientType=1 );
+  background: #E5E2E0;
+  background: linear-gradient(to right, rgba(252,252,252,1) 0%,rgba(255,255,255,1) 67%,rgba(229,226,224,1) 67%,rgba(229,226,224,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fcfcfc', endColorstr='#E5E2E0', GradientType=1 );
   margin-bottom: 60px;
   .wrapper {
     margin-top: 0px;
@@ -53,19 +53,26 @@ h5.white{
 }
 
 .black {
-  color: #2c2c33;
+  color: $black;
 }
 
 .sky_blue {
-  color: #68ace5;
+  color: $skyblue;
 }
 
 .blue {
-  color: #418fde;
+  color: $blue;
 }
 
 .blue_bg {
-  background: #418fde;
+  background: $blue;
+    &.button{
+    opacity: 1;
+  }
+  &.button:hover {
+    background: $blue;
+    opacity: .8;
+  }
 }
 
 .dark_blue_bg {
@@ -77,20 +84,20 @@ h5.white{
 }
 
 .rust_bg {
-  background: #6f2c3f;
+  background: $rust;
 }
 
 .green_bg, #department {
-  background: #007a53;
+  background: $green;
   &.button:hover {
-    background: #007a53;
+    background: $green;
   }
 }
 
 .purple_bg, #interdisciplinary {
-  background: #24135f;
+  background: $purple;
   &.button:hover {
-    background: #24135f;
+    background: $purple;
   }
 }
 
@@ -102,9 +109,9 @@ h5.white{
 }
 
 .yellow_bg, #humanities {
-  background: #dbb003;
+  background: $yellow;
   &.button:hover {
-    background: #dbb003;
+    background: $yellow;
   }
 }
 
@@ -120,14 +127,14 @@ h5.white{
 }
 
 .bright_blue_bg {
-  background: #418fde;
+  background: $skyblue;
   &.button:hover {
-    background: #418fde;
+    background: $skyblue;
   }
 }
 
 #social {
-  background: #418fde;
+  background: $skyblue;
 }
 
 button, .button {

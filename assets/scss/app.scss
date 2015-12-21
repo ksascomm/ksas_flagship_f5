@@ -37,6 +37,16 @@
 }
 
 @font-face {
+  font-family: 'gentona-bold';
+  src: url('../fonts/gentona/Gentona-Bold.eot');
+  src: url('../fonts/gentona/Gentona-Bold.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/gentona/Gentona-Bold.woff') format('woff'),
+       url('../fonts/gentona/Gentona-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
   font-family: 'flagship-icon';
   src: url('../fonts/flagship-icon/flagship-icon-webfont.eot');
   src: url('../fonts/flagship-icon/flagship-icon-webfont.eot?#iefix') format("embedded-opentype"), url('../fonts/flagship-icon/flagship-icon-webfont.woff2') format("woff2"), url('../fonts/flagship-icon/flagship-icon-webfont.woff') format("woff"), url('../fonts/flagship-icon/flagship-icon-webfont.ttf') format("truetype"), url('../fonts/flagship-icon/flagship-icon-webfont.svg#flagship-iconicon') format("svg");

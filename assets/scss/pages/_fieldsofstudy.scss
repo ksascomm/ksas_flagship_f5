@@ -1,19 +1,32 @@
 a.field {
-  color: #FFF;
-  p {
-    color: #FFF;
-  }
+  color: #fff;
 }
 
-div.field {
+.field {
   min-height: 355px;
   margin-bottom: 30px;
   max-width: 305px;
   min-width: 240px;
+  p {
+    color: #FFF;
+    font-size: .9rem;
+    line-height: 1.3;
+    font-family: $font-subhead-book;
+  }
+  h3 {
+    font-family: 'gentona-bold';
+    font-size: 1.4rem;
+  }
 }
 
 .field .floatright {
   margin-left: 0;
+}
+
+.field p.contact {
+  font-size: 13px;
+  margin-bottom: 10px;
+  color: #fff;
 }
 
 #interdisciplinary {
@@ -188,13 +201,9 @@ div.field {
   }
 }
 
-.field h3 {
-  font-size: 24px;
-}
-
 #landing {
-  h2, h3, a {
-    color: $skyblue;
+  h2, h3 {
+    color: $blue;
   }
 }
 
@@ -221,11 +230,6 @@ p.contact {
     color: $skyblue;
     margin-right: 0px;
   }
-}
-
-.field p.contact {
-  font-size: 13px;
-  margin-bottom: 10px;
 }
 
 ul.nav {
@@ -259,7 +263,7 @@ ul.nav:last-child {
     margin: 0 0 30px 30px;
   }
   select {
-    background-color: $skyblue;
+    background-color: $blue;
     border: #666;
     color: #FFF;
     font-size: inherit;
@@ -301,7 +305,6 @@ ul.nav:last-child {
 
 .callout-card { 
   border: 1px solid $black; 
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); 
   margin: 1rem 0; 
   overflow: hidden;
   font-size: .75em;
