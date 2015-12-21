@@ -101,7 +101,7 @@ Template Name: Fields of Study
 					</div>
 				</div>
 				
-					<img align="center" src="<?php echo get_post_meta($post->ID, 'ecpt_indeximage', true); ?>" />
+					<img src="<?php echo get_post_meta($post->ID, 'ecpt_indeximage', true); ?>" alt="<?php the_title(); ?>"/>
 					<h3><?php the_title(); ?></h3>
 					<div class="row">
 						<div class="small-12 columns">
@@ -111,13 +111,13 @@ Template Name: Fields of Study
 							</p>
 							<p>
 								<?php if (get_post_meta($post->ID, 'ecpt_majors', true)) : ?>
-									<b>Majors:</b>&nbsp;<?php echo get_post_meta($post->ID, 'ecpt_majors', true); ?><br>
+									<strong>Majors:</strong>&nbsp;<?php echo get_post_meta($post->ID, 'ecpt_majors', true); ?><br>
 								<?php endif; ?>
 								<?php if (get_post_meta($post->ID, 'ecpt_minors', true)) : ?>
-									<b>Minors:</b>&nbsp;<?php echo get_post_meta($post->ID, 'ecpt_minors', true); ?><br>
+									<strong>Minors:</strong>&nbsp;<?php echo get_post_meta($post->ID, 'ecpt_minors', true); ?><br>
 								<?php endif; ?>
 								<?php if (get_post_meta($post->ID, 'ecpt_degreesoffered', true)) : ?>
-									<b>Degrees Offered:</b>&nbsp;<?php echo get_post_meta($post->ID, 'ecpt_degreesoffered', true); ?>
+									<strong>Degrees Offered:</strong>&nbsp;<?php echo get_post_meta($post->ID, 'ecpt_degreesoffered', true); ?>
 								<?php endif; ?>
 								<?php if (get_post_meta($post->ID, 'ecpt_pcitext', true)) : ?>
 									<?php echo get_post_meta($post->ID, 'ecpt_pcitext', true); ?>
