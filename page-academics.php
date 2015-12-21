@@ -5,6 +5,21 @@
 			<div class="large-6 columns show-for-large-up photo-page-left">
 				<?php the_post_thumbnail('full',array(
 						'class'	=> "radius-topleft")); ?>
+				<div id="links">			
+					<dl class="tabs contained" data-tab style="margin-left: 17px">
+						<dd class="active bright_blue_bg semibold">Academic Resources</dd>
+					</dl>
+				
+					<div class="tabs-content contained">
+					<?php wp_nav_menu( array( 
+							'theme_location' => '',
+							'menu' => 'Academic Resources', 
+							'menu_class' => 'panel', 
+							'container' => 'li',
+							'container_class' => 'active',
+							'depth' => 1 )); ?> 
+					</div>	
+				</div>		
 			</div>
 			
 			<div class="small-12 large-6 columns">
@@ -14,28 +29,26 @@
 <?php endwhile; endif; ?>
 		
 		<div class="row">
-			<div class="small-12 large-4 columns" id="links">
-				<dl class="tabs contained" data-tab style="margin-left: 18px">
-					<dd class="active blue_bg semibold">Academic Resources</dd>
-				</dl>
 			
-				<div class="tabs-content contained">
-				<?php wp_nav_menu( array( 
-						'theme_location' => '',
-						'menu' => 'Academic Resources', 
-						'menu_class' => 'panel', 
-						'container' => 'li',
-						'container_class' => 'active',
-						'depth' => 1 )); ?> 
-				</div>
-			</div>
-			
-			<div class="small-12 large-8 columns tan_bg radius10">
-				<div class="row">
-					<div class="medium-offset-1 columns">
-						<a href="<?php echo site_url('/news/archive/student-voices'); ?>"><h3 class="blue">Student Voices</h3></a>
-						<p><i>Hear what current students have to say about Johns Hopkins and their academic experience</i></p>
+			<div class="small-12 columns hide-for-large-up" id="links">
+					<dl class="tabs contained" data-tab style="margin-left: 17px">
+						<dd class="active bright_blue_bg semibold">Academic Resources</dd>
+					</dl>
+					<div class="tabs-content contained">
+					<?php wp_nav_menu( array( 
+							'theme_location' => '',
+							'menu' => 'Academic Resources', 
+							'menu_class' => 'panel', 
+							'container' => 'li',
+							'container_class' => 'active',
+							'depth' => 1 )); ?> 
 					</div>	
+			</div>
+
+			<div class="small-12 columns tan_bg radius10">
+				<div class="row">
+						<a href="<?php echo site_url('/news/archive/student-voices'); ?>"><h3 class="blue">Student Voices</h3></a>
+						<p><em>Hear what current students have to say about Johns Hopkins and their academic experience</em></p>
 				</div>
 				
 				<div class="row" id="video_scroll">
@@ -44,13 +57,13 @@
 							'post_type' => array('deptextra', 'post'),
 							'category_name' => 'voices',
 							'orderby' => 'rand',
-							'posts_per_page' => '3',
+							'posts_per_page' => '6',
 						));
 	 
 						if ( $student_voice_query->have_posts() ) : while ( $student_voice_query->have_posts() ) : $student_voice_query->the_post(); 
 
 				 ?>
-					<article class="small-12 medium-3 columns rust_bg no-gutter voices">
+					<article class="small-5 medium-3 columns end rust_bg no-gutter voices">
 						<a href="#" data-reveal-id="modal_home_<?php the_id(); ?>_video" onclick="ga('send', 'event', 'Video', 'Play', '<?php the_title(); ?>');">
 							<div class="video_thumb small">
 								<span class="icon-play"></span><?php the_post_thumbnail('full'); ?>
