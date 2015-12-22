@@ -23,7 +23,7 @@
 body.news-events {
   h4 {
     font-size: 18px;
-    line-height: 1.1em;
+    line-height: 1.1;
     margin-bottom: 6px;
     color: #000;
     font-family: $font-subhead-book;
@@ -141,4 +141,23 @@ time {
   p, h4 {
     color: #FFF;
   }
+}
+
+article.article {
+    margin-bottom: 1.1rem;
+    a {
+       font-size: 1.1rem;
+       line-height: 1.1;
+    }
+}
+
+span.article-title {
+    margin-bottom: 2px;
+    font-size: 18px;
+    display: block;
+    font-weight: bold;
+    line-height: 1.45;
+    color: $black;
+    font-family: 'gentona-book',Arial,sans-serif;
+    font-weight: 300;
 }

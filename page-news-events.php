@@ -47,11 +47,13 @@
 								<article>
 									<img src="<?php echo $hub_article['_embedded']['image_thumbnail'][0]['sizes']['impact_small']; ?>" />
 									<h4><?php echo $hub_article['headline']; ?></h4>
-									<p><?php echo $hub_article['subheadline']; 
-											 if (empty($hub_article['subheadline'])) { 
-												 echo $hub_article['excerpt'];
-											} ?>
-									</p>
+									<summary>
+										<p><?php echo $hub_article['subheadline']; 
+												 if (empty($hub_article['subheadline'])) { 
+													 echo $hub_article['excerpt'];
+												} ?>
+										</p>
+									</summary>
 								</article>	
 							</a>
 						<?php } ?>					
@@ -168,7 +170,7 @@
 						<?php // Get RSS Feed(s)
 						//include_once(ABSPATH . WPINC . '/rss.php'); 
 						//locate_template('parts-fields-feeds.php', true, false);
-						 echo do_shortcode('[globalrecentposts number="5" ]');
+						 echo do_shortcode('[globalrecentposts number="4" content_characters="100" show_blog="true"]');
 						 ?>	
 				</div>		 
 					<!-- ************END DEPT NEWS ROLL************ -->
