@@ -142,8 +142,6 @@ h5.white{
 
 button, .button {
   border: none;
-  -webkit-border-radius: 7px;
-  -moz-border-radius: 7px;
   border-radius: 7px;
   font-family: $font-subhead-book;
   font-weight: 400;
@@ -166,7 +164,7 @@ button, .button {
     opacity: 1;
   }
   a {
-    color: #fff;
+    color: #fff !important;
     &:hover, &:visited {
       color: #fff;
     }

@@ -17,8 +17,12 @@ body.home .reveal-modal {
   .inline-list{
     > li {
     margin-left: .9em;
+    &:first-child {
+      margin-left: 45px;
+    }
       &.cta {
         font-size: 1rem;
+        margin-left: 2rem;
       }
     }
   }
@@ -43,6 +47,7 @@ body.home .reveal-modal {
       float: left;
       width: 88%;
       border: none;
+      color: #fff;
     }
     &[type="submit"] {
       background: #2c2c33;
@@ -118,4 +123,16 @@ body.home .reveal-modal {
 .video_thumb.full .icon-play:before {
   top: 35%;
   left: 38%;
+}
+
+#handheld {
+  h1, h2, h3, h4, p {
+    color: $black !important;
+  }
+  h1 {
+    font-size: 1.5rem;
+  }
+  h2 {
+    font-size: 1.25rem;
+  }
 }
