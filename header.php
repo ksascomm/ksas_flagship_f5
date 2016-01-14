@@ -61,8 +61,10 @@ if( is_page() ) {
 					<div class="row">
 						<div class="small-6 columns">
 							<form method="GET" action="<?php echo site_url('/search'); ?>" role="search">
-								<input type="submit" class="icon-search" value="&#xe004;" />
-								<label class="hide" for="search">Search</label><input type="text" name="q" id="search" placeholder="Search this site" />
+								<label for="search">
+									<input type="submit" name="search" class="icon-search" value="&#xe004;" />
+								</label>
+									<input type="text" name="q" id="search" placeholder="Search this site" />
 							</form>
 						</div>
 						<div class="small-6 columns links inline">
