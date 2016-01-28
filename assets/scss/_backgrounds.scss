@@ -2,7 +2,7 @@
   padding: 0;
 }
 
-#sidebar_header {
+.sidebar_header {
   padding: 15px 15px;
   h5 {
     color: #FFF;
@@ -34,7 +34,7 @@ aside .photo-page-right {
   margin-top: 0;
 }
 
-body.home, #sidebar_header a:hover {
+body.home, .sidebar_header a:hover {
   color: #FFF;
 }
 

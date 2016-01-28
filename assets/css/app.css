@@ -8789,19 +8789,19 @@ footer {
 .no-gutter {
   padding: 0; }
 
-#sidebar_header {
+.sidebar_header {
   padding: 15px 15px; }
-  #sidebar_header h5 {
+  .sidebar_header h5 {
     color: #FFF; }
-  #sidebar_header.rust_bg {
+  .sidebar_header.rust_bg {
     padding: 5px 15px;
     margin-bottom: 20px; }
-    #sidebar_header.rust_bg h5 {
+    .sidebar_header.rust_bg h5 {
       margin: 0; }
-  #sidebar_header.blue_bg {
+  .sidebar_header.blue_bg {
     padding: 5px 15px;
     margin-bottom: 20px; }
-    #sidebar_header.blue_bg h5 {
+    .sidebar_header.blue_bg h5 {
       margin: 0; }
 
 a.button.cta {
@@ -8812,7 +8812,7 @@ a.button.cta {
 aside .photo-page-right {
   margin-top: 0; }
 
-body.home, #sidebar_header a:hover {
+body.home, .sidebar_header a:hover {
   color: #FFF; }
 
 body.academics, body.single-studyfields {

@@ -51,7 +51,7 @@
 		
 		<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 			
-			<div class="blue_bg offset-gutter" id="sidebar_header">
+			<div class="blue_bg offset-gutter sidebar_header">
 					<h5>Explore <?php the_title();?></h5>
 			</div>	
 
@@ -67,7 +67,7 @@
 
 		<?php if ( get_post_meta($post->ID, 'ecpt_title', true) && get_post_meta($post->ID, 'ecpt_content', true) ) : ?>
 			<?php if ( get_post_meta($post->ID, 'ecpt_title', true) ) : ?>
-				<div class="blue_bg offset-gutter" id="sidebar_header">
+				<div class="blue_bg offset-gutter sidebar_header">
 					<h5><?php echo get_post_meta($post->ID, 'ecpt_title', true);?></h5>
 				</div>	
 			<?php endif; ?>
@@ -81,7 +81,7 @@
 		<?php endif; ?>		
 		<!--Begin Jump to department -->
 
-		<div class="blue_bg offset-gutter" id="sidebar_header">
+		<div class="blue_bg offset-gutter sidebar_header">
 			<h5>Other Undergraduate &  Full-Time Graduate Programs</h5>
 		</div>	
 
