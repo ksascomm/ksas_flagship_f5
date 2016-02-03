@@ -23,7 +23,7 @@ Template Name: Student Voices
 					set_transient( 'flagship_student_voices_query_archive_' . $paged, $flagship_student_voices_query_archive, 2592000 );
 			} 	?>
 
-<section class="row wrapper radius10">
+<main class="row wrapper radius10" role="main">
 	<div class="small-12 columns">
 		<div class="row">
 			<div class="small-12 columns" id="archive">
@@ -48,7 +48,7 @@ Template Name: Student Voices
 			<?php flagship_pagination($flagship_student_voices_query_archive->max_num_pages); ?>		
 		</div>
 	</div>
-</section>
+</main>
 
 <!-- VIDEO MODALS -->
 <?php if ( $flagship_student_voices_query_archive->have_posts() ) : while ( $flagship_student_voices_query_archive->have_posts() ) : $flagship_student_voices_query_archive->the_post(); ?>

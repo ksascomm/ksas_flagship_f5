@@ -46,10 +46,8 @@ Template Name: Front Page Normal
 				  	<div class="row hide-for-small">	
 					<!-- Search Bar -->
 						<div class="small-12 columns">
-							<label for="home_search">
-								<input type="submit" class="icon-search" value="&#xe004;" />
-						     	<input type="text" name="home_search" placeholder="Search fields of study by major, minor, interests, or name" />
-						     </label>
+							<input type="submit" aria-label="Submit" class="icon-search" value="&#xe004;" />
+					     	<input type="text" id="home_search" aria-label="Search Fields of Study" placeholder="Search fields of study by major, minor, interests, or name" />
 						</div>
 					</div>	
 					<div class="row" id="filters">

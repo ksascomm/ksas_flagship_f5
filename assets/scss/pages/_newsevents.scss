@@ -7,6 +7,10 @@
   a {
     color: #FFF;
     padding: 8px;
+    &:hover {
+      color: #fff;
+      border-bottom: none;
+    }
     &::after {
       content: "";
       width: 0;

@@ -6,7 +6,7 @@ Template Name: Quicklinks Listing
 <?php get_header(); ?>
 
 <div class="row wrapper radius10">
-	<section class="small-12 columns no-gutter" role="main-content">
+	<main class="small-12 columns no-gutter" role="main-content">
 		<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 			<?php if ( has_post_thumbnail()) { ?> 
 			<div class="photo-page-left floatleft small-6 columns">
@@ -14,14 +14,14 @@ Template Name: Quicklinks Listing
 			</div>
 			<?php } ?>
 
-			<h2><?php the_title();?></h2>
+			<h1><?php the_title();?></h1>
 			<p><?php the_content(); ?></p>
 		<?php endwhile; endif; ?>
 			  		<?php wp_nav_menu( array( 
 				'theme_location' => 'quick_links', 
 				'fallback_cb' => 'foundation_page_menu', 
 				) ); ?>
-	</section>
+	</main>
 </div>
 
 <?php get_footer(); ?>

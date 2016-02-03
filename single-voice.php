@@ -4,7 +4,7 @@
 	<div class="small-12 columns">
 		<section>
 		<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-			<h2 class="blue"><?php the_title();?></h2>
+			<h1><?php the_title();?></h1>
 			<div class="row">
 				<div class="small-12 medium-6 columns end">
 					<?php the_excerpt() ?>

@@ -5,7 +5,7 @@
 		<section role="main">
 				<h5 class="uppercase no-margin">Dean's Newsletter <time class="floatright"><?php echo get_post_meta($post->ID, 'date_newsletter', true); ?></time></h4>
 				<p><b>A newsletter from James B. Knapp Dean Beverly Wendland</b></p>
-				<h2><?php the_title();?></h2>
+				<h1><?php the_title();?></h1>
 				<?php the_content(); ?>
 		</section>
 	</div>	<!-- End main content (left) section -->

@@ -11,7 +11,7 @@ $flagship_news_archive_query = new WP_Query(array(
        		)); 
 ?>
 
-<section class="row wrapper radius10" role="main">
+<main class="row wrapper radius10" role="main">
 	<div class="small-12 columns">
 		<div class="row">
 			<div class="small-12 columns" id="archive">
@@ -60,7 +60,7 @@ $flagship_news_archive_query = new WP_Query(array(
 			<?php flagship_pagination($flagship_news_archive_query->max_num_pages); ?>		
 		</div>
 	</div>
-</section>
+</main>
 
 <?php while ($flagship_news_archive_query->have_posts()) : $flagship_news_archive_query->the_post(); 
 	$format = get_post_format();  //Determine post format ?>

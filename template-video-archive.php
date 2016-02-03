@@ -22,11 +22,11 @@ Template Name: Video Archive
 					set_transient( 'flagship_video_archive_query_' . $paged, $flagship_video_archive_query, 2592000 );
 			} 	?>
 
-<section class="row wrapper radius10">
+<main class="row wrapper radius10" role="main">
 	<div class="small-12 columns">
 		<div class="row">
 			<div class="small-12 columns" id="archive">
-			<h2>Video Library</h2>
+			<h1>Video Library</h1>
 			<?php locate_template('parts-archive-navigation.php', true, false); ?>
 			<?php while ($flagship_video_archive_query->have_posts()) : $flagship_video_archive_query->the_post(); ?>
 				<article class="medium-4 columns mobile-four">
@@ -47,7 +47,7 @@ Template Name: Video Archive
 			<?php flagship_pagination($flagship_video_archive_query->max_num_pages); ?>		
 		</div>
 	</div>
-</section>
+</main>
 
 <!-- VIDEO MODALS -->
 <?php if ( $flagship_video_archive_query->have_posts() ) : while ( $flagship_video_archive_query->have_posts() ) : $flagship_video_archive_query->the_post(); ?>

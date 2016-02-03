@@ -6,6 +6,20 @@
   margin-top: 40px;
 }
 
+.single-people .tabs {
+  dd a, li a {
+    outline: none;
+    display: block;
+    padding: 0.88889rem 1rem;
+    font-family: $font-stack;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 0.88889rem;
+    border-bottom: none;
+  }
+}
+
+
 #directory {
   list-style: none;
   li:nth-child(odd) {
@@ -30,7 +44,16 @@ li.person {
 }
 
 .tabs {
-    dd.active, li.active {
-      border-top: 3px solid $blue;
-    }
+  dd.active, li.active {
+    border-top: 3px solid $blue;
   }
+}
+.bio {
+ h1 {
+  font-size: 1.4375rem;
+  font-family: $font-subhead-book;
+}
+ h2 {
+  font-size: 1.125rem;
+ }
+}

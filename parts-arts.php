@@ -7,7 +7,7 @@
 <div class="row sidebar_bg radius10" id="landing">
 	<div class="small-12 medium-8 columns wrapper radius-left offset-top-small">		
 		<section class="content">
-				<h2><?php the_title();?></h2>
+				<h1><?php the_title();?></h1>
 				<p class="contact"> <!-- Contact info line -->
 					<?php if ( get_post_meta($post->ID, 'ecpt_phonenumber', true) ) : ?>
 						<span class="icon-mobile"><?php echo get_post_meta($post->ID, 'ecpt_phonenumber', true); ?></span> 

@@ -6,9 +6,9 @@ Template Name: Calendar
 <?php get_header(); ?>
 <div class="row wrapper radius10" id="page" role="main">
 	<div class="small-12 columns">	
-		<section class="content">
+		<main class="content" role="main">
 			<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-				<h2><?php the_title();?></h2>
+				<h1><?php the_title();?></h1>
 				<?php the_content(); ?>
 			<?php endwhile; endif; ?>
 			
@@ -23,7 +23,7 @@ Template Name: Calendar
 						<a href="<?php echo get_site_url() . '/calendar/krieger_all' ; ?>">View our Events Calendar</a>
 					</div>
 				<?php } ?>
-		</section>
+		</main>
 	</div>
 </div> 
 <?php get_footer(); ?>

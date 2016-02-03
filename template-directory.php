@@ -31,7 +31,7 @@ Template Name: Dean's Directory
 	
 		<div class="medium-5 columns copy">
 		<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-			<h2><?php the_title();?></h2>
+			<h1><?php the_title();?></h1>
 			<p><?php the_content(); ?></p>
 		<?php endwhile; endif; ?>
 		</div>
@@ -59,11 +59,13 @@ Template Name: Dean's Directory
 				<li class="person">
 					<div class="row">
 						<div class="small-12 columns">
-						<a href="<?php the_permalink();?>" title="<?php the_title(); ?>" class="field">	
+						
 							<?php if ( has_post_thumbnail()) { ?> 
-								<?php the_post_thumbnail('directory', array('class' => 'padding-five floatleft hide-for-small')); ?>
+								<a href="<?php the_permalink();?>" title="<?php the_title(); ?>"><?php the_post_thumbnail('directory', array('class' => 'padding-five floatleft hide-for-small')); ?></a>
 							<?php } ?>			    
-							<h4 class="no-margin"><?php the_title(); ?></h4>
+							<h4 class="no-margin">
+								<a href="<?php the_permalink();?>" title="<?php the_title(); ?>"><?php the_title(); ?></a>
+							</h4>
 							<?php if ( get_post_meta($post->ID, 'ecpt_position', true) ) : ?>
 								<h5 class="no-margin"><?php echo get_post_meta($post->ID, 'ecpt_position', true); ?></h5>
 							<?php endif; ?>

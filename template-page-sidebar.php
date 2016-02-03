@@ -8,7 +8,7 @@ Template Name: Page with Sidebar
 <div class="row sidebar_bg radius10" id="opp">
 	<div class="small-12 medium-8 columns wrapper radius-left offset-topgutter">		
 		<section class="content">
-				<h2><?php the_title();?></h2>
+				<h1><?php the_title();?></h1>
 					<?php if ( has_post_thumbnail()) { ?> 
 						<div class="photo-page-left floatleft small-12 medium-7 columns">
 							<?php the_post_thumbnail('full',array('class'	=> "radius-topleft")); ?>

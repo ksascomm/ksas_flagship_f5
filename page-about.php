@@ -1,9 +1,9 @@
 <?php get_header(); ?>
 
-<div class="row wrapper radius10" role="main">
+<main class="row wrapper radius10" role="main">
 			<div class="small-12 medium-6 columns">
 		<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-			<h2><?php the_title();?></h2>
+			<h1><?php the_title();?></h1>
 			<p><?php the_content(); ?></p>
 		<?php endwhile; endif; ?>
 			</div>
@@ -29,5 +29,5 @@
 			<?php endwhile; endif; ?>
 				</div> <!-- End slider -->
 		</div>		
-</div> <!-- End Wrapper -->
+</main> <!-- End Wrapper -->
 <?php get_footer(); ?>

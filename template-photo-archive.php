@@ -25,7 +25,7 @@ Template Name: Photo Archive
 <section class="row wrapper radius10">
 		<div class="row">
 			<div class="small-12 columns" id="archive">
-			<h2>This Week on Campus</h2>
+			<h1>This Week on Campus</h1>
 			<?php locate_template('parts-archive-navigation.php', true, false); ?>			
 			<ul class="photo_list" data-clearing>
 			<?php while ($flagship_photo_archive_query->have_posts()) : $flagship_photo_archive_query->the_post(); 

@@ -22,11 +22,11 @@ Template Name: Article Archive
 					set_transient( 'flagship_article_archive_query_' . $paged, $flagship_article_archive_query, 2592000 );
 			} 	?>
 
-<section class="row wrapper radius10">
+<main class="row wrapper radius10" role="main">
 	<div class="small-12 columns">
 		<div class="row">
 			<div class="small-12 columns" id="archive">
-			<h2>News Articles</h2>
+			<h1>News Articles</h1>
 			<?php locate_template('parts-archive-navigation.php', true, false); ?>			
 			<?php while ($flagship_article_archive_query->have_posts()) : $flagship_article_archive_query->the_post(); ?>
 					<article class="medium-4 columns">
@@ -46,6 +46,6 @@ Template Name: Article Archive
 			<?php flagship_pagination($flagship_article_archive_query->max_num_pages); ?>		
 		</div>
 	</div>
-</section>
+</main>
 
 <?php get_footer(); ?>

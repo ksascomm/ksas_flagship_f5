@@ -3,7 +3,7 @@
 	<div class="small-12 columns">
 		<div class="row">
 			<div class="small-12 columns" id="archive">
-			<h2><?php single_cat_title(); ?> Archive</h2>
+			<h1><?php single_cat_title(); ?> Archive</h1>
 			<?php while (have_posts()) : the_post(); ?>
 					<article class="small-12 large-3 columns">
 						<a href="<?php the_permalink(); ?>">

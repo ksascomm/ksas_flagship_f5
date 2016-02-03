@@ -16,12 +16,12 @@ Template Name: Dean's Newsletter
 ?>
 <?php if ( $dean_letter_query->have_posts() ) : while ( $dean_letter_query->have_posts() ) : $dean_letter_query->the_post(); ?>
 	<div class="small-12 medium-8 columns wrapper radius-left offset-topgutter">
-		<section role="main">
+		<main role="main">
 				<h5 class="uppercase no-margin">Dean's Newsletter <time class="floatright"><?php echo get_post_meta($post->ID, 'date_newsletter', true); ?></time></h4>
 				<p><b>A quarterly newsletter from James B. Knapp Dean Beverly Wendland</b></p>
-				<h2><?php the_title();?></h2>
+				<h1><?php the_title();?></h1>
 				<?php the_content(); ?>
-		</section>
+		</main>
 	</div>	<!-- End main content (left) section -->
 <?php endwhile; endif; ?>
 	<?php locate_template('parts-deans-sidebar.php', true, false); ?>

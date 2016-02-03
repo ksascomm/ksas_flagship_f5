@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-<section class="row wrapper radius10">
+<main class="row wrapper radius10" role="main">
 			<div class="large-6 columns show-for-large-up photo-page-left">
 				<?php the_post_thumbnail('full',array(
 						'class'	=> "radius-topleft")); ?>
@@ -23,7 +23,7 @@
 			</div>
 			
 			<div class="small-12 large-6 columns">
-				<h2 class="blue"><?php the_title(); ?></h2>
+				<h1><?php the_title(); ?></h1>
 				<?php the_content(); ?>
 			</div>
 <?php endwhile; endif; ?>
@@ -91,7 +91,7 @@
 				</div>
 			</div>
 		</div>
-</section>
+</main>
 
 
 <!-- ************Modal Video Boxes******************* -->

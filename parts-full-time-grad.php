@@ -1,37 +1,67 @@
+<?php if(!is_mobile()) {  ?>
 <style>
 	#field_image { background: #000 url('<?php echo get_post_meta($post->ID, 'ecpt_image', true); ?>') no-repeat top center; }
 </style>
 <div class="row radius10" id="field_image"></div>
-
+<?php } ?>	
 <div class="row sidebar_bg radius10" id="landing">
 	<div class="small-12 medium-8 columns wrapper radius-left offset-top-small">		
-		<section class="content">
+		<main class="content" role="main">
 			<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-				<h2><?php the_title();?></h2>
-				<p class="contact"> <!-- Contact info line -->
-					<?php if ( get_post_meta($post->ID, 'ecpt_phonenumber', true) ) : ?>
-						<span class="icon-mobile"><?php echo get_post_meta($post->ID, 'ecpt_phonenumber', true); ?></span> 
-					<?php endif; ?>
-					
-					<?php if ( get_post_meta($post->ID, 'ecpt_emailaddress', true) ) : ?>
-						<span class="icon-mail">
-						<a href="mailto:<?php echo get_post_meta($post->ID, 'ecpt_emailaddress', true); ?>">
-							<?php echo get_post_meta($post->ID, 'ecpt_emailaddress', true);?>
-						</a>
-						</span>
-					<?php endif; ?>
-										
-					<?php if ( get_post_meta($post->ID, 'ecpt_location', true) ) : ?>
-						<span class="icon-location"><?php echo get_post_meta($post->ID, 'ecpt_location', true); ?></span> 
-					<?php endif; ?>
-					<?php if ( get_post_meta($post->ID, 'ecpt_homepage', true) ) : ?>
-						<br><span class="icon-globe">
-						<a href="http://<?php echo get_post_meta($post->ID, 'ecpt_homepage', true); ?>" onclick="ga('send','event','Outgoing Links','<?php echo get_post_meta($post->ID, 'ecpt_homepage', true); ?>')">
-							<?php echo get_post_meta($post->ID, 'ecpt_homepage', true);?>
-						</a>
-						</span>
-					<?php endif; ?>
-				</p> <!-- End Contact info line -->
+				<h1><?php the_title();?></h1>
+				<?php if(!is_mobile()) {  ?>
+						<p class="contact"> <!-- Contact info line -->
+							<?php if ( get_post_meta($post->ID, 'ecpt_phonenumber', true) ) : ?>
+								<span class="icon-mobile"><?php echo get_post_meta($post->ID, 'ecpt_phonenumber', true); ?></span> 
+							<?php endif; ?>
+							
+							<?php if ( get_post_meta($post->ID, 'ecpt_emailaddress', true) ) : ?>
+								<span class="icon-mail">
+								<a href="mailto:<?php echo get_post_meta($post->ID, 'ecpt_emailaddress', true); ?>">
+									<?php echo get_post_meta($post->ID, 'ecpt_emailaddress', true);?>
+								</a>
+								</span>
+							<?php endif; ?>
+												
+							<?php if ( get_post_meta($post->ID, 'ecpt_location', true) ) : ?>
+								<span class="icon-location"><?php echo get_post_meta($post->ID, 'ecpt_location', true); ?></span> 
+							<?php endif; ?>
+							<?php if ( get_post_meta($post->ID, 'ecpt_homepage', true) ) : ?>
+								<br><span class="icon-globe">
+								<a href="http://<?php echo get_post_meta($post->ID, 'ecpt_homepage', true); ?>" onclick="ga('send','event','Outgoing Links','<?php echo get_post_meta($post->ID, 'ecpt_homepage', true); ?>')">
+									<?php echo get_post_meta($post->ID, 'ecpt_homepage', true);?>
+								</a>
+								</span>
+							<?php endif; ?>
+						</p> <!-- End Contact info line -->
+					<?php } ?>	
+
+					<?php if(is_mobile()) {  ?>
+							<p class="contact"> <!-- Contact info line -->
+								<?php if ( get_post_meta($post->ID, 'ecpt_phonenumber', true) ) : ?>
+									<span class="icon-mobile"><?php echo get_post_meta($post->ID, 'ecpt_phonenumber', true); ?></span> 
+								<?php endif; ?>
+								
+								<?php if ( get_post_meta($post->ID, 'ecpt_emailaddress', true) ) : ?>
+									<br><span class="icon-mail">
+									<a href="mailto:<?php echo get_post_meta($post->ID, 'ecpt_emailaddress', true); ?>">
+										<?php echo get_post_meta($post->ID, 'ecpt_emailaddress', true);?>
+									</a>
+									</span>
+								<?php endif; ?>
+													
+								<?php if ( get_post_meta($post->ID, 'ecpt_location', true) ) : ?>
+									<br><span class="icon-location"><?php echo get_post_meta($post->ID, 'ecpt_location', true); ?></span> 
+								<?php endif; ?>
+								<?php if ( get_post_meta($post->ID, 'ecpt_homepage', true) ) : ?>
+									<br><span class="icon-globe">
+									<a href="http://<?php echo get_post_meta($post->ID, 'ecpt_homepage', true); ?>" onclick="ga('send','event','Outgoing Links','<?php echo get_post_meta($post->ID, 'ecpt_homepage', true); ?>')">
+										<?php echo get_post_meta($post->ID, 'ecpt_homepage', true);?>
+									</a>
+									</span>
+								<?php endif; ?>
+							</p> <!-- End Contact info line -->
+					<?php } ?>	
 				
 				<?php if ( get_post_meta($post->ID, 'ecpt_section1', true) ) :  echo get_post_meta($post->ID, 'ecpt_section1', true);  endif; ?>
 				
@@ -43,11 +73,11 @@
 				<?php if ( get_post_meta($post->ID, 'ecpt_section3content', true) ) :  echo get_post_meta($post->ID, 'ecpt_section3content', true);  endif; ?>
 				
 			<?php endwhile; endif; ?>	
-		</section>
+		</main>
 	</div>	
 	
-	<div class="small-12 medium-4 columns"> <!-- Begin Sidebar -->
-		<a href="/admissions" class="button expand blue_bg cta">Apply Now!</a>
+	<aside class="small-12 medium-4 columns" role="navigation"> <!-- Begin Sidebar -->
+		<!--<a href="/admissions" class="button expand blue_bg cta">Apply Now!</a>-->
 			<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 				<div class="blue_bg offset-gutter sidebar_header">
 						<h5>Explore <?php the_title();?></h5>
@@ -79,15 +109,14 @@
 			<?php endif; ?>
 		<?php endif; ?>		
 				<!--Begin Jump to department -->
+		<label for="jump">
+			<div class="blue_bg offset-gutter sidebar_header">
+				<h5>Other Undergraduate & Full-Time Graduate Programs</h5>
+			</div>
+		</label>		
 
-		<div class="blue_bg offset-gutter sidebar_header">
-			<h5>Other Undergraduate & Full-Time Graduate Programs</h5>
-		</div>	
-
-		<div class="row jumpmenu">
-			<form name="jump" class="small-10 columns no-gutter">
-				<select onchange="window.open(this.options[this.selectedIndex].value,'_top')">
-					<option>--<?php the_title(); ?></option>
+		<select name="jump" onchange="window.open(this.options[this.selectedIndex].value,'_top')">
+			<option>--<?php the_title(); ?></option>
 					<?php if ( false === ( $jump_menu_full_grad_query = get_transient( 'jump_menu_full_grad_query' ) ) ) {
 						// It wasn't there, so regenerate the data and save the transient
 						$jump_menu_full_grad_query = new WP_Query(array(
@@ -107,11 +136,9 @@
 						<option value="<?php the_permalink() ?>"><?php the_title(); ?></option>
 					<?php endwhile; ?>
 				</select>
-			</form>
-		</div>
 		<!--End jump-menu -->
 
 		<a href="/academics/fields" class="button blue_bg cta">Explore All Our Fields of Study</a>
-	</div> <!-- End Sidebar -->
+	</aside> <!-- End Sidebar -->
 
 </div> <!-- End #landing -->

@@ -2,7 +2,7 @@
 		<div class="photo-page-right">
 			<img src="<?php echo get_template_directory_uri() ?>/assets/images/deanwendland.jpg" class="radius-topright offset-gutter" />
 		</div>
-		<div class="rust_bg offset-gutter" id="sidebar_header">
+		<div class="rust_bg offset-gutter sidebar_header">
 			<h5>James B. Knapp Dean Beverly Wendland</h5>
 		</div>
 		<div class="row">
@@ -13,7 +13,7 @@
 				'link_before' => '<span class="icon-arrow-right-2"></span>', 
 				'depth' => 1 )); ?> 
 		</div>
-		<div class="rust_bg offset-gutter" id="sidebar_header">
+		<div class="rust_bg offset-gutter sidebar_header">
 			<h5>Past Newsletters</h5>
 		</div>
 		

@@ -107,8 +107,17 @@
   body {
     background: none !important;
   }
+  #mobile-nav {
+    margin-bottom: 1%;
+  }
+  .wrapper {
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+  }
   .sidebar_bg {
-    background: #cecece !important;
+    background: $gray;
+    margin-bottom: inherit;
+    border-radius: 0px;
   }
   #main_nav ul {
     li {
@@ -177,6 +186,13 @@
     img {
       width: 75%;
     }
+  }
+  .field {
+    border: none;
+    min-height: 10px;
+  }
+  .content {
+    padding-right: 1px;
   }
 }
 

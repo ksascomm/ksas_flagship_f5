@@ -13,10 +13,19 @@ a {
   padding: 30px;
   margin-top: 5px;
   margin-bottom: 30px;
+    a {
+      border-bottom: .125em dotted;
+      border-bottom-color: rgba(0,0,0,.1);
+      &:hover, &:focus {
+        color: $black;
+        border-bottom-color: $blue;
+        border-bottom-style: solid;
+       }
+     }
 }
 
 .sidebar_bg {
-  background: #E5E2E0;
+  background: $gray;
   background: linear-gradient(to right, rgba(252,252,252,1) 0%,rgba(255,255,255,1) 67%,rgba(229,226,224,1) 67%,rgba(229,226,224,1) 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fcfcfc', endColorstr='#E5E2E0', GradientType=1 );
   margin-bottom: 60px;
@@ -90,21 +99,21 @@ h5.white{
   background: $rust;
 }
 
-.green_bg, #department {
+.green_bg {
   background: $green;
   &.button:hover {
     background: $green;
   }
 }
 
-.purple_bg, #interdisciplinary {
+.purple_bg {
   background: $purple;
   &.button:hover {
     background: $purple;
   }
 }
 
-.fushia, #arts {
+.fushia {
   background: #8e3a80;
   &.button:hover {
     background: #8e3a80;

@@ -21,7 +21,7 @@ Template Name: Fields of Study
 	
 		<div class="small-12 medium-5 columns copy">
 		<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-			<h2><?php the_title();?></h2>
+			<h1><?php the_title();?></h1>
 			<p><?php the_content(); ?></p>
 		<?php endwhile; endif; ?>
 		</div>
@@ -38,8 +38,8 @@ Template Name: Fields of Study
 					</div>
 					<div class="row">
 						<h5>Search by keyword:</h5>		
-						<input type="submit" class="icon-search" placeholder="Search by major/minor, interests, department name..."value="&#xe004;" />
-						<input type="text" name="search" value="<?php if (isset($_POST['home_search'])) { echo($_POST['home_search']); } ?>" id="id_search" aria-label="Search" placeholder="Enter major/minor, area of study, or description keyword"  /> 
+						<input type="submit" class="icon-search" aria-label="Submit" placeholder="Search by major/minor, interests, department name..."value="&#xe004;" />
+						<input type="text" name="search" value="<?php if (isset($_POST['home_search'])) { echo($_POST['home_search']); } ?>" id="id_search" aria-label="Search Fields of Study" placeholder="Enter major/minor, area of study, or description keyword"  /> 
 					</div>
 					
 					<div class="row hide-for-mobile">
@@ -80,9 +80,9 @@ Template Name: Fields of Study
 		<!-- Set mobile classes for isotype.js filter buttons -->
 		<div class="medium-6 large-4 columns mobile-field <?php echo $discipline[0] . ' '; if ( isset($discipline[1] )) { echo $discipline[1] . ' ';  } if ( isset($discipline[2] )) { echo $discipline[2] . ' ';  } echo get_post_meta($post->ID, 'ecpt_structure', true);?> <?php echo $program_type_name; ?>">
 			<a href="<?php the_permalink();?>" title="<?php the_title(); ?>" class="field">
-				<ul class="field" style="color:#005eb8">
+				<ul class="field">
 				<!-- Display ribbons for discipline taxonomy -->
-					<li class="blue"><p style="color:#005eb8"><?php the_title(); ?></p>
+					<li class="blue"><?php the_title(); ?>
 					<span class="hide"><?php echo get_post_meta($post->ID, 'ecpt_keywords', true); ?></span>
 					</li>
 				</ul>
@@ -92,8 +92,8 @@ Template Name: Fields of Study
 		<!-- Set desktop classes for isotype.js filter buttons -->
 		<div class="medium-6 large-4 columns  mobile-field <?php echo $discipline[0] . ' '; if ( isset($discipline[1] )) { echo $discipline[1] . ' ';  } if ( isset($discipline[2] )) { echo $discipline[2] . ' ';  } echo get_post_meta($post->ID, 'ecpt_structure', true);?> <?php echo $program_type_name; ?>">
 		
-			<a href="<?php the_permalink();?>" title="<?php the_title(); ?>" class="field">
-				<div class="small-12 columns field" id="<?php echo get_post_meta($post->ID, 'ecpt_structure', true); ?>">
+			<a href="<?php the_permalink();?>" title="<?php the_title(); ?>">
+				<div class="small-12 columns field <?php echo get_post_meta($post->ID, 'ecpt_structure', true); ?>">
 				
 				<!-- Display ribbons for discipline taxonomy -->
 				<div class="row">	
