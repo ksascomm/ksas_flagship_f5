@@ -173,8 +173,18 @@ a.field {
 }
 
 .button {
+  a {
+    border-bottom: none;
+    &:hover {
+      border-bottom: none;
+    }
+    &:visited {
+      border-bottom: none;
+    }
+  }
   a.selected {
     text-shadow: 1px 1px 1px $black;
+    border-bottom: none;
   }
   &.radio {
     font-size: 14px;
