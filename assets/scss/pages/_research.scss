@@ -96,3 +96,12 @@ body.research {
 #sidebar h6 {
   padding-left: 30px;
 }
+
+.thumb {
+  a {
+    border-bottom: none;
+    &:hover {
+      border-bottom: none;
+    }
+  }
+}
