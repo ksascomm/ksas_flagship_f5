@@ -37,8 +37,12 @@ Template Name: Fields of Study
 						<div class="button radio"><a href="#" data-filter=".part_time_program" onclick="ga('send', 'event', 'Fields', 'Filter', 'AAP');">Graduate (part-time)</a></div>
 					</div>
 					<div class="row">
-						<h5>Search by keyword:</h5>		
-						<input type="submit" class="icon-search" aria-label="Submit" placeholder="Search by major/minor, interests, department name..."value="&#xe004;" />
+						<label for="id_search">
+							<h5>Search by keyword:</h5>
+						</label>		
+						<button class="submit" type="submit" aria-label="submit"/>
+							<span class="fa fa-search"></span>
+						</button>
 						<input type="text" name="search" value="<?php if (isset($_POST['home_search'])) { echo($_POST['home_search']); } ?>" id="id_search" aria-label="Search Fields of Study" placeholder="Enter major/minor, area of study, or description keyword"  /> 
 					</div>
 					

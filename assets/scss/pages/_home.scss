@@ -9,6 +9,21 @@ body.home .reveal-modal {
 }
 
 #field_search {
+ ::-webkit-input-placeholder {
+      color: $gray;
+  }
+
+  :-moz-placeholder { /* Firefox 18- */
+    color: $gray;
+  }
+
+  ::-moz-placeholder {  /* Firefox 19+ */
+     color: $gray;
+  }
+
+  :-ms-input-placeholder {
+    color: $gray;
+  }  
   font-family: $font-subhead-book;
   font-weight: 400;
   font-style: normal;
@@ -50,7 +65,7 @@ body.home .reveal-modal {
       color: #fff;
     }
     &[type="submit"] {
-      background: #2c2c33;
+      background: $black;
       height: 35px;
       width: 38px;
       font-family: $flagship-icon;
@@ -62,6 +77,22 @@ body.home .reveal-modal {
       padding: 0;
       color: #ccc;
     }
+  }
+  button.submit {
+      background: $black;
+      height: 35px;
+      width: 38px;
+      font-family: $flagship-icon;
+      border-radius: inherit;
+      border-top-left-radius: 7px;
+      border-bottom-left-radius: 7px;
+      font-size: 16px;
+      border: none;
+      float: left;
+      padding: 0;
+      color: #ccc;
+      margin-right: inherit;
+      margin-bottom: inherit;
   }
   .tabs {
     border-bottom: none;

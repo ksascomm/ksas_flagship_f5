@@ -74,7 +74,7 @@
 												<article>
 													<div class="row">
 														<div class="small-12 columns centered">														
-															<h4>Around Campus with Homewood Photography <a href="http://twitter.com/<?php echo $tweet->user->screen_name // Author display name ?>"><i class="fa fa-twitter-square"></i></a></h4>																		
+															<h4>Around Campus with Homewood Photography <a href="http://twitter.com/<?php echo $tweet->user->screen_name // Author display name ?>"><span class="fa fa-twitter-square"></span></a></h4>																		
 															 <?php echo '<p>' . $tweet->text . '</p>'  ; ?> 
 														</div>
 													</div>

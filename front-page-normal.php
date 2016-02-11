@@ -38,7 +38,9 @@ Template Name: Front Page Normal
 <?php if (!is_handheld()) { ?>	
 	<section class="row" id="field_search" role="form">
 		<dl class="tabs contained" data-tab>
-		  <dd class="active black_bg">Fields of Study</dd>
+			<label for="home_search">
+				<dd class="active black_bg">Fields of Study</dd>
+			</label>
 		</dl>
 		<div class="tabs-content contained">
 			<li class="active">
@@ -46,8 +48,10 @@ Template Name: Front Page Normal
 				  	<div class="row hide-for-small">	
 					<!-- Search Bar -->
 						<div class="small-12 columns">
-							<input type="submit" aria-label="Submit" class="icon-search" value="&#xe004;" />
-					     	<input type="text" id="home_search" aria-label="Search Fields of Study" placeholder="Search fields of study by major, minor, interests, or name" />
+							<button class="submit" type="submit" aria-label="submit"/>
+								<span class="fa fa-search"></span>
+							</button>
+					     	<input type="text" name="home_search" id="field_search" placeholder="Search fields of study by major, minor, interests, or name" />
 						</div>
 					</div>	
 					<div class="row" id="filters">

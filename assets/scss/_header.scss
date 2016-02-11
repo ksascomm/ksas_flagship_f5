@@ -106,6 +106,20 @@
       color: #ccc;
     }
   }
+  button {
+    background: #666;
+    height: 31px;
+    width: 30px;
+    border-radius: inherit;
+    border-top-left-radius: 7px;
+    border-bottom-left-radius: 7px;
+    border: none;
+    float: left;
+    padding: 0;
+    color: $gray;
+    margin-right: inherit;
+    margin-bottom: inherit;
+  }  
 }
 
 #mobile-nav {
