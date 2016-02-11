@@ -89,7 +89,17 @@
 						<?php if ( get_post_meta($post->ID, 'ecpt_homepage', true) ) : ?>
 							<li><span class="icon-arrow-right-2"></span><a href="http://<?php echo get_post_meta($post->ID, 'ecpt_homepage', true); ?>" onclick="ga('send','event','Outgoing Links','<?php echo get_post_meta($post->ID, 'ecpt_homepage', true); ?>')"><?php the_title(); ?> Website</a></li>
 						<?php endif; ?>
+						<?php if ( get_post_meta($post->ID, 'ecpt_facultypage', true) ) : ?>
+							<li><span class="icon-arrow-right-2"></span><a href="http://<?php echo get_post_meta($post->ID, 'ecpt_facultypage', true); ?>">Faculty</a></li>
+						<?php endif; ?>
 
+						<?php if ( get_post_meta($post->ID, 'ecpt_undergraduatepage', true) ) : ?>
+							<li><span class="icon-arrow-right-2"></span><a href="http://<?php echo get_post_meta($post->ID, 'ecpt_undergraduatepage', true); ?>">Undergraduate</a></li>
+						<?php endif; ?>
+
+						<?php if ( get_post_meta($post->ID, 'ecpt_graduatepage', true) ) : ?>
+							<li><span class="icon-arrow-right-2"></span><a href="http://<?php echo get_post_meta($post->ID, 'ecpt_graduatepage', true); ?>">Graduate</a></li>
+						<?php endif; ?>
 					</ul>
 				</div> <!--End Dept Nav Links -->
 			<?php endwhile; endif; ?>	

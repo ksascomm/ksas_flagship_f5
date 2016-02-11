@@ -91,6 +91,17 @@
 					<?php if ( get_post_meta($post->ID, 'ecpt_homepage', true) ) : ?>
 						<li><span class="icon-arrow-right-2"></span><a href="http://<?php echo get_post_meta($post->ID, 'ecpt_homepage', true); ?>" onclick="ga('send','event','Outgoing Links','<?php echo get_post_meta($post->ID, 'ecpt_homepage', true); ?>')"><?php the_title(); ?> Website</a></li>
 					<?php endif; ?>
+					<?php if ( get_post_meta($post->ID, 'ecpt_facultypage', true) ) : ?>
+						<li><span class="icon-arrow-right-2"></span><a href="http://<?php echo get_post_meta($post->ID, 'ecpt_facultypage', true); ?>">Faculty</a></li>
+					<?php endif; ?>
+
+					<?php if ( get_post_meta($post->ID, 'ecpt_undergraduatepage', true) ) : ?>
+						<li><span class="icon-arrow-right-2"></span><a href="http://<?php echo get_post_meta($post->ID, 'ecpt_undergraduatepage', true); ?>">Undergraduate</a></li>
+					<?php endif; ?>
+
+					<?php if ( get_post_meta($post->ID, 'ecpt_graduatepage', true) ) : ?>
+						<li><span class="icon-arrow-right-2"></span><a href="http://<?php echo get_post_meta($post->ID, 'ecpt_graduatepage', true); ?>">Graduate</a></li>
+					<?php endif; ?>
 				</ul>
 			</div> <!--End Dept Nav Links -->
 		<?php endwhile; endif; ?>	
@@ -116,7 +127,7 @@
 				<h5 class="white">Other Undergraduate &  Full-Time Graduate Programs</h5>
 			</div>
 		</label>	
-        <select name="jump" onchange="window.open(this.options[this.selectedIndex].value,'_top')">
+        <select name="jump" id="jump" onchange="window.open(this.options[this.selectedIndex].value,'_top')">
          	<option>--<?php the_title(); ?></option>
 			<?php if ( false === ( $jump_menu_undergrad_query = get_transient( 'jump_menu_undergrad_query' ) ) ) {
 				// It wasn't there, so regenerate the data and save the transient
