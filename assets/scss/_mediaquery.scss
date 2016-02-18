@@ -92,6 +92,11 @@
   #main_nav ul li {
     padding: 0 7px;
   }
+  .mobile-logo {
+    img {
+      width: 40%;
+    }
+  }
 }
 
 @media only screen and (min-width: 767px) and (max-width: 975px) {
@@ -104,9 +109,6 @@
 }
 
 @media only screen and (max-width: 767px) {
-  body {
-    background: none !important;
-  }
   #mobile-nav {
     margin-bottom: 1%;
   }
@@ -167,7 +169,6 @@
       width: 84%;
     }
   }
-  
   #links {
     .tabs-content {
       width: 100%
@@ -184,7 +185,7 @@
   }
   .mobile-logo {
     img {
-      width: 75%;
+      width: 65%;
     }
   }
   .field {
@@ -194,9 +195,15 @@
   .content {
     padding-right: 1px;
   }
+  #evergreen {
+    margin-top: 10px !important;
+  }
 }
 
 @media only screen and (max-width: 640px) {
+  body {
+    background: none !important;
+  }
   #main_nav ul li {
     padding: 0 20px;
     /*width: auto;*/
@@ -204,6 +211,36 @@
   }
   body.fields .row .mobile-two {
     width: 100% !important;
+  }
+  #field_search { 
+    dd {
+    color: $black;
+    }
+    .black_bg {
+     background: inherit;
+    }
+    div.tabs-content.contained {
+      background: inherit;
+      margin-top: 2em;
+    }
+  }
+  #news_feed {
+    background: inherit;
+      h2, h3, summary p {
+        color: $black;
+      }
+    h1 {
+      font-size: 1.5rem;
+    }
+    h2 {
+      font-size: 1.25rem;
+    }
+  }
+  h1.mobile-title {
+    font-family: 'quadon',Arial,sans-serif;
+    text-transform: initial;
+    color: $black!important;
+    font-size: 1.5rem;
   }
 }
 
