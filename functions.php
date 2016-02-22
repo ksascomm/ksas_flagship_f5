@@ -1,14 +1,5 @@
 <?php
 
-//livereload
-if ( $_SERVER['REMOTE_ADDR'] === '127.0.0.1' ){
-  add_action( 'wp_enqueue_scripts', 'enqueue_livereload' );
-}
-function enqueue_livereload(){
-  wp_enqueue_script( 'livereload', site_url().'/livereload.js', '', NULL );
-}
-
-
 // Adding WP 3+ Functions & Theme Support
 function flagship_theme_support() {
 	add_theme_support( 'post-thumbnails' );
@@ -123,6 +114,7 @@ function my_sitemap_replacement ($content) {
 	return $content;
 }
 add_filter('simple_sitemaps-generated_urlset', 'my_sitemap_replacement');
+
 
  
 ?>
