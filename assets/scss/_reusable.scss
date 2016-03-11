@@ -85,6 +85,10 @@ h5.white{
     background: $blue;
     opacity: .8;
   }
+  &.button:focus {
+    background: $blue;
+    opacity: 1;
+  }
 }
 
 .dark_blue_bg {
@@ -304,6 +308,7 @@ ul, ol {
   color: #fff;
   font-family: $font-subhead-light;
   font-size: 1em;
+  padding-bottom: 1em;
     &:before {
       content: "\25FC";
       font-family: $flagship-icon;
@@ -450,4 +455,21 @@ p.lead, .lead {
     height: 1px;
     width: 1px;
     overflow: hidden;
+}
+
+#sidebar {
+  ul.nav li {
+    font-size: 14px;
+    margin-left: 0;
+    padding-left: 45px;
+    text-indent: -25px;
+    padding-right: 15px;
+  &:before, ul li:before {
+    content: "\e010";
+    font-family: $flagship-icon;
+    color: #999;
+    margin-right: 10px;
+    vertical-align: middle;
+  }
+}
 }

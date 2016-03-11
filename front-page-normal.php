@@ -20,6 +20,7 @@ Template Name: Front Page Normal
 						body { background: #000 url('<?php echo get_post_meta($post->ID, 'ecpt_fullimage', true); ?>') no-repeat top center;
 								background-attachment: scroll; }
 						@media only screen and (max-width: 420px) { body { background: #000; } }
+						#main_nav {margin-top: 15px;}
 					</style>
 					<a href="#" data-reveal-id="modal_<?php the_id(); ?>_caption">
 						<h1 class="text-shadow"><?php the_title(); ?></h1>

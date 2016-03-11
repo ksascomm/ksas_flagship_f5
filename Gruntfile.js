@@ -10,6 +10,7 @@ module.exports = function(grunt) {
       dev: {
         options: {
           style: 'expanded',
+          debugInfo: true,
           sourceMap: true,
         },
         files: {
@@ -19,7 +20,7 @@ module.exports = function(grunt) {
       dist: {
         options: {
           outputStyle: 'compressed',
-          sourceMap: true,
+          sourceMap: false,
         },
         files: {
           'assets/css/app.min.css': 'assets/scss/app.scss',
@@ -33,7 +34,7 @@ module.exports = function(grunt) {
       options: {
         map: true,
         processors: [
-          require('autoprefixer-core')({browsers: ['last 2 versions', 'ie 8', 'ie 9', '> 1%']})
+          require('autoprefixer')({browsers: ['last 2 versions', '> 10%']})
         ]
       },
       //prefix all files

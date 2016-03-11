@@ -71,7 +71,7 @@ function getParameterByName(name)
             meanRevealPositionDistance: "15px", // Tweak the position of the menu
             meanRevealColour: "", // override CSS colours for the reveal background
             meanRevealHoverColour: "", // override CSS colours for the reveal hover
-            meanScreenWidth: "1023", // set the screen width you want meanmenu to kick in at
+            meanScreenWidth: "767", // set the screen width you want meanmenu to kick in at
             meanNavPush: "", // set a height here in px, em or % if you want to budge your layout now the navigation is missing.
             meanShowChildren: true, // true to show children in the menu, false to hide them
             meanExpandableChildren: true, // true to allow expand/collapse children

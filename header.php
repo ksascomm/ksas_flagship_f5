@@ -10,7 +10,7 @@
   <link rel="apple-touch-icon-precomposed" sizes="72x72" href="<?php echo get_template_directory_uri() ?>/assets/images/apple-touch-icon-72x72-precomposed.png" />
   <link rel="apple-touch-icon-precomposed" href="<?php echo get_template_directory_uri() ?>/assets/images/apple-touch-icon-57x57-precomposed.png" />
   <!-- CSS Files: All pages -->
-  <link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri() ?>/assets/css/app.min.css">
+  <link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri() ?>/assets/css/app.css">
 
   <!-- CSS Files: Conditionals -->
   
@@ -56,26 +56,7 @@ if( is_page() ) {
 		</div>
 	
 		<div id="desktop-nav">
-			<div class="row hide-for-print">
-				<div id="search-bar" class="small-12 medium-4 medium-offset-8 columns" role="search">
-					<div class="row">
-						<div class="small-6 columns">
-							<form method="GET" action="<?php echo site_url('/search'); ?>" role="search">
-								<label for="search" class="screen-reader-text">Search this site</label>	
-									<button type="submit" aria-label="submit"/>
-										<span class="fa fa-search"></span>
-									</button>
-									<input type="text" name="q" id="search" placeholder="Search this site" aria-label="search"/>
-							</form>
-						</div>
-						<div class="small-6 columns links inline">
-							<a href="http://www.jhu.edu">jhu.edu</a> |
-							<a href="http://library.jhu.edu/">Library</a> |
-							<a href="<?php echo network_site_url(); ?>about/contact/">Contact</a>
-						</div>
-					</div>	
-				</div>	<!-- End #search-bar	 -->
-			</div>
+			<?php get_template_part( 'parts', 'offcanvas' ); ?>
 			<div class="row hide-for-print" role="navigation">
 				<?php wp_nav_menu( array( 
 					'theme_location' => 'main_nav', 

@@ -5,10 +5,39 @@ For production environment search and replace javascripts/ for javascripts/min.
 <!***********ALL PAGES**************>
   <script src="<?php echo get_template_directory_uri() ?>/assets/js/foundation.min.js"></script> <!-- ALL -->
   <script src="<?php echo get_template_directory_uri() ?>/assets/js/vendor/app.js"></script>
-	<script>jQuery(document).ready(function () {
-	    jQuery('#main_nav').meanmenu();
-	});
+  <script src="<?php echo get_template_directory_uri() ?>/assets/js/vendor/offcanvas.js"></script>
+
+
+	<script>
+	var $x = jQuery.noConflict();
+		$x('#quicklinks ul.flyout li a').on('click', function() {
+  			ga('send', 'event', 'Quicklinks', 'Flyout Menu', 'Flagship');
+		});
 	</script>
+
+	<script>
+	var $za = jQuery.noConflict();
+		$za('#quicklinks ul.flyout li a').on('click', function() {
+  			_sz.push(['event', 'Quicklinks', 'Flyout Menu', ('Flagship-SiteImprove') ]);
+		});
+	</script>
+
+
+<!**********TABLET/MOBILE MENUS**************>  
+<?php if(is_tablet()) {  ?>
+		<script>
+			jQuery(document).ready(function () {
+			    jQuery('#main_nav').meanmenu({meanScreenWidth: "767"});
+			});
+		</script>
+<?php } else { ?>
+	<script>
+		jQuery(document).ready(function () {
+		    jQuery('#main_nav').meanmenu();
+		});
+	</script>
+<?php } ?>
+
 	
 <!***********FIELDS OF STUDY**************>
   <?php if ( is_page_template( 'template-fieldsofstudy.php' ))  { ?>

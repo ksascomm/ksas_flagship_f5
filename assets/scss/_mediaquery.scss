@@ -32,15 +32,16 @@
 }
 
 @media only screen and (max-width: 1023px) {
-    #desktop-nav {
-    display: none;
-  }
     html, body {
     overflow-x: hidden;
   }
 }
-
-@media only screen and (min-width: 1023px) {
+@media only screen and (max-width: 767px) {
+    #desktop-nav {
+    display: none;
+  }
+}
+@media only screen and (min-width: 767px) {
     #mobile-nav {
     display: none;
   }
@@ -85,7 +86,25 @@
   p {
     color:$blue;
   }
+  }
+  .o-content {
+    a {
+      font-size: 13px;
+    }
+    h1 {
+      font-size: 15px;
+    }
+    li {
+      font-size: 13px;
+      margin-top: -2px;
+    }
+  }
 }
+
+@media only screen and (max-width: 890px) {
+  #main_nav ul li a {
+    font-size: 16px;
+  }
 }
 
 @media only screen and (max-width: 975px) {
@@ -256,7 +275,7 @@
   }
 }
 
-/*IE9 Queries*/
+/*IE9 Queries
 @media (min-width: 1023px) {
     #mobile-nav {
     display: none !important;
@@ -266,4 +285,4 @@
     #desktop-nav {
     display: none;
   }
-}
+}*/

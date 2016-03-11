@@ -1,0 +1,55 @@
+.accordion .accordion-navigation.active > a, .accordion dd.active > a {
+background: white;
+border-top: 3px solid #005eb8;
+padding-top: 13px;
+}
+
+.accordion {
+  .fa-caret-down {
+    display: inline;
+    float: right;
+  }
+  .fa-caret-up {
+    display: none;
+    float: right;
+  }
+  .active {
+    .fa-caret-down {
+      display: none;
+      float: right;
+    }
+    .fa-caret-up {
+      display: inline;
+      float: right;
+    }
+  }
+}
+.accordion .accordion-navigation>a, .accordion dd>a {
+    border-bottom: none;
+}
+
+.accordion-navigation > a:after {
+  content: "\f0d7";
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: normal;
+  text-decoration: inherit;
+  padding-left: 5px;
+  float: right;
+  font-size: 20px;
+}
+.accordion-navigation.active > a:after {
+  content: "\f0d8";
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: normal;
+  text-decoration: inherit;
+}
+
+.wrapper > .accordion .accordion-navigation > a,
+.accordion dd > a {
+    font-size: 1.1rem;
+    font-family: $font-subhead-book !important;
+    font-weight: 400;
+    font-style: normal;
+}
