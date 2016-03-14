@@ -5,8 +5,8 @@
           <ul class="small-block-grid-4" id="global-links" role="list">
               <li class="black"><h1>Academics</h1>
                   <ul class="no-bullet" role="menu">
-                    <li role="menuitem"><a href="http://bicycle.dev/academics/departments-programs-centers/">Departments, Programs, and Centers</a></li>
-                    <li role="menuitem"><a href="http://bicycle.dev/academics/faculty/">Faculty Directory</a></li>
+                    <li role="menuitem"><a href="/academics/departments-programs-and-centers/">Departments, Programs, and Centers</a></li>
+                    <li role="menuitem"><a href="/about/faculty/">Faculty Directory</a></li>
                     <li role="menuitem"><a href="http://krieger.jhu.edu/academics/fields/">Fields of Study</a></li>
                     <li role="menuitem"><a href="http://www.library.jhu.edu/">Libraries</a></li>
                     <li role="menuitem"><a href="#" class="off-canvas-submenu-call">Other Educational Opportunities<span>+</span></a></li>
@@ -46,7 +46,7 @@
                 </ul>
             </li>
             <li role="menuitem">
-                <a href="http://bicycle.dev/giving/" class="blue_bg button"><span class="fa fa-gift"></span> Give Now!</a>
+                <a href="/giving/" class="blue_bg button"><span class="fa fa-gift"></span> Give Now!</a>
                 <form method="GET" action="<?php echo site_url('/search'); ?>" role="search" id="search-bar">
                       <input type="submit" class="icon-search" value="&#xe004;" />
                       <label for="search" class="screen-reader-text">Search</label>
