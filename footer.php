@@ -39,6 +39,6 @@
   </footer>
   
   <?php locate_template('parts-script-initiators.php', true, false); wp_footer();?>
-  <script src="//localhost:35729/livereload.js"></script>
+
 	</body>
 </html>
