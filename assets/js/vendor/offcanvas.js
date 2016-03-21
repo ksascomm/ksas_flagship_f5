@@ -3,10 +3,10 @@
   var $z = jQuery.noConflict();
   var $container = $z('.offcanvas-top');
   var $cHeightMax = $z('.o-content').outerHeight();
-  console.log($cHeightMax);
+  
   $z(".off-canvas-submenu").hide();
   var $cHeightMin = $z('.o-content').outerHeight();
-  console.log($cHeightMin);
+
   $z(document).ready(function() {
     buildCanvas();
   });
@@ -28,7 +28,7 @@
 
     });
 
-    $z('<a class="blue_bg button" href="#" id="trigger">Explore KSAS +</a>').appendTo($container);
+    $z('<a class="blue_bg button" href="#" id="trigger">Explore KSAS</a>').appendTo($container);
 
     $z('#trigger').bind('click', function(e) {
       e.preventDefault();
@@ -37,21 +37,16 @@
       if ($container.hasClass('active')) {
         $container.height($cHeightMin);
        $z('.o-content').show();
-        $this.text('Hide -');
+        $this.text('Hide');
       } else {
         $container.height(50);
         $z('.o-content').hide();
-        $this.text('Explore KSAS +');
+        $this.text('Explore KSAS');
         $z(".off-canvas-submenu").hide();
         $z(".off-canvas-submenu-call span").text('+');
       }
     });
 
   }
-
-  $z(window).resize(function() { //On Window resizeBy(
-    $cHeight = $z('.o-content').outerHeight();
-    console.log($cHeight);
-  });
 
 })(this);
