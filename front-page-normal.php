@@ -38,7 +38,7 @@ Template Name: Front Page Normal
 
 	<section class="row" id="field_search" role="form">
 		<dl class="tabs contained" data-tab>
-			<label for="home_search">
+			<label for="field_search">
 				<dd class="active black_bg">
 					<span class="show-for-medium-up">Fields of Study</span>
 					<h1 class="mobile-title">
@@ -56,7 +56,10 @@ Template Name: Front Page Normal
 							<button class="submit" type="submit" aria-label="submit"/>
 								<span class="fa fa-search"></span>
 							</button>
-					     	<input type="text" name="home_search" id="field_search" placeholder="Search fields of study by major, minor, interests, or name" />
+					     	<input type="text" name="home_search" id="home_search" placeholder="Search fields of study by major, minor, interests, or name" />
+						     	<label for="home_search" class="screen-reader-text">
+									Search fields of study by major, minor, interests, or name
+								</label>
 						</div>
 					</div>	
 					<div class="row" id="filters">

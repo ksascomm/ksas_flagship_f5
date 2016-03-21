@@ -44,8 +44,11 @@ Template Name: Dean's Directory
 					</div>
 					
 					<div class="row">		
-						<input type="submit" class="icon-search" placeholder="Search by major/minor, interests, department name..."value="&#xe004;" />
+						<input type="submit" class="icon-search" placeholder="Search by major/minor, interests, department name..." value="&#xe004;" />
 						<input type="text" name="search" id="id_search"  /> 
+							<label for="search" class="screen-reader-text">
+								Search the dean's directory
+							</label>
 					</div>
 					
 				</fieldset>
