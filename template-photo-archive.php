@@ -36,7 +36,7 @@ Template Name: Photo Archive
 			?>
 					<li class="medium-5 columns">
 						<a href="<?php echo $full_image_url[0]; ?>">
-								<img src="<?php echo $thumbnail_url[0]; ?>" class="floatleft" data-caption="<?php echo $clean_caption; ?>" >
+								<img src="<?php echo $thumbnail_url[0]; ?>" class="floatleft" data-caption="<?php echo $clean_caption; ?>" alt="<?php the_title(); ?>">
 								<time><?php echo get_the_date(); ?></time>
 								<h5 class="icon-camera"><?php the_title(); ?></h5>
 								<summary><?php echo limit_words(get_the_content(), '25'); ?><span class="blue">&nbsp;&nbsp;[Read More]</span></summary>

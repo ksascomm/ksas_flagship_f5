@@ -22,8 +22,8 @@
 					<div class="number">
 							<?php the_post_thumbnail('full',array( 'class'	=> "radius-topright no-lazy")); ?>
 							<summary class="<?php echo get_post_meta($post->ID, 'bg_color', true); ?>">
-								<h3 class="no-margin white bold" align="center"><?php the_title(); ?></h3>
-								<h5 class="white bold no-margin" align="center"><?php echo get_the_content(); ?></h5>
+								<h3 class="no-margin white bold"><?php the_title(); ?></h3>
+								<h5 class="white bold no-margin"><?php echo get_the_content(); ?></h5>
 							</summary>
 					</div> <!-- End number -->
 			<?php endwhile; endif; ?>

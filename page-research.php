@@ -26,7 +26,7 @@
 		    	<li data-orbit-slide="<?php the_ID(); ?>">
 		    		<div class="slide">
 						<a href="<?php the_permalink(); ?>">
-						<img src="<?php echo $full_image_url[0]; ?>" class="radius-topright" />
+						<img src="<?php echo $full_image_url[0]; ?>" class="radius-topright" / alt="<?php the_title(); ?>">
 						<summary>
 							<h3 class="no-margin white"><?php the_title(); ?></h3>
 							<h5 class="white italic no-margin"><?php echo get_the_content(); ?><span class="icon-arrow-right-2"></span></h5>

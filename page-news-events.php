@@ -45,7 +45,7 @@
 						foreach($hub_articles['articles'] as $hub_article) { ?>
 							<a href="<?php echo $hub_article['url']; ?>">
 								<article>
-									<img src="<?php echo $hub_article['_embedded']['image_thumbnail'][0]['sizes']['impact_small']; ?>" />
+									<img src="<?php echo $hub_article['_embedded']['image_thumbnail'][0]['sizes']['impact_small']; ?>" alt="From The Hub" />
 									<h4><?php echo $hub_article['headline']; ?></h4>
 									<summary>
 										<p><?php echo $hub_article['subheadline']; 
