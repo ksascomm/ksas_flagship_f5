@@ -7,7 +7,6 @@ For production environment search and replace javascripts/ for javascripts/min.
   <script src="<?php echo get_template_directory_uri() ?>/assets/js/vendor/app.js"></script>
   <script src="<?php echo get_template_directory_uri() ?>/assets/js/vendor/offcanvas.js"></script>
 
-
 	<script>
 	var $x = jQuery.noConflict();
 		$x('#quicklinks ul.flyout li a').on('click', function() {
@@ -16,12 +15,18 @@ For production environment search and replace javascripts/ for javascripts/min.
 	</script>
 
 	<script>
-	var $za = jQuery.noConflict();
-		$za('#quicklinks ul.flyout li a').on('click', function() {
-  			_sz.push(['event', 'Quicklinks', 'Flyout Menu', ('Flagship-SiteImprove') ]);
-		});
+		var $za = jQuery.noConflict();
+			$za('#quicklinks ul.flyout li a').on('click', function() {
+	  			_sz.push(['event', 'Quicklinks', 'Flyout Menu', ('Flagship-SiteImprove') ]);
+			});
 	</script>
 
+	<script>
+		var $zz = jQuery.noConflict();
+			$zz('#trigger').on('click', function() {
+	  			_sz.push(['event', 'Quicklinks', 'Explore KSAS', ('Offcanvas Top Navigation') ]);
+			});
+	</script>
 
 <!**********TABLET/MOBILE MENUS**************>  
 <?php if(is_tablet()) {  ?>
