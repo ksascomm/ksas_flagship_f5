@@ -9,13 +9,16 @@
 		'container_class' => 'small-10 medium-3 columns', 
 		'walker' => new foundation_navigation() ) ); ?>
   		
-		<?php wp_nav_menu( array( 
-		'theme_location' => 'footer_links', 
-		'menu_class' => 'inline-list', 
-		'fallback_cb' => 'foundation_page_menu', 
-		'container' => 'nav', 
-		'container_class' => 'medium-7 columns', 
-		'walker' => new foundation_navigation() ) ); ?>
+		<!-- Footer Links -->
+		<nav class="medium-5 medium-offset-1 columns">
+			<ul id="menu-footer-links" class="inline-list">
+				<li role="menuitem"><a href="http://krieger.jhu.edu/about/contact/">Contact/Directory</a></li>
+				<li role="menuitem"><a href="http://krieger.jhu.edu/communications-office/">Communications Office</a></li>
+				<li role="menuitem"><a href="http://webapps.jhu.edu/jhuniverse/administration/emergency_weather_security_information/">Emergency Info</a></li>
+				<li role="menuitem"><a href="http://krieger.jhu.edu/research/policies/">Policies</a></li>
+				<li role="menuitem"><a href="http://krieger.jhu.edu/faculty-jobs/">Faculty Job Openings</a></li>
+			</ul>
+		</nav>
 		
 		<nav class="small-12 medium-2 columns" id="social-media">
 			<div class="small-6 columns">
