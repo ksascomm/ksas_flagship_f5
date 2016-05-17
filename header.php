@@ -11,7 +11,7 @@
   <link rel="apple-touch-icon-precomposed" sizes="72x72" href="<?php echo get_template_directory_uri() ?>/assets/images/apple-touch-icon-72x72-precomposed.png" />
   <link rel="apple-touch-icon-precomposed" href="<?php echo get_template_directory_uri() ?>/assets/images/apple-touch-icon-57x57-precomposed.png" />
   <!-- CSS Files: All pages -->
-  <link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri() ?>/assets/css/app.css">
+  <link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri() ?>/assets/css/app.min.css">
 
   <!-- CSS Files: Conditionals -->
   
