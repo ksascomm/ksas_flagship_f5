@@ -45,6 +45,9 @@ if( is_page() ) {
 	<script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
 	<script src="<?php echo get_template_directory_uri() ?>/assets/vendor/js/lte-ie7.js"></script>
 	<link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri() ?>/assets/css/app.ie.css">
+	<div data-alert class="alert-box alert">
+    <?php _e('You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.'); ?>	
+    </div>		
 <![endif]-->
 <body <?php body_class($ancestorslug); ?> onLoad="viewport()">
 	<header>
