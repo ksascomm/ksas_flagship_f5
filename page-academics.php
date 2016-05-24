@@ -1,58 +1,60 @@
 <?php get_header(); ?>
-
-<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-<main class="row wrapper radius10" role="main">
-			<div class="large-6 columns show-for-large-up photo-page-left">
-				<?php the_post_thumbnail('full',array(
-						'class'	=> "radius-topleft")); ?>
+<main role="main">
+	<div class="row wrapper radius10">
+		<div class="row">
+			<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+			<div class="small-12 medium-6 columns show-for-large-up">
+					<?php the_post_thumbnail('full',array(
+							'class'	=> "radius-topleft")); ?>
+			</div>
+			<div class="small-12 medium-6 columns">
+					<h1><?php the_title();?></h1>
+					<p><?php the_content(); ?></p>
+			</div>
+			<?php endwhile; endif; ?>	
+		</div>	
+		<div class="row">
+			<div class="small-12 medium-6 columns">
 				<div id="links">			
 					<dl class="tabs contained" data-tab style="margin-left: 17px">
 						<dd class="active bright_blue_bg semibold">Academic Resources</dd>
 					</dl>
-				
-					<div class="tabs-content contained">
-					<?php wp_nav_menu( array( 
-							'theme_location' => '',
-							'menu' => 'Academic Resources', 
-							'menu_class' => 'panel', 
-							'container' => 'li',
-							'container_class' => 'active',
-							'depth' => 1 )); ?> 
-					</div>	
-				</div>		
-			</div>
-			
-			<div class="small-12 large-6 columns">
-				<h1><?php the_title(); ?></h1>
-				<?php the_content(); ?>
-			</div>
-<?php endwhile; endif; ?>
-		
-		<div class="row">
-			
-			<div class="small-12 columns hide-for-large-up" id="links">
-					<dl class="tabs contained" data-tab style="margin-left: 17px">
-						<dd class="active bright_blue_bg semibold">Academic Resources</dd>
-					</dl>
-					<div class="tabs-content contained">
-					<?php wp_nav_menu( array( 
-							'theme_location' => '',
-							'menu' => 'Academic Resources', 
-							'menu_class' => 'panel', 
-							'container' => 'li',
-							'container_class' => 'active',
-							'depth' => 1 )); ?> 
-					</div>	
-			</div>
 
+					<div class="tabs-content contained">
+					<?php wp_nav_menu( array( 
+							'theme_location' => '',
+							'menu' => 'Academic Resources', 
+							'menu_class' => 'panel', 
+							'container' => 'li',
+							'container_class' => 'active',
+							'depth' => 1 )); ?> 
+					</div>	
+				</div>
+			</div>
+			<div class="small-12 medium-6 columns">
+				<div class="panel callout radius10">
+					<h3>Fields of Study</h3>
+					<p class="no-margin">Here's what you'll be able to browse and search for:</p>
+					<ul>
+						<li><a href="/academics/fields/?filter=undergrad_program">Undergraduate Majors &amp; Minors</a></li>
+						<li><a href="/academics/fields/?filter=full_time_program">Full-Time Graduate Programs</a></li>
+						<li><a href="/academics/fields/?filter=part_time_program">Part-Time Graduate Programs</a></li>
+						<li><a href="/academics/fields/?filter=interdisciplinary">Centers, Programs, &amp; Institutes</a></li>
+					    <li><a href="http://advanced.jhu.edu/academics/online-programs/">Online Programs <i class="fa fa-external-link-square"></i></a></li>
+					</ul>
+				</div>	
+			</div>
+		</div>
+
+		<div class="row">
 			<div class="small-12 columns tan_bg radius10">
 				<div class="row">
-						<a href="<?php echo site_url('/news/archive/student-voices'); ?>"><h3 class="blue">Student Voices</h3></a>
-						<p><em>Hear what current students have to say about Johns Hopkins and their academic experience</em></p>
+					<h3 class="blue"><a href="<?php echo site_url('/news/archive/student-voices'); ?>">Student Voices</a></h3>
+					<p>Hear what current students have to say about Johns Hopkins and their academic experience<</p>
 				</div>
 				
 				<div class="row" id="video_scroll">
-				<div class="medium-1 columns spacer"></div>
+					<div class="medium-1 columns spacer"></div>
 					<?php $student_voice_query = new WP_Query(array(
 							'post_type' => array('deptextra', 'post'),
 							'category_name' => 'voices',
@@ -90,30 +92,28 @@
 					<div class="medium-1 columns spacer"></div>
 				</div>
 			</div>
-		</div>
+		</div>	
+	</div>
 </main>
-
 
 <!-- ************Modal Video Boxes******************* -->
 <?php if ( $student_voice_query->have_posts() ) : while ( $student_voice_query->have_posts() ) : $student_voice_query->the_post(); ?>
-<div id="modal_home_<?php the_id(); ?>_video" class="reveal-modal large black_bg" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
-	<div class="flex-video">
+	<div id="modal_home_<?php the_id(); ?>_video" class="reveal-modal large black_bg" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
+		<div class="flex-video"></div>
+		<a class="close-reveal-modal" aria-label="Close">&#215;</a>
 	</div>
-	<a class="close-reveal-modal" aria-label="Close">&#215;</a>
-</div>
-<script>
-	<?php 
-	$vid_url = get_the_content();
-	$embed_vid = "[embed]" . $vid_url . "[/embed]"; 
-	$wp_embed = new WP_Embed();
-	$post_embed = $wp_embed->run_shortcode($embed_vid); ?>
-	var $d = jQuery.noConflict();
-        $d('a[data-reveal-id="modal_home_<?php the_id(); ?>_video"]').click( function(){
-            $d('<?php echo $post_embed; ?>').appendTo('#modal_home_<?php the_id();?>_video .flex-video');
-        });
-</script>
+	<script>
+		<?php 
+		$vid_url = get_the_content();
+		$embed_vid = "[embed]" . $vid_url . "[/embed]"; 
+		$wp_embed = new WP_Embed();
+		$post_embed = $wp_embed->run_shortcode($embed_vid); ?>
+		var $d = jQuery.noConflict();
+	        $d('a[data-reveal-id="modal_home_<?php the_id(); ?>_video"]').click( function(){
+	            $d('<?php echo $post_embed; ?>').appendTo('#modal_home_<?php the_id();?>_video .flex-video');
+	        });
+	</script>
 <?php endwhile; endif; ?>
 <!-- ************End Modal Video Boxes******************* -->
 
 <?php get_footer(); ?>
-
