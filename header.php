@@ -38,17 +38,17 @@ if( is_page() ) {
 }
 
 ?>
-  <!-- Make IE a modern browser -->
-  <!--[if lt IE 10]>
-    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <script src="http://ie7-js.googlecode.com/svn/version/2.1(beta4)/IE9.js"></script>
-	<script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
-	<script src="<?php echo get_template_directory_uri() ?>/assets/vendor/js/lte-ie7.js"></script>
-	<link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri() ?>/assets/css/app.ie.css">
-	<div data-alert class="alert-box alert">
-    <?php _e('You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.'); ?>	
-    </div>		
-<![endif]-->
+	<!-- Make IE a modern browser -->
+	<!--[if IE]>
+		<script src="https://cdn.jsdelivr.net/html5shiv/3.7.3/html5shiv.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/css3-mediaqueries/0.1/css3-mediaqueries.min.js"></script>
+	<![endif]-->
+  	<!--[if lt IE 11]>
+		<link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri() ?>/assets/css/app.ie.css">
+		<div data-alert class="alert-box alert">
+		<?php _e('You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.'); ?>	
+		</div>		
+	<![endif]-->
 <body <?php body_class($ancestorslug); ?> onLoad="viewport()">
 	<header>
 		<div id="mobile-nav">
