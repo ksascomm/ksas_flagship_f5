@@ -126,7 +126,7 @@
 			</div>
 		</label>	
 
-		<select name="jump" onchange="window.open(this.options[this.selectedIndex].value,'_top')">
+		<select name="jump" id="jump" onchange="window.open(this.options[this.selectedIndex].value,'_top')">
 			<option>--<?php the_title(); ?></option>
 			<?php if ( false === ( $jump_menu_part_grad_query = get_transient( 'jump_menu_part_grad_query' ) ) ) {
 				// It wasn't there, so regenerate the data and save the transient
