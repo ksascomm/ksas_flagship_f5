@@ -42,8 +42,8 @@ Template Name: Research Opp
 					'posts_per_page' => '-1'));
 					set_transient( 'graduate_research_query', $graduate_research_query, 2592000 ); }
 ?>
-	<div class="small-4 columns" id="sidebar"> <!-- Begin Sidebar -->
-		<div class="blue_bg radius-topright offset-gutter" id="sidebar_header">
+	<aside class="small-4 columns sidebar" id="sidebar" role="complementary"> <!-- Begin Sidebar -->
+		<div class="blue_bg radius-topright offset-gutter sidebar_header">
 			<h5 class="white">Krieger School of Arts and Sciences Fellowship Programs</h5>
 		</div>
 		<!--Begin Department Navigation Links -->
@@ -51,7 +51,7 @@ Template Name: Research Opp
 			<h6>Undergraduate Opportunities</h6>
 			<ul class="nav">
 			<?php while ($undergraduate_research_query->have_posts()) : $undergraduate_research_query->the_post(); ?>
-					<li><span class="icon-arrow-right-2"></span><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></li>
+					<li><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></li>
 			<?php endwhile ?>
 			</ul>
 		</div> <!--End Dept Nav Links -->
@@ -60,12 +60,12 @@ Template Name: Research Opp
 			<h6>Graduate Opportunities</h6>
 			<ul class="nav">
 			<?php while ($graduate_research_query->have_posts()) : $graduate_research_query->the_post(); ?>
-					<li><span class="icon-arrow-right-2"></span><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></li>
+					<li><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></li>
 			<?php endwhile ?>
 			</ul>
 		</div> <!--End Dept Nav Links -->
 		
 		</div> 
-	</div> <!-- End Sidebar -->
+	</aside> <!-- End Sidebar -->
 </div> <!-- End #landing -->
 <?php get_footer(); ?>
