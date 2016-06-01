@@ -14,7 +14,7 @@
 			<ul id="menu-footer-links" class="inline-list">
 				<li role="menuitem"><a href="http://krieger.jhu.edu/about/contact/">Contact/Directory</a></li>
 				<li role="menuitem"><a href="http://krieger.jhu.edu/communications-office/">Communications Office</a></li>
-				<li role="menuitem"><a href="http://webapps.jhu.edu/jhuniverse/administration/emergency_weather_security_information/">Emergency Info</a></li>
+				<li role="menuitem"><a href="https://www.jhu.edu/alert/">Emergency Alerts & Info</a></li>
 				<li role="menuitem"><a href="http://krieger.jhu.edu/research/policies/">Policies</a></li>
 				<li role="menuitem"><a href="http://krieger.jhu.edu/faculty-jobs/">Faculty Job Openings</a></li>
 			</ul>
