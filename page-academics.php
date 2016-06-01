@@ -49,7 +49,7 @@
 		<div class="row">
 			<div class="small-12 columns tan_bg radius10">
 				<div class="row">
-					<h3 class="blue"><a href="<?php echo site_url('/news/archive/student-voices'); ?>">Student Voices</a></h3>
+					<h3 class="blue"><a href="<?php echo site_url('/news-events/archive/student-voices/'); ?>">Student Voices</a></h3>
 					<p>Hear what current students have to say about Johns Hopkins and their academic experience<</p>
 				</div>
 				
