@@ -79,7 +79,7 @@ module.exports = function(grunt) {
         }
     },
 
-    //Copy Font-Awesome
+    //Copy Bower Components
     copy: {
         fontawesome: {
             expand: true,
@@ -92,7 +92,32 @@ module.exports = function(grunt) {
             flatten: true,
             src: ['assets/bower_components/foundation/js/*'],
             dest: 'assets/js'
+        },
+       foundation_plugins: {
+            expand: true,
+            flatten: true,
+            src: ['assets/bower_components/foundation/js/foundation/*'],
+            dest: 'assets/js/foundation'
+        },
+        modernizr: {
+            expand: true,
+            flatten: true,
+            src: ['assets/bower_components/foundation/js/vendor/modernizr.js'],
+            dest: 'assets/js/vendor'
         }
+    },
+
+    //minify js with uglify
+     uglify: {
+        dist: {
+        options: {
+          mangle: false,
+          compress: true
+        },
+        files: {
+          "assets/js/vendor/modernizr.min.js": ["assets/js/vendor/modernizr.js"]
+        }
+      },
     },
 
     //Watch Task
@@ -116,6 +141,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-imagemin');
   grunt.loadNpmTasks('grunt-browser-sync');
   grunt.loadNpmTasks('grunt-contrib-copy');
+  grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.registerTask('build', ['sass']);
-  grunt.registerTask('default', ['sass','browserSync','copy','watch']);
+  grunt.registerTask('default', ['sass','browserSync','copy','uglify', 'watch']);
 }
