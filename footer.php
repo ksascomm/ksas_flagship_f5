@@ -29,7 +29,7 @@
 			</div>
 		</nav>
   	</div>
-  	<div class="row" id="copyright" role="content-info">
+  	<div class="row" id="copyright" role="contentinfo">
   		<div class="small-12 medium-5 medium-centered columns">
 	  		<p>&copy; <?php print date('Y'); ?> Johns Hopkins University, Zanvyl Krieger School of Arts & Sciences, 3400 N. Charles St, Baltimore, MD 21218</p>
   		</div>
