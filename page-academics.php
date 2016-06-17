@@ -98,7 +98,7 @@
 
 <!-- ************Modal Video Boxes******************* -->
 <?php if ( $student_voice_query->have_posts() ) : while ( $student_voice_query->have_posts() ) : $student_voice_query->the_post(); ?>
-	<div id="modal_home_<?php the_id(); ?>_video" class="reveal-modal large black_bg" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
+	<div id="modal_home_<?php the_id(); ?>_video" class="reveal-modal large black_bg" data-reveal aria-labelledby="modal_home_<?php the_id(); ?>_video" aria-hidden="true" role="dialog">
 		<div class="flex-video"></div>
 		<a class="close-reveal-modal" aria-label="Close">&#215;</a>
 	</div>
