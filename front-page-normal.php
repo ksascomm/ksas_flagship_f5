@@ -23,10 +23,11 @@ Template Name: Front Page Normal
 						#main_nav {margin-top: 15px;}
 					</style>
 					<a href="#" data-reveal-id="modal_<?php the_id(); ?>_caption">
-						<h1 class="text-shadow"><?php the_title(); ?></h1>
-						<span class="text-shadow"><?php the_content();?></span>
+						<h1 class="text-shadow"><?php the_title(); ?>
+							<small class="white"><?php the_content();?></small>
+						</h1>
 					</a>
-					<div id="modal_<?php the_id(); ?>_caption" class="reveal-modal radius10" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
+					<div id="modal_<?php the_id(); ?>_caption" class="reveal-modal radius10" data-reveal aria-labelledby="modal_<?php the_id(); ?>_caption" aria-hidden="true" role="dialog">
 							<h4>About the Photo</h4>
 							<p class="white"><?php $caption = get_post_meta($post->ID, 'ecpt_caption_credit', true); 
 													echo apply_filters('the_content', $caption); ?></p>
@@ -40,7 +41,7 @@ Template Name: Front Page Normal
 		<dl class="tabs contained" data-tab>
 			<label for="field_search">
 				<dd class="active black_bg">
-					<span class="show-for-medium-up">Fields of Study</span>
+					<h2><span class="show-for-medium-up">Fields of Study</span></h2>
 					<h1 class="mobile-title">
 						<span class="show-for-small-only">Explore our Fields of Study</span>
 					</h1>
@@ -63,7 +64,7 @@ Template Name: Front Page Normal
 						</div>
 					</div>	
 					<div class="row" id="filters">
-						<ul class="inline-list hide-for-small-only">
+						<ul class="inline-list hide-for-small-only" id="homepage_buttons">
 							<li class="button bright_blue_bg"><a href="academics/fields" data-filter="*" onclick="ga('send', 'event', 'Fields', 'Homepage', 'All');">View All</a></li>
 							<li class="button green_bg"><a href="academics/fields?filter=department" data-filter=".department" onclick="ga('send', 'event', 'Fields', 'Homepage', 'Department');">Departments</a></li>
 							<li class="button purple_bg"><a href="academics/fields?filter=interdisciplinary" data-filter=".interdisciplinary" onclick="ga('send', 'event', 'Fields', 'Homepage', 'Interdisciplinary');">Interdisciplinary</a></li>
@@ -89,7 +90,8 @@ Template Name: Front Page Normal
 
 	<section class="row black_bg radius10" id="news_feed" role="complementary">
 		<div class="small-12 columns">
-			<h2 class="hide-for-medium-up black">Latest News & Announcements</h2>
+			<h2 class="hide-for-small-only white">Arts & Sciences News</h2>
+			<h2 class="hide-for-medium-up black">Arts & Sciences News</h2>
 				<?php
 					//Query news and department extras for Homepage category
 					$homepage_query = new WP_Query(array(
