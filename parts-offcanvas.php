@@ -1,7 +1,7 @@
 <div class="off-canvas-bg">
   <div id="pattern" class="pattern">
     <div class="offcanvas-top">
-        <div class="o-content" aria-hidden="false" role="navigation">
+        <div class="o-content" aria-hidden="false" role="navigation" aria-label="Offcanvas menu">
           <ul class="small-block-grid-4" id="global-links" role="list">
               <li class="black"><h1>Academics</h1>
                   <ul class="no-bullet" role="menu">

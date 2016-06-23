@@ -1,5 +1,5 @@
   <footer>
-  	<div class="row" role="navigation">
+  	<div class="row">
 		<?php wp_nav_menu( array( 
 		'theme_location' => 'quick_links', 
 		'menu_class' => 'nav-bar', 
@@ -7,6 +7,7 @@
 		'container' => 'nav', 
 		'container_id' => 'quicklinks',
 		'container_class' => 'small-10 medium-3 columns', 
+		'items_wrap' => '<ul id="%1$s" class="%2$s" role="navigation" aria-label="Quicklinks menu">%3$s</ul>',
 		'walker' => new foundation_navigation() ) ); ?>
   		
 		<!-- Footer Links -->
