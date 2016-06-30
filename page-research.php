@@ -50,7 +50,7 @@
 					
 					<li class="thumb">
 						<a data-orbit-link="<?php the_ID(); ?>">
-							<img src="<?php echo $full_image_url[0]; ?>" />
+							<img src="<?php echo $full_image_url[0]; ?>" alt="<?php the_title(); ?>" />
 						</a>
 					</li><!-- .img-home .small-12 .columns -->
 				<?php endwhile;
