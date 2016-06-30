@@ -458,18 +458,28 @@ p.lead, .lead {
 }
 
 #sidebar {
+  .textwidget ul li a, p a {
+    border-bottom: .125em dotted;
+    border-bottom-color: rgba(0,0,0,.1);
+    &:hover, &:focus {
+      color: $black;
+      border-bottom-color: $blue;
+      border-bottom-style: solid;
+     }
+  } 
+
   ul.nav li {
     font-size: 14px;
     margin-left: 0;
     padding-left: 45px;
     text-indent: -25px;
     padding-right: 15px;
-  &:before, ul li:before {
-    content: "\e010";
-    font-family: $flagship-icon;
-    color: #999;
-    margin-right: 10px;
-    vertical-align: middle;
+    &:before, ul li:before {
+      content: "\e010";
+      font-family: $flagship-icon;
+      color: #999;
+      margin-right: 10px;
+      vertical-align: middle;
+    }
   }
-}
 }

@@ -8718,6 +8718,14 @@ p.lead, .lead {
   width: 1px;
   overflow: hidden; }
 
+#sidebar .textwidget ul li a, #sidebar p a {
+  border-bottom: .125em dotted;
+  border-bottom-color: rgba(0, 0, 0, 0.1); }
+  #sidebar .textwidget ul li a:hover, #sidebar .textwidget ul li a:focus, #sidebar p a:hover, #sidebar p a:focus {
+    color: #2C2C33;
+    border-bottom-color: #005eb8;
+    border-bottom-style: solid; }
+
 #sidebar ul.nav li {
   font-size: 14px;
   margin-left: 0;
