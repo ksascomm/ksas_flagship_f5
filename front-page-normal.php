@@ -24,10 +24,10 @@ Template Name: Front Page Normal
 					</style>
 					<a href="#" data-reveal-id="modal_<?php the_id(); ?>_caption">
 						<h1 class="text-shadow"><?php the_title(); ?>
-							<small class="white"><?php the_content();?></small>
+							<?php the_content();?>
 						</h1>
 					</a>
-					<div id="modal_<?php the_id(); ?>_caption" class="reveal-modal radius10" data-reveal aria-labelledby="modal_<?php the_id(); ?>_caption" aria-hidden="true" role="dialog">
+					<div id="modal_<?php the_id(); ?>_caption" class="reveal-modal radius10" data-reveal aria-labelledby="Photo caption" aria-hidden="true" role="dialog">
 							<h4>About the Photo</h4>
 							<p class="white"><?php $caption = get_post_meta($post->ID, 'ecpt_caption_credit', true); 
 													echo apply_filters('the_content', $caption); ?></p>
