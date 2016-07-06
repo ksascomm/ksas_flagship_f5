@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-<main role="main">
+<main>
 	<div class="row wrapper radius10">
 		<div class="row">
 			<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
@@ -40,7 +40,7 @@
 						<li><a href="/academics/fields/?filter=full_time_program">Full-Time Graduate Programs</a></li>
 						<li><a href="/academics/fields/?filter=part_time_program">Part-Time Graduate Programs</a></li>
 						<li><a href="/academics/fields/?filter=interdisciplinary">Centers, Programs, &amp; Institutes</a></li>
-					    <li><a href="http://advanced.jhu.edu/academics/online-programs/">Online Programs <i class="fa fa-external-link-square"></i></a></li>
+					    <li><a href="http://advanced.jhu.edu/academics/online-programs/">Online Programs <span class="fa fa-external-link-square"></span></a></li>
 					</ul>
 				</div>	
 			</div>
@@ -49,7 +49,9 @@
 		<div class="row">
 			<div class="small-12 columns tan_bg radius10">
 				<div class="row">
-					<h3 class="blue"><a href="<?php echo site_url('/news-events/archive/student-voices/'); ?>">Student Voices</a></h3>
+					<h3 class="blue">
+						<a href="<?php echo site_url('/news-events/archive/student-voices/'); ?>">Student Voices</a>
+					</h3>
 					<p>Hear what current students have to say about Johns Hopkins and their academic experience<</p>
 				</div>
 				
@@ -98,7 +100,7 @@
 
 <!-- ************Modal Video Boxes******************* -->
 <?php if ( $student_voice_query->have_posts() ) : while ( $student_voice_query->have_posts() ) : $student_voice_query->the_post(); ?>
-	<div id="modal_home_<?php the_id(); ?>_video" class="reveal-modal large black_bg" data-reveal aria-labelledby="modal_home_<?php the_id(); ?>_video" aria-hidden="true" role="dialog">
+	<div id="modal_home_<?php the_id(); ?>_video" class="reveal-modal large black_bg" data-reveal aria-labelledby="Video Caption" aria-hidden="true" role="dialog">
 		<div class="flex-video"></div>
 		<a class="close-reveal-modal" aria-label="Close">&#215;</a>
 	</div>

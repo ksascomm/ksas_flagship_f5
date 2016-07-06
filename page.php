@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 
 <div class="row wrapper radius10">
-	<main class="small-12 columns no-gutter" role="main">
+	<main class="small-12 columns no-gutter">
 		<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 			<?php if ( has_post_thumbnail()) { ?> 
 			<div class="photo-page-left floatleft small-6 columns">

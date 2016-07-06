@@ -22,7 +22,7 @@ Template Name: Video Archive
 					set_transient( 'flagship_video_archive_query_' . $paged, $flagship_video_archive_query, 2592000 );
 			} 	?>
 
-<main class="row wrapper radius10" role="main">
+<main class="row wrapper radius10">
 	<div class="small-12 columns">
 		<div class="row">
 			<div class="small-12 columns" id="archive">

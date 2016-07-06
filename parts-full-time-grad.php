@@ -6,7 +6,7 @@
 <?php } ?>	
 <div class="row sidebar_bg radius10" id="landing">
 	<div class="small-12 medium-8 columns wrapper radius-left offset-top-small">		
-		<main class="content" role="main">
+		<main class="content">
 			<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 				<h1><?php the_title();?></h1>
 				<?php if(!is_mobile()) {  ?>

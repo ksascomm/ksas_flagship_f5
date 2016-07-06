@@ -6,7 +6,7 @@ Template Name: Calendar
 <?php get_header(); ?>
 <div class="row wrapper radius10" id="page" role="main">
 	<div class="small-12 columns">	
-		<main class="content" role="main">
+		<main class="content">
 			<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 				<h1><?php the_title();?></h1>
 				<?php the_content(); ?>

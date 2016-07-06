@@ -42,7 +42,7 @@ Template Name: Research Opp
 					'posts_per_page' => '-1'));
 					set_transient( 'graduate_research_query', $graduate_research_query, 2592000 ); }
 ?>
-	<aside class="small-4 columns sidebar" id="sidebar" role="complementary"> <!-- Begin Sidebar -->
+	<aside class="small-4 columns sidebar" id="sidebar"> <!-- Begin Sidebar -->
 		<div class="blue_bg radius-topright offset-gutter sidebar_header">
 			<h5 class="white">Krieger School of Arts and Sciences Fellowship Programs</h5>
 		</div>

@@ -22,7 +22,7 @@ Template Name: Article Archive
 					set_transient( 'flagship_article_archive_query_' . $paged, $flagship_article_archive_query, 2592000 );
 			} 	?>
 
-<main class="row wrapper radius10" role="main">
+<main class="row wrapper radius10">
 	<div class="small-12 columns">
 		<div class="row">
 			<div class="small-12 columns" id="archive">

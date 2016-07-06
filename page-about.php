@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-<main role="main">
+<main>
 	<div class="row wrapper radius10">
 		<div class="small-12 medium-6 columns">
 			<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
@@ -7,7 +7,7 @@
 				<p><?php the_content(); ?></p>
 			<?php endwhile; endif; ?>
 		</div>
-		<aside class="small-12 medium-6 columns no-lazy " role="complementary">	
+		<aside class="small-12 medium-6 columns no-lazy ">	
 			<ul id="slider" data-orbit data-options="animation_speed:2000; timer:true; slide_number: false; timer_speed:3000; navigation_arrows:false; bullets:false;" class="no-gutter photo-page-right no-lazy">
 				<?php if ( false === ( $by_the_numbers_query = get_transient( 'by_the_numbers_query' ) ) ) {
 			// It wasn't there, so regenerate the data and save the transient

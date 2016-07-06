@@ -1,4 +1,4 @@
-<aside class="small-12 medium-4 columns toplayer" id="sidebar" role="complementary"> <!-- Begin Sidebar -->
+<aside class="small-12 medium-4 columns toplayer" id="sidebar"> <!-- Begin Sidebar -->
 		<div class="photo-page-right">
 			<img src="<?php echo get_template_directory_uri() ?>/assets/images/deanwendland.jpg" class="radius-topright offset-gutter" />
 		</div>
