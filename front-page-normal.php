@@ -22,7 +22,7 @@ Template Name: Front Page Normal
 						@media only screen and (max-width: 420px) { body { background: #000; } }
 						#main_nav {margin-top: 15px;}
 					</style>
-					<a href="#" data-reveal-id="modal_<?php the_id(); ?>_caption">
+					<a href="#" data-reveal-id="modal_<?php the_id(); ?>_caption" onclick="ga('send', 'event', 'Homepage Big Ideas', 'Click', '<?php the_title(); ?>')">
 						<h1 class="text-shadow"><?php the_title(); ?>
 							<?php the_content();?>
 						</h1>
