@@ -12,26 +12,26 @@
 				<?php if(!is_mobile()) {  ?>
 						<p class="contact"> <!-- Contact info line -->
 							<?php if ( get_post_meta($post->ID, 'ecpt_phonenumber', true) ) : ?>
-								<span class="icon-mobile"><?php echo get_post_meta($post->ID, 'ecpt_phonenumber', true); ?></span> 
+								<span class="icon-phone" aria-hidden="true"></span> <?php echo get_post_meta($post->ID, 'ecpt_phonenumber', true); ?> 
 							<?php endif; ?>
 							
 							<?php if ( get_post_meta($post->ID, 'ecpt_emailaddress', true) ) : ?>
-								<span class="icon-mail">
+								<span class="icon-mail"></span> 
 								<a href="mailto:<?php echo get_post_meta($post->ID, 'ecpt_emailaddress', true); ?>">
 									<?php echo get_post_meta($post->ID, 'ecpt_emailaddress', true);?>
 								</a>
-								</span>
+								
 							<?php endif; ?>
 												
 							<?php if ( get_post_meta($post->ID, 'ecpt_location', true) ) : ?>
-								<span class="icon-location"><?php echo get_post_meta($post->ID, 'ecpt_location', true); ?></span> 
+								<span class="icon-location"></span> <?php echo get_post_meta($post->ID, 'ecpt_location', true); ?>
 							<?php endif; ?>
 							<?php if ( get_post_meta($post->ID, 'ecpt_homepage', true) ) : ?>
-								<br><span class="icon-globe">
+								<br><span class="icon-earth" aria-hidden="true"></span> 
 								<a href="http://<?php echo get_post_meta($post->ID, 'ecpt_homepage', true); ?>" onclick="ga('send','event','Outgoing Links','<?php echo get_post_meta($post->ID, 'ecpt_homepage', true); ?>')">
 									<?php echo get_post_meta($post->ID, 'ecpt_homepage', true);?>
 								</a>
-								</span>
+								
 							<?php endif; ?>
 						</p> <!-- End Contact info line -->
 					<?php } ?>	
@@ -39,26 +39,26 @@
 					<?php if(is_mobile()) {  ?>
 							<p class="contact"> <!-- Contact info line -->
 								<?php if ( get_post_meta($post->ID, 'ecpt_phonenumber', true) ) : ?>
-									<span class="icon-mobile"><?php echo get_post_meta($post->ID, 'ecpt_phonenumber', true); ?></span> 
+									<span class="icon-phone" aria-hidden="true"></span> <?php echo get_post_meta($post->ID, 'ecpt_phonenumber', true); ?>
 								<?php endif; ?>
 								
 								<?php if ( get_post_meta($post->ID, 'ecpt_emailaddress', true) ) : ?>
-									<br><span class="icon-mail">
+									<br><span class="icon-mail"></span>
 									<a href="mailto:<?php echo get_post_meta($post->ID, 'ecpt_emailaddress', true); ?>">
 										<?php echo get_post_meta($post->ID, 'ecpt_emailaddress', true);?>
 									</a>
-									</span>
+									
 								<?php endif; ?>
 													
 								<?php if ( get_post_meta($post->ID, 'ecpt_location', true) ) : ?>
 									<br><span class="icon-location"><?php echo get_post_meta($post->ID, 'ecpt_location', true); ?></span> 
 								<?php endif; ?>
 								<?php if ( get_post_meta($post->ID, 'ecpt_homepage', true) ) : ?>
-									<br><span class="icon-globe">
+									<br><span class="icon-earth" aria-hidden="true"></span>
 									<a href="http://<?php echo get_post_meta($post->ID, 'ecpt_homepage', true); ?>" onclick="ga('send','event','Outgoing Links','<?php echo get_post_meta($post->ID, 'ecpt_homepage', true); ?>')">
 										<?php echo get_post_meta($post->ID, 'ecpt_homepage', true);?>
 									</a>
-									</span>
+									
 								<?php endif; ?>
 							</p> <!-- End Contact info line -->
 					<?php } ?>	
@@ -87,18 +87,18 @@
 				<div class="row">
 					<ul class="nav">
 						<?php if ( get_post_meta($post->ID, 'ecpt_homepage', true) ) : ?>
-							<li><span class="icon-arrow-right-2"></span><a href="http://<?php echo get_post_meta($post->ID, 'ecpt_homepage', true); ?>" onclick="ga('send','event','Outgoing Links','<?php echo get_post_meta($post->ID, 'ecpt_homepage', true); ?>')"><?php the_title(); ?> Website</a></li>
+							<li><span class="icon-arrow-right14" aria-hidden="true"></span><a href="http://<?php echo get_post_meta($post->ID, 'ecpt_homepage', true); ?>" onclick="ga('send','event','Outgoing Links','<?php echo get_post_meta($post->ID, 'ecpt_homepage', true); ?>')"><?php the_title(); ?> Website</a></li>
 						<?php endif; ?>
 						<?php if ( get_post_meta($post->ID, 'ecpt_facultypage', true) ) : ?>
-							<li><span class="icon-arrow-right-2"></span><a href="http://<?php echo get_post_meta($post->ID, 'ecpt_facultypage', true); ?>">Faculty</a></li>
+							<li><span class="icon-arrow-right14" aria-hidden="true"></span><a href="http://<?php echo get_post_meta($post->ID, 'ecpt_facultypage', true); ?>">Faculty</a></li>
 						<?php endif; ?>
 
 						<?php if ( get_post_meta($post->ID, 'ecpt_undergraduatepage', true) ) : ?>
-							<li><span class="icon-arrow-right-2"></span><a href="http://<?php echo get_post_meta($post->ID, 'ecpt_undergraduatepage', true); ?>">Undergraduate</a></li>
+							<li><span class="icon-arrow-right14" aria-hidden="true"></span><a href="http://<?php echo get_post_meta($post->ID, 'ecpt_undergraduatepage', true); ?>">Undergraduate</a></li>
 						<?php endif; ?>
 
 						<?php if ( get_post_meta($post->ID, 'ecpt_graduatepage', true) ) : ?>
-							<li><span class="icon-arrow-right-2"></span><a href="http://<?php echo get_post_meta($post->ID, 'ecpt_graduatepage', true); ?>">Graduate</a></li>
+							<li><span class="icon-arrow-right14" aria-hidden="true"></span><a href="http://<?php echo get_post_meta($post->ID, 'ecpt_graduatepage', true); ?>">Graduate</a></li>
 						<?php endif; ?>
 					</ul>
 				</div> <!--End Dept Nav Links -->

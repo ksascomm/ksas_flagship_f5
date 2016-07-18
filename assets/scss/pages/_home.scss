@@ -10,19 +10,19 @@ body.home .reveal-modal {
 
 #field_search {
  ::-webkit-input-placeholder {
-      color: $gray;
+      color: $grey;
   }
 
   :-moz-placeholder { /* Firefox 18- */
-    color: $gray;
+    color: $grey;
   }
 
   ::-moz-placeholder {  /* Firefox 19+ */
-     color: $gray;
+     color: $grey;
   }
 
   :-ms-input-placeholder {
-    color: $gray;
+    color: $grey;
   }  
   font-family: $font-subhead-book;
   font-weight: 400;
@@ -144,17 +144,17 @@ body.home .reveal-modal {
   }
 }
 
-.four.columns .video_thumb .icon-play:before {
+.four.columns .video_thumb .icon-play4:before {
   top: 23%;
   left: 36%;
 }
 
-.three.columns .video_thumb .icon-play:before {
+.three.columns .video_thumb .icon-play4:before {
   top: 18%;
   left: 33%;
 }
 
-.video_thumb.full .icon-play:before {
+.video_thumb.full .icon-play4:before {
   top: 35%;
   left: 38%;
 }

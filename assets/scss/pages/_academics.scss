@@ -2,9 +2,6 @@
   .tabs {
     border-bottom: none;
   }
-  ul {
-    list-style: none;
-  }
   .tabs {
     dd.active, li.active {
       border-top: none;
@@ -44,7 +41,7 @@
   text-align: center;
 }
 
-.video_thumb.small .icon-play:before {
+.video_thumb.small .icon-play4:before {
   font-size: 48px;
 }
 

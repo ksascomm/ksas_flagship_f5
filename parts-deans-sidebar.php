@@ -10,7 +10,7 @@
 				'menu' => 'Dean Links',
 				'container' => false,
 				'menu_class' => 'nav',
-				'link_before' => '<span class="icon-arrow-right-2"></span>', 
+				'link_before' => '<span class="icon-arrow-right14" aria-hidden="true"></span>', 
 				'depth' => 1 )); ?> 
 		</div>
 		<div class="rust_bg offset-gutter sidebar_header">
@@ -40,7 +40,7 @@
 			</div>
 			</div>
 			<?php endwhile; ?>
-			<p class="floatright"><a href="<?php echo site_url('/blog/category/newsletter'); ?>"><b>View full archive &nbsp;</b><span class="icon-arrow-right-2"></span></a></p>
+			<p class="floatright"><a href="<?php echo site_url('/blog/category/newsletter'); ?>"><b>View full archive &nbsp;</b><span class="icon-arrow-right14" aria-hidden="true"></span></a></p>
 			<?php endif; ?>
 		
 	</aside> <!-- End Sidebar -->

@@ -44,6 +44,9 @@ Template Name: Fields of Study
 							<span class="fa fa-search"></span>
 						</button>
 						<input type="text" name="search" value="<?php if (isset($_POST['home_search'])) { echo($_POST['home_search']); } ?>" id="id_search" aria-label="Search Fields of Study" placeholder="Enter major/minor, area of study, or description keyword"  /> 
+							<label for="id_search" class="screen-reader-text">
+								Search Fields of Study
+							</label>
 					</div>
 					
 					<div class="row hide-for-mobile">

@@ -43,7 +43,7 @@
 			    	<?php endif; ?>
 			    
 			    	<?php if ( get_post_meta($post->ID, 'ecpt_phone', true) ) : ?>
-			    		<span class="icon-mobile"></span><?php echo get_post_meta($post->ID, 'ecpt_phone', true); ?><br>
+			    		<span class="icon-phone" aria-hidden="true"></span><?php echo get_post_meta($post->ID, 'ecpt_phone', true); ?><br>
 			    	<?php endif; ?>
 			    
 			    	<?php if ( get_post_meta($post->ID, 'ecpt_fax', true) ) : ?>
@@ -61,10 +61,10 @@
 			    	<?php endif; ?>
 			    
 			    	<?php if ( get_post_meta($post->ID, 'ecpt_website', true) ) : ?>
-			    		<a href="<?php echo get_post_meta($post->ID, 'ecpt_website', true); ?>" target="_blank"><span class="icon-globe"></span>Personal Website</a><br>
+			    		<a href="<?php echo get_post_meta($post->ID, 'ecpt_website', true); ?>" target="_blank"><span class="icon-earth" aria-hidden="true"></span>Personal Website</a><br>
 			    	<?php endif; ?>
 			    	<?php if ( get_post_meta($post->ID, 'ecpt_lab_website', true) ) : ?>
-			    		<a href="<?php echo get_post_meta($post->ID, 'ecpt_lab_website', true); ?>" target="_blank"><span class="icon-globe"></span>Group Website</a>
+			    		<a href="<?php echo get_post_meta($post->ID, 'ecpt_lab_website', true); ?>" target="_blank"><span class="icon-earth" aria-hidden="true"></span>Group Website</a>
 			    	<?php endif; ?>
 			    </p>
 			</div>

@@ -7,7 +7,7 @@
 <article class="small-12 medium-4 columns">
 	<div class="video_thumb">
 		<a href="<?php echo $vid_url ;?>">
-			<span class="icon-play"></span><?php the_post_thumbnail('rss', array( 'class' => 'no-lazy')); ?>
+			<span class="icon-play4" aria-hidden="true"></span><?php the_post_thumbnail('rss', array( 'class' => 'no-lazy')); ?>
 		</a>
 	</div>
 	<h3><?php the_title(); ?></h3>

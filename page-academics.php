@@ -70,7 +70,7 @@
 					<article class="small-5 medium-3 columns end rust_bg no-gutter voices">
 						<a href="#" data-reveal-id="modal_home_<?php the_id(); ?>_video" onclick="ga('send', 'event', 'Video', 'Play', '<?php the_title(); ?>');">
 							<div class="video_thumb small">
-								<span class="icon-play"></span><?php the_post_thumbnail('full'); ?>
+								<span class="icon-play4" aria-hidden="true"></span><?php the_post_thumbnail('full'); ?>
 							</div>
 							<?php if (has_term('','academicdepartment', $post->ID) == true) {
 							$terms = get_the_terms( $post->ID, 'academicdepartment' );

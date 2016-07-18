@@ -1,5 +1,12 @@
-.iconfont {
-  font-family: $flagship-icon;
+@font-face {
+    font-family: 'icomoon';
+    src:    url('fonts/icomoon.eot?xw593v');
+    src:    url('fonts/icomoon.eot?xw593v#iefix') format('embedded-opentype'),
+        url('fonts/icomoon.ttf?xw593v') format('truetype'),
+        url('fonts/icomoon.woff?xw593v') format('woff'),
+        url('fonts/icomoon.svg?xw593v#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
 }
 
 [class^="icon-"], [class*=" icon-"] {

@@ -44,7 +44,9 @@ Template Name: Dean's Directory
 					</div>
 					
 					<div class="row">		
-						<input type="submit" class="icon-search" placeholder="Search by major/minor, interests, department name..." value="&#xe004;" />
+						<button class="submit" type="submit" aria-label="submit"/>
+							<span class="fa fa-search"></span>
+						</button>
 						<input type="text" name="search" id="id_search"  /> 
 							<label for="id_search" class="screen-reader-text">
 								Search the dean's directory
@@ -74,10 +76,10 @@ Template Name: Dean's Directory
 							<?php endif; ?>
 						</a>
 						<p class="contact black">
-							<?php if ( get_post_meta($post->ID, 'ecpt_phone', true) ) : ?><span class="icon-mobile"><?php echo get_post_meta($post->ID, 'ecpt_phone', true); ?></span><?php endif; ?>
-							<?php if ( get_post_meta($post->ID, 'ecpt_fax', true) ) : ?><span class="icon-printer"><?php echo get_post_meta($post->ID, 'ecpt_fax', true); ?></span><?php endif; ?>
-							<?php if ( get_post_meta($post->ID, 'ecpt_email', true) ) : ?><span class="icon-mail"><a href="mailto:<?php echo get_post_meta($post->ID, 'ecpt_email', true); ?>"> <?php echo get_post_meta($post->ID, 'ecpt_email', true); ?></a></span><?php endif; ?>
-							<?php if ( get_post_meta($post->ID, 'ecpt_office', true) ) : ?><span class="icon-location"><?php echo get_post_meta($post->ID, 'ecpt_office', true); ?></span><?php endif; ?>
+							<?php if ( get_post_meta($post->ID, 'ecpt_phone', true) ) : ?><span class="icon-phone"></span> <?php echo get_post_meta($post->ID, 'ecpt_phone', true); ?><?php endif; ?>
+							<?php if ( get_post_meta($post->ID, 'ecpt_fax', true) ) : ?><span class="icon-printer"></span><?php echo get_post_meta($post->ID, 'ecpt_fax', true); ?><?php endif; ?>
+							<?php if ( get_post_meta($post->ID, 'ecpt_email', true) ) : ?><span class="icon-mail"></span> <a href="mailto:<?php echo get_post_meta($post->ID, 'ecpt_email', true); ?>"> <?php echo get_post_meta($post->ID, 'ecpt_email', true); ?></a><?php endif; ?>
+							<?php if ( get_post_meta($post->ID, 'ecpt_office', true) ) : ?><span class="icon-location"></span> <?php echo get_post_meta($post->ID, 'ecpt_office', true); ?><?php endif; ?>
 						</p>
 						</div>	
 					</div>
@@ -94,10 +96,10 @@ Template Name: Dean's Directory
 								<h5 class="no-margin"><?php echo get_post_meta($post->ID, 'ecpt_position', true); ?></h5>
 						<?php endif; ?>
 						<p class="contact">
-							<?php if ( get_post_meta($post->ID, 'ecpt_phone', true) ) : ?><span class="icon-mobile"><?php echo get_post_meta($post->ID, 'ecpt_phone', true); ?></span><?php endif; ?>
-							<?php if ( get_post_meta($post->ID, 'ecpt_fax', true) ) : ?><span class="icon-printer"><?php echo get_post_meta($post->ID, 'ecpt_fax', true); ?></span><?php endif; ?>
-							<?php if ( get_post_meta($post->ID, 'ecpt_email', true) ) : ?><span class="icon-mail"><a href="mailto:<?php echo get_post_meta($post->ID, 'ecpt_email', true); ?>"> <?php echo get_post_meta($post->ID, 'ecpt_email', true); ?></a></span><?php endif; ?>
-							<?php if ( get_post_meta($post->ID, 'ecpt_office', true) ) : ?><span class="icon-location"><?php echo get_post_meta($post->ID, 'ecpt_office', true); ?></span><?php endif; ?>
+							<?php if ( get_post_meta($post->ID, 'ecpt_phone', true) ) : ?><span class="icon-phone"></span> <?php echo get_post_meta($post->ID, 'ecpt_phone', true); ?><?php endif; ?>
+							<?php if ( get_post_meta($post->ID, 'ecpt_fax', true) ) : ?><span class="icon-printer">/span> <?php echo get_post_meta($post->ID, 'ecpt_fax', true); ?><<?php endif; ?>
+							<?php if ( get_post_meta($post->ID, 'ecpt_email', true) ) : ?><span class="icon-mail"></span> <a href="mailto:<?php echo get_post_meta($post->ID, 'ecpt_email', true); ?>"> <?php echo get_post_meta($post->ID, 'ecpt_email', true); ?></a><?php endif; ?>
+							<?php if ( get_post_meta($post->ID, 'ecpt_office', true) ) : ?><span class="icon-location"></span> <?php echo get_post_meta($post->ID, 'ecpt_office', true); ?><?php endif; ?>
 						</p>
 						</div>
 					</div>

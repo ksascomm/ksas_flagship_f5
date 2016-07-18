@@ -29,7 +29,7 @@
 						<img src="<?php echo $full_image_url[0]; ?>" class="radius-topright" / alt="<?php the_title(); ?>">
 						<summary>
 							<h3 class="no-margin white"><?php the_title(); ?></h3>
-							<h5 class="white italic no-margin"><?php echo get_the_content(); ?><span class="icon-arrow-right-2"></span></h5>
+							<h5 class="white italic no-margin"><?php echo get_the_content(); ?><span class="icon-arrow-right14" aria-hidden="true"></span></h5>
 						</summary>
 					</a>
 		    		</div>

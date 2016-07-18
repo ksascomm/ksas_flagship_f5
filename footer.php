@@ -1,6 +1,6 @@
 <footer>
   	<div class="row hide-for-print">
-  		<nav class="small-10 medium-3 columns" id="quicklinks" aria-label="Quicklinks Menu">
+  		<nav class="medium-3 columns hide-for-small" id="quicklinks" aria-label="Quicklinks Menu">
 			<?php wp_nav_menu( array( 
 			'theme_location' => 'quick_links', 
 			'menu_class' => 'nav-bar', 
@@ -20,7 +20,7 @@
 		</div>
 		
 		<!-- Social Media -->
-		<div class="small-12 medium-4 large-2 columns" id="social-media" role="navigation" aria-labelledby="social-media">
+		<div class="small-12 medium-3 large-2 columns" id="social-media" role="navigation" aria-labelledby="social-media">
 			<div class="small-6 columns">
 				<a href="http://facebook.com/jhuksas" title="Facebook"><span class="fa fa-facebook-official fa-3x"></span><span class="screen-reader-text">Facebook</span></a>
 			</div>
