@@ -9343,7 +9343,8 @@ ul.flyout li.active a, .nav-bar li ul li.active a {
   color: #FFF; }
 
 #main_nav ul li ul li.current_page_item a, #main_nav ul li ul li.current_page_ancestor a, #main_nav ul li ul li.current_page_parent a, #main_nav ul li ul li a:hover {
-  color: #FFF; }
+  color: #FFF;
+  background: #004485; }
 
 #menu-item-897 ul.flyout li:hover {
   background: black; }
@@ -9545,7 +9546,7 @@ footer {
   padding: 0;
   background: none; }
   #quicklinks .nav-bar {
-    margin-top: -50px;
+    margin-top: -55px;
     background: none; }
   #quicklinks li.has-flyout {
     background: #d07b00;

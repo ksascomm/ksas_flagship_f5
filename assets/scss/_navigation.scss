@@ -597,6 +597,7 @@ ul.flyout li.active a, .nav-bar li ul li.active a {
   ul li {
     &.current_page_item a, &.current_page_ancestor a, &.current_page_parent a, a:hover {
       color: #FFF;
+      background: darken($blue, 10%);
     }
   }
 }
