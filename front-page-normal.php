@@ -22,12 +22,12 @@ Template Name: Front Page Normal
 						@media only screen and (max-width: 420px) { body { background: #000; } }
 						#main_nav {margin-top: 15px;}
 					</style>
-					<a href="#" data-reveal-id="modal_<?php the_id(); ?>_caption" onclick="ga('send', 'event', 'Homepage Big Ideas', 'Click', '<?php the_title(); ?>')">
+					<a href="#" data-reveal-id="modal-caption" onclick="ga('send', 'event', 'Homepage Big Ideas', 'Click', '<?php the_title(); ?>')">
 						<h1 class="text-shadow"><?php the_title(); ?>
 							<?php the_content();?>
 						</h1>
 					</a>
-					<div id="modal_<?php the_id(); ?>_caption" class="reveal-modal radius10" data-reveal aria-labelledby="Photo caption" aria-hidden="true" role="dialog">
+					<div id="modal-caption" class="reveal-modal radius10" data-reveal aria-labelledby="modal-caption" aria-hidden="true" role="dialog">
 							<h4>About the Photo</h4>
 							<p class="white"><?php $caption = get_post_meta($post->ID, 'ecpt_caption_credit', true); 
 													echo apply_filters('the_content', $caption); ?></p>
