@@ -26,7 +26,7 @@ Template Name: Photo Archive
 		<div class="row">
 			<div class="small-12 columns" id="archive">
 			<h1>This Week on Campus</h1>
-			<?php locate_template('parts-archive-navigation.php', true, false); ?>			
+			<?php locate_template('/parts/archive-navigation.php', true, false); ?>			
 			<ul class="photo_list" data-clearing>
 			<?php while ($flagship_photo_archive_query->have_posts()) : $flagship_photo_archive_query->the_post(); 
 				$full_image_url = wp_get_attachment_image_src( get_post_thumbnail_id(), 'full');
@@ -38,7 +38,7 @@ Template Name: Photo Archive
 						<a href="<?php echo $full_image_url[0]; ?>">
 								<img src="<?php echo $thumbnail_url[0]; ?>" class="floatleft" data-caption="<?php echo $clean_caption; ?>" alt="<?php the_title(); ?>">
 								<time><?php echo get_the_date(); ?></time>
-								<h5 class="icon-camera"><?php the_title(); ?></h5>
+								<h5><span class="fa fa-camera" aria-hidden="true"></span> <?php the_title(); ?></h5>
 								<summary><?php echo limit_words(get_the_content(), '25'); ?><span class="blue">&nbsp;&nbsp;[Read More]</span></summary>
 						</a>
 					</li>

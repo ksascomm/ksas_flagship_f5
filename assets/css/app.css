@@ -9404,7 +9404,7 @@ ul.flyout li.active a, .nav-bar li ul li.active a {
     background: #666;
     height: 31px;
     width: 30px;
-    font-family: "icomoon", "gentona-light", Arial, sans-serif;
+    font-family: FontAwesome;
     border-top-left-radius: 7px;
     border-bottom-left-radius: 7px;
     font-size: 16px;
@@ -10555,7 +10555,8 @@ ul.photo_list li:last-child {
   float: left !important; }
 
 #archive h5 {
-  margin-top: 3px; }
+  margin-top: 3px;
+  line-height: 1; }
 
 #archive .four.columns .video_thumb .icon-play4:before {
   font-size: 36px; }

@@ -13,14 +13,9 @@
   <!-- CSS Files: All pages -->
   <link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri() ?>/assets/css/app.min.css">
 
-  <!-- CSS Files: Conditionals -->
-  
-  <!-- Modernizr and Jquery Script -->
-  <?php wp_enqueue_script('jquery'); ?> 
-  <script src="<?php echo get_template_directory_uri() ?>/assets/js/vendor/modernizr.min.js"></script>
   <?php wp_head(); ?>
 
-  <?php include_once("parts-analytics.php") ?> 
+  <?php include_once("analytics.php") ?> 
 </head>
 
 <?php
@@ -49,7 +44,7 @@ if( is_page() ) {
 		<?php _e('You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.'); ?>	
 		</div>		
 	<![endif]-->
-<body <?php body_class($ancestorslug); ?> onLoad="viewport()">
+<body <?php body_class($ancestorslug); ?>>
 	<header>
 		<div id="mobile-nav">
 	  		<div class="row">
@@ -60,7 +55,7 @@ if( is_page() ) {
 		</div>
 	
 		<div id="desktop-nav">
-			<?php get_template_part( 'parts', 'offcanvas' ); ?>
+			<?php get_template_part( '/parts/offcanvas-nav' ); ?>
 
 			<div class="row hide-for-print" role="navigation">
 				<?php wp_nav_menu( array( 

@@ -10,6 +10,6 @@
 		</section>
 	</div>	<!-- End main content (left) section -->
 <?php endwhile; endif; ?>
-	<?php locate_template('parts-deans-sidebar.php', true, false); ?>
+	<?php locate_template('/parts/deans-sidebar.php', true, false); ?>
 	</div> 
 <?php get_footer(); ?>

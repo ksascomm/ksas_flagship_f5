@@ -91,8 +91,8 @@ Template Name: Front Page Takeover
 	$format = get_post_format();  //Determine post format
 	if ( false === $format ) {
 		$format = 'standard'; }
-		if ( $format == 'video' ) : locate_template('parts-home-video.php', true, false); endif;
-		if ( $format == 'standard' ) : locate_template('parts-home-news.php', true, false); endif;
+		if ( $format == 'video' ) : locate_template('/parts/home-video.php', true, false); endif;
+		if ( $format == 'standard' ) : locate_template('/parts/home-news.php', true, false); endif;
 ?>
 <?php endwhile; endif; ?>
 </section>

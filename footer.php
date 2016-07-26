@@ -41,7 +41,8 @@
 	</div>
 </footer>
   
-  <?php locate_template('parts-script-initiators.php', true, false); wp_footer();?>
+  <?php wp_footer(); 
+  locate_template('/parts/script-initiators.php', true, false); ?>
 
 	</body>
 </html>

@@ -16,7 +16,7 @@ $flagship_news_archive_query = new WP_Query(array(
 		<div class="row">
 			<div class="small-12 columns" id="archive">
 			<h2>News &amp; Video Archive</h2>
-			<?php locate_template('parts-archive-navigation.php', true, false); ?>
+			<?php locate_template('/parts/archive-navigation.php', true, false); ?>
 			<?php while ($flagship_news_archive_query->have_posts()) : $flagship_news_archive_query->the_post(); ?>
 				<?php $format = get_post_format();  //Determine post format
 					if ( false === $format ) { $format = 'standard'; }
@@ -26,7 +26,7 @@ $flagship_news_archive_query = new WP_Query(array(
 						<a href="<?php the_permalink(); ?>">
 							<?php the_post_thumbnail('bullet', array('class' => 'floatleft')); ?>								
 							<time><?php echo get_the_date(); ?></time>
-							<h5 class="icon-newspaper"><?php the_title(); ?></h5>
+							<h5><span class="fa fa-newspaper-o" aria-hidden="true"></span> <?php the_title(); ?></h5>
 							<summary><?php echo limit_words(get_the_excerpt(), '25'); ?><span class="blue">&nbsp;&nbsp;[Read More]</span></summary>
 						</a>
 					</article>
@@ -38,7 +38,7 @@ $flagship_news_archive_query = new WP_Query(array(
 							<?php the_post_thumbnail('bullet', array('class' => 'floatleft')); ?>
 						</div>
 							<time><?php echo get_the_date(); ?></time>
-							<h5 class="icon-video"><?php the_title(); ?></h5>
+							<h5><span class="fa fa-video-camera" aria-hidden="true"></span> <?php the_title(); ?></h5>
 							<summary><?php echo limit_words(get_the_excerpt(), '25'); ?><span class="blue">&nbsp;&nbsp;[Read More]</span></summary>
 						</a>
 					</article>
@@ -48,7 +48,7 @@ $flagship_news_archive_query = new WP_Query(array(
 						<a href="#" data-reveal-id="modal_home_<?php the_id(); ?>_image">
 							<?php the_post_thumbnail('bullet', array('class' => 'floatleft')); ?>
 							<time><?php echo get_the_date(); ?></time>
-							<h5 class="icon-camera"><?php the_title(); ?></h5>
+							<h5><span class="fa fa-camera" aria-hidden="true"></span> <?php the_title(); ?></h5>
 							<summary><?php echo limit_words(get_the_content(), '25'); ?><span class="blue">&nbsp;&nbsp;[Read More]</span></summary>
 						</a>
 					</article>

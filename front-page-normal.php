@@ -106,8 +106,8 @@ Template Name: Front Page Normal
 					$format = get_post_format();  //Determine post format
 					if ( false === $format ) {
 						$format = 'standard'; }
-						if ( $format == 'video' ) : locate_template('parts-home-video.php', true, false); endif;
-						if ( $format == 'standard' ) : locate_template('parts-home-news.php', true, false); endif;
+						if ( $format == 'video' ) : locate_template('/parts/home-video.php', true, false); endif;
+						if ( $format == 'standard' ) : locate_template('/parts/home-news.php', true, false); endif;
 				?>
 				<hr class="show-for-small-only">
 				<?php endwhile; endif; ?>

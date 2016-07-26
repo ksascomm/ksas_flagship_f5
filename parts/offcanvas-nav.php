@@ -9,6 +9,7 @@
                     <li role="menuitem"><a href="http://krieger.jhu.edu/about/faculty/" onclick="ga('send', 'event', 'Offcanvas', 'Academics', 'Faculty')">Faculty Directory</a></li>
                     <li role="menuitem"><a href="http://krieger.jhu.edu/academics/fields/" onclick="ga('send', 'event', 'Offcanvas', 'Academics', 'Fields of Study')">Fields of Study</a></li>
                     <li role="menuitem"><a href="http://www.library.jhu.edu/" onclick="ga('send', 'event', 'Offcanvas', 'Academics', 'Libraries')">Libraries</a></li>
+                    <li role="menuitem"><a href="krieger.jhu.edu/academics/majors-minors/" onclick="ga('send', 'event', 'Offcanvas', 'Academics', 'Majors & Minors')">Majors & Minors</a></li>
                     <li role="menuitem"><a href="#" class="off-canvas-submenu-call">Other Educational Opportunities<span>+</span></a></li>
                       <ul class="no-bullet off-canvas-submenu"> 
                         <li role="menuitem"><a href="http://advanced.jhu.edu/" onclick="ga('send', 'event', 'Offcanvas', 'Academics', 'AAP')">Advanced Academic Programs</a></li>
@@ -48,7 +49,7 @@
             <li role="menuitem">
                 <a href="http://krieger.jhu.edu/giving/" class="blue_bg button" onclick="ga('send', 'event', 'Offcanvas', 'ETC', 'Giving')"><span class="fa fa-gift"></span> Give Now!</a>
                 <form method="GET" action="<?php echo site_url('/search'); ?>" role="search" id="search-bar">
-                      <input type="submit" class="icon-search" value="&#xe004;" />
+                      <input type="submit" class="search" value="&#xf002;" />
                       <label for="search" class="screen-reader-text">Search</label>
                       <input type="text" id="search" name="q" placeholder="Search this site" aria-label="search"/>
                 </form>

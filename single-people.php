@@ -111,7 +111,7 @@
 							</script>
 							<script language="javascript" id="insideJs" src="http://academic.research.microsoft.com/LibraInside?js&infos=<?php echo $author_id; ?>|5|0|20"></script>						
 						<?php endif; ?>
-						<?php if ( get_post_meta($post->ID, 'ecpt_google_id', true) ) : locate_template('parts-google-scholar.php', true, false); endif; ?>
+						<?php if ( get_post_meta($post->ID, 'ecpt_google_id', true) ) : locate_template('/parts/google-scholar.php', true, false); endif; ?>
 					</div>
 				<?php endif; ?>
 				

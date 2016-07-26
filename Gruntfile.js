@@ -115,7 +115,8 @@ module.exports = function(grunt) {
           compress: true
         },
         files: {
-          "assets/js/vendor/modernizr.min.js": ["assets/js/vendor/modernizr.js"]
+          "assets/js/vendor/modernizr.min.js": ["assets/js/vendor/modernizr.js"],
+          "assets/js/vendor/app.min.js": ["assets/js/vendor/app.js"]
         }
       },
     },

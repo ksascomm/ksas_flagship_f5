@@ -2,9 +2,13 @@
 For development environment search and replace javascripts/min. for javascripts/
 For production environment search and replace javascripts/ for javascripts/min.
 -->
+  <!-- Modernizr & Foundation -->
+  <script src="<?php echo get_template_directory_uri() ?>/assets/js/vendor/modernizr.min.js"></script>
+  <script src="<?php echo get_template_directory_uri() ?>/assets/js/foundation.min.js"></script>
+
 <!***********ALL PAGES**************>
-  <script src="<?php echo get_template_directory_uri() ?>/assets/js/foundation.min.js"></script> <!-- ALL -->
-  <script src="<?php echo get_template_directory_uri() ?>/assets/js/vendor/app.js"></script>
+   
+  <script src="<?php echo get_template_directory_uri() ?>/assets/js/vendor/app.min.js"></script>
   <script src="<?php echo get_template_directory_uri() ?>/assets/js/vendor/offcanvas.js"></script>
 	<script>
 	var $x = jQuery.noConflict();

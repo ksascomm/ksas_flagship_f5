@@ -1,6 +1,6 @@
 theme_flagship_foundation5
 ======================
-**Current Version:** 3.0
+**Current Version:** 4.0
 
 Based off Foundation Grunt/libsass template:
 

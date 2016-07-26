@@ -28,7 +28,7 @@ Template Name: Student Voices
 		<div class="row">
 			<div class="small-12 columns" id="archive">
 			<h2>Student Voices</h2>
-			<?php locate_template('parts-archive-navigation.php', true, false); ?>
+			<?php locate_template('/parts/archive-navigation.php', true, false); ?>
 			<?php while ($flagship_student_voices_query_archive->have_posts()) : $flagship_student_voices_query_archive->the_post(); ?>
 				<article class="small-4 columns mobile-four">
 				<a href="#" data-reveal-id="modal_home_<?php the_id(); ?>_video" onclick="ga('send', 'event', 'Video', 'Play', '<?php the_title(); ?>');">
@@ -36,7 +36,7 @@ Template Name: Student Voices
 						<?php the_post_thumbnail('bullet', array('class' => 'floatleft')); ?>
 					</div>
 						<time><?php echo get_the_date(); ?></time>						
-						<h5 class="icon-video"><?php the_title(); ?></h5>
+						<h5><?php the_title(); ?></h5>
 						<summary><?php echo limit_words(get_the_excerpt(), '25'); ?><span class="blue">&nbsp;&nbsp;[Read More]</span></summary>
 					</a>
 				</article>

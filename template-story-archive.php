@@ -27,7 +27,7 @@ Template Name: Article Archive
 		<div class="row">
 			<div class="small-12 columns" id="archive">
 			<h1>News Articles</h1>
-			<?php locate_template('parts-archive-navigation.php', true, false); ?>			
+			<?php locate_template('/parts/archive-navigation.php', true, false); ?>			
 			<?php while ($flagship_article_archive_query->have_posts()) : $flagship_article_archive_query->the_post(); ?>
 					<article class="medium-4 columns">
 						<a href="<?php the_permalink(); ?>">
@@ -35,7 +35,7 @@ Template Name: Article Archive
 								 the_post_thumbnail('bullet', array('class' => 'floatleft')); 
 							} ?>								
 							<time><?php echo get_the_date(); ?></time>
-							<h5 class="icon-newspaper"><?php the_title(); ?></h5>
+							<h5><span class="fa fa-newspaper-o" aria-hidden="true"></span> <?php the_title(); ?></h5>
 							<summary><?php echo limit_words(get_the_excerpt(), '25'); ?><span class="blue">&nbsp;&nbsp;[Read More]</span></summary>
 						</a>
 					</article>			

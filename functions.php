@@ -116,5 +116,21 @@ function my_sitemap_replacement ($content) {
 add_filter('simple_sitemaps-generated_urlset', 'my_sitemap_replacement');
 
 
+function my_init()   
+{  
+    if (!is_admin())   
+    {  
+        wp_deregister_script('jquery');  
+  
+        // Load a copy of jQuery from the Google API CDN  
+        // The last parameter set to TRUE states that it should be loaded  
+        // in the footer.  
+        wp_register_script('jquery', 'http://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js', FALSE, '1.12.4', TRUE);  
+  
+        wp_enqueue_script('jquery');  
+    }  
+}  
+add_action('init', 'my_init');  
+
  
 ?>
