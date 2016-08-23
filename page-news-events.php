@@ -190,20 +190,14 @@
 								<a class="dark_blue_bg" href="/news-events/events">Today's Events</a>
 							</h3>
 						</div>
-						<div class="button bright_blue_bg">
-							<a href="/news-events/events">View Full Calendar</a>
-						</div>
-						<div id="calendar_container"></div>
-							<!-- Uncomment when ready for filter calendars
-								<h6>View full calendars</h6>
-								<div class="button yellow_bg small"><a href="/news/events/cal_humanities">Humanities</a></div>
-								<div class="button orange_bg"><a href="/news/events/cal_sciences">Sciences</a></div>
-								<div class="button bright_blue_bg"><a href="/news/events/cal_interdisciplinary">Interdisciplinary</a></div>
-							-->
-
+						<div class="row">
+							<?php echo do_shortcode('[ai1ec view="agenda"]'); ?>
+							<hr>
+						</div>	
 					</div>
 				</div>	
 						<!-- ************END CALENDAR SECTION************* -->	
+			</div>	
 			</div>	
 
 		</div>
