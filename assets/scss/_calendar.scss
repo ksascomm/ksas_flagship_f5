@@ -153,3 +153,37 @@ a.rssLink {
   width: 14.28%;
   height: 138px;
 }
+
+footer.timely.ai1ec-event-footer {
+    background: inherit;
+}
+
+.timely p {
+  font-size: 16px;
+  font-family: $font-stack !important;
+}
+
+.ai1ec-event-time, span.ai1ec-event-title, .ai1ec-event-details {
+  font-family: $font-subhead-book !important;
+}
+
+.ai1ec-agenda-widget-view .ai1ec-date, .ai1ec-agenda-widget-view .ai1ec-date.ai1ec-today,{
+  background: none !important;
+}
+
+.ai1ec-agenda-view .ai1ec-date.ai1ec-today {
+  border-top: none !important;
+  background: none !important;
+}
+
+.timely {
+  font-family: inherit !important;
+}
+
+.ai1ec-agenda-widget-view .ai1ec-event .ai1ec-event-time, .ai1ec-agenda-widget-view .ai1ec-event>a {
+  color: $black;
+}
+
+#calendar_section {
+  margin-bottom: 10px;
+}

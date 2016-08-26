@@ -192,7 +192,6 @@
 						</div>
 						<div class="row">
 							<?php echo do_shortcode('[ai1ec view="agenda"]'); ?>
-							<hr>
 						</div>	
 					</div>
 				</div>	

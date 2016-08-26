@@ -1,30 +1,19 @@
-<!--
-For development environment search and replace javascripts/min. for javascripts/
-For production environment search and replace javascripts/ for javascripts/min.
--->
-  <!-- Modernizr & Foundation -->
-  <script src="<?php echo get_template_directory_uri() ?>/assets/js/vendor/modernizr.min.js"></script>
-  <script src="<?php echo get_template_directory_uri() ?>/assets/js/foundation.min.js"></script>
-
 <!***********ALL PAGES**************>
-   
-  <script src="<?php echo get_template_directory_uri() ?>/assets/js/vendor/app.min.js"></script>
-  <script src="<?php echo get_template_directory_uri() ?>/assets/js/vendor/offcanvas.js"></script>
-	<script>
+	<script async>
 	var $x = jQuery.noConflict();
 		$x('#quicklinks ul.flyout li a').on('click', function() {
   			ga('send', 'event', 'Quicklinks', 'Flyout Menu', 'Flagship');
 		});
 	</script>
 
-	<script>
+	<script async>
 		var $za = jQuery.noConflict();
 			$za('#quicklinks ul.flyout li a').on('click', function() {
 	  			_sz.push(['event', 'Quicklinks', 'Flyout Menu', ('Flagship-SiteImprove') ]);
 			});
 	</script>
 
-	<script>
+	<script async>
 		var $zz = jQuery.noConflict();
 			$zz('#trigger').on('click', function() {
 	  			_sz.push(['event', 'Quicklinks', 'Explore KSAS', ('Offcanvas Top Navigation') ]);
@@ -33,13 +22,13 @@ For production environment search and replace javascripts/ for javascripts/min.
 
 <!**********TABLET/MOBILE MENUS**************>  
 <?php if(is_tablet()) {  ?>
-		<script>
+		<script defer>
 			jQuery(document).ready(function () {
 			    jQuery('#main_nav').meanmenu({meanScreenWidth: "767"});
 			});
 		</script>
 <?php } else { ?>
-	<script>
+	<script defer>
 		jQuery(document).ready(function () {
 		    jQuery('#main_nav').meanmenu();
 		});
@@ -49,17 +38,17 @@ For production environment search and replace javascripts/ for javascripts/min.
 	
 <!***********FIELDS OF STUDY**************>
   <?php if ( is_page_template( 'template-fieldsofstudy.php' ))  { ?>
-  	<script src="<?php echo get_template_directory_uri() ?>/assets/js/vendor/min.page.fieldsofstudy.js"></script>
+  	<script defer src="<?php echo get_template_directory_uri() ?>/assets/js/vendor/page.fieldsofstudy.min.js"></script>
   	
   		<?php if (isset($_POST['home_search'])) { ?>
-	  		<script>
+	  		<script defer>
 		  		var $j = jQuery.noConflict();
 		  		$j(window).load(function() {
 		  		    $j('#id_search').trigger('keyup'); // Trigger the listener
 		  		});
 	  		</script>
 	  	<?php } else { ?>
-	  		<script>
+	  		<script defer>
 		  		var $j = jQuery.noConflict();
 		  		$j(window).load(function() {
 		  		    var filterFromQuerystring = getParameterByName('filter');
@@ -74,7 +63,7 @@ For production environment search and replace javascripts/ for javascripts/min.
 	<?php } ?> 
 <!***********DIRECTORY**************>
 <?php if ( is_page_template( 'template-directory.php' ))  { ?>
-  	<script src="<?php echo get_template_directory_uri() ?>/assets/js/vendor/min.page.directory.js"></script>
+  	<script defer src="<?php echo get_template_directory_uri() ?>/assets/js/vendor/page.directory.min.js"></script>
 <?php } ?>
 
 <!***********RESEARCH**************>
@@ -85,40 +74,12 @@ For production environment search and replace javascripts/ for javascripts/min.
 
 <!***********ABOUT**************>
 
-<!***********NEWS**************>
-<?php if ( is_page('news-events')) { ?>
-	<script src="<?php echo get_template_directory_uri() ?>/assets/js/vendor/min.easyXDM.js"></script>
-	<script>
-	    new easyXDM.Socket({
-	        remote: "http://krieger.jhu.edu/calendar/calendar_holder.html?url=http://krieger.jhu.edu/calendar/krieger_all/list/byday",
-	        container: document.getElementById("calendar_container"),
-	        onMessage: function(message, origin){
-	            this.container.getElementsByTagName("iframe")[0].style.height = message + "px";
-	        }
-	    });
-	</script>
-<?php } ?>
-
-<?php if ( is_page('events')) { ?>
-	<script src="<?php echo get_template_directory_uri() ?>/assets/js/vendor/min.easyXDM.js"></script>
-	<script>
-	    new easyXDM.Socket({
-	        remote: "http://krieger.jhu.edu/calendar/calendar_holder.html?url=http://krieger.jhu.edu/calendar/krieger_all",
-	        container: document.getElementById("calendar_container"),
-	        onMessage: function(message, origin){
-	            this.container.getElementsByTagName("iframe")[0].style.height = message + "px";
-	            this.container.getElementsByTagName("iframe")[0].style.width = "100%";
-	        }
-	    });
-	</script>
-<?php } ?>
-
 <!***********NAVIGATION INDICATORS**************>
 <?php if (  is_singular('post') || is_page_template('template-photo-archive.php') || is_page_template('template-story-archive.php') || is_page_template('template-video-archive.php') || is_page('archive') || is_page('events')) { 
 		$news_id = ksas_get_page_id('news-events');
 		$archive_id = ksas_get_page_id('archive');
 ?>
-	<script>
+	<script defer>
 		var $j = jQuery.noConflict();
 		$j(document).ready(function(){
 			$j('li.page-id-<?php echo $news_id; ?>').addClass('current_page_ancestor');
@@ -131,7 +92,7 @@ For production environment search and replace javascripts/ for javascripts/min.
 	$about_id = ksas_get_page_id('about');
 	$people_id = ksas_get_page_id('leadership');
 ?>
-	<script>
+	<script defer>
 		var $k = jQuery.noConflict();
 		$k(document).ready(function(){
 			$k('li.page-id-<?php echo $about_id; ?>').addClass('current_page_ancestor');
@@ -143,7 +104,7 @@ For production environment search and replace javascripts/ for javascripts/min.
 		$academics_id = ksas_get_page_id('academics');
 		$fields_id = ksas_get_page_id('fields');
 ?>
-	<script>
+	<script defer>
 		var $k = jQuery.noConflict();
 		$k(document).ready(function(){
 			$k('li.page-id-<?php echo $academics_id; ?>').addClass('current_page_ancestor');
@@ -155,7 +116,7 @@ For production environment search and replace javascripts/ for javascripts/min.
 	$about_id = ksas_get_page_id('about');
 	$newsletter_id = ksas_get_page_id('dean-newsletter');
 ?>
-	<script>
+	<script defer>
 		var $k = jQuery.noConflict();
 		$k(document).ready(function(){
 			$k('li.page-id-<?php echo $about_id; ?>').addClass('current_page_ancestor');
@@ -164,7 +125,7 @@ For production environment search and replace javascripts/ for javascripts/min.
 	</script>
 <?php } ?>
 
-<script>
+<script defer>
 jQuery.noConflict();
 jQuery(document).foundation();
 </script>
