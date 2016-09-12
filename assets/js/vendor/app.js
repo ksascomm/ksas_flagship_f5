@@ -297,7 +297,7 @@ function getParameterByName(name)
     'use strict';
     $.fn.foundationNavigation = function(options) {
         var lockNavBar = false;
-        if (Modernizr.touch || navigator.userAgent.match(/Windows Phone/i)) {
+        if (Modernizr.touchevents || navigator.userAgent.match(/Windows Phone/i)) {
             $(document).on('click.fndtn touchstart.fndtn', '.nav-bar a.flyout-toggle', function(e) {
                 e.preventDefault();
                 var flyout = $(this).siblings('.flyout').first();
