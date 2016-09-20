@@ -10,8 +10,7 @@ get_header(); ?>
 <div class="row wrapper radius10">
 	<div class="large-12 columns">
 		<h1>Search Results</h1>
-		<section>
-
+        <p>You are currently searching the Krieger network. Try searching the <a href="https://www.jhu.edu/search/">JHU network</a> for websites beyond KSAS.</p>
 <?php 
 try {
     $search = new KSAS_GoogleSearch();
@@ -34,16 +33,22 @@ try {
         ?>
        <form class="search-form" action="<?php echo site_url('/search'); ?>" method="get">
                     <fieldset>
-                        <input type="text" class="input-text" name="q" value="<?php echo $displayQuery ?>" />
-                        <input type="submit" class="button blue_bg" value="Search Again" />
+                        <label>
+                            Search:
+                            <input type="text" class="input-text" name="q" value="<?php echo $displayQuery ?>" />
+                        </label>
+                        <input type="submit" class="button blue_bg" id="search_again" value="Search Krieger Network" />
+                            <label for="search_again" class="screen-reader-text">
+                            Search Again
+                            </label>
                     </fieldset>
-       </form>        
-       <h6>Results <span class="black"><?php echo $results->getFirstResultNum() ?> - <?php echo $results->getLastResultNum() ?></span> of about <span class="black"><?php echo $hits ?></span></h6>
+       </form>       
+       <p>Results <strong><?php echo $results->getFirstResultNum() ?> - <?php echo $results->getLastResultNum() ?></strong> of about <strong><?php echo $hits ?></strong></p>
            
         <?php if (empty($sponsored_result) == false) { ?>
 	        <div class="panel callout radius10" id="sponsored">
-	        	<h6 class="black">Featured Result</h6>
-	        	<a href="<?php echo $sponsored_result['sponsored_url']; ?>"><h3><?php echo $sponsored_result['sponsored_title']; ?><small class="italic">-- <?php echo $sponsored_result['sponsored_url']; ?></small></h3></a>
+                <h2 class="black">Featured Result</h2>
+                <h3><a href="<?php echo $sponsored_result['sponsored_url']; ?>"><?php echo $sponsored_result['sponsored_title']; ?></a><small class="italic"> &mdash;<?php echo $sponsored_result['sponsored_url']; ?></small></h3>
 	        </div>
          <?php } ?>   
             <div id="search-results">
@@ -54,7 +59,8 @@ try {
             // note what results are PDFs
             $pdfNote = '';
             if (preg_match('{application/pdf}', $result['mimeType'])) {
-                $pdfNote = '<span class="black">[PDF]</span> ';
+                $pdfNote = '<span class="black"><i class="fa fa-file-pdf-o" aria-hidden="true"></i>
+[PDF]</span>  ';
             }
             ?>
                     <li>
@@ -110,11 +116,17 @@ try {
             }
         ?>
              
-            <p style="font-weight: bold;">There are no pages matching your search.</p>
+             <h3 class="black">There are no pages matching your search.</h3>
                    <form class="search-form" action="<?php echo site_url('/search'); ?>" method="get">
                     <fieldset>
-                        <input type="text" class="input-text" name="q" value="<?php echo $displayQuery ?>" />
-                        <input type="submit" class="button blue_bg" value="Search Again" />
+                        <label>
+                            Search:
+                            <input type="text" class="input-text" name="q" value="<?php echo $displayQuery ?>" />
+                        </label>
+                        <input type="submit" class="button blue_bg" id="search_again" value="Search Krieger Network" />
+                            <label for="search_again" class="screen-reader-text">
+                            Search Again
+                            </label>
                     </fieldset>
        </form>        
 
@@ -128,7 +140,6 @@ try {
     </div>
     <?php
 } ?>
-		</section>
 	</div>
 </div>
 
