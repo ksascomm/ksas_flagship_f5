@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-<div class="row wrapper radius10 no-padding">
+<div class="row wrapper radius10 no-padding" id="news-events">
 	<div class="small-12 columns">
 		<div class="row">
 		<!-- ************START NEWS & FEATURED VIDEO SECTION************* -->
@@ -25,13 +25,11 @@
 						 ?>
 			
 					<?php while ($flagship_news_query->have_posts()) : $flagship_news_query->the_post(); ?>
-						<a href="<?php the_permalink(); ?>">
-							<article>
+							<article id="post-<?php the_ID(); ?>">
 								<?php the_post_thumbnail('rss'); ?>
-								<h4><?php the_title(); ?></h4>
+								<h4><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
 								<summary><?php the_excerpt(); ?></summary>
 							</article>
-						</a>
 					<?php endwhile; ?>
 
 			<!-- ************DEPARTMENT & HUB SECTION************* -->
@@ -49,10 +47,9 @@
 						$hub_results = json_decode($hub_call['body'], true);
 						$hub_articles = $hub_results['_embedded'];						
 						foreach($hub_articles['articles'] as $hub_article) { ?>
-							<a href="<?php echo $hub_article['url']; ?>">
-								<article>
+								<article id="post-<?php the_ID(); ?>">
 									<img src="<?php echo $hub_article['_embedded']['image_thumbnail'][0]['sizes']['impact_small']; ?>" alt="From The Hub" />
-									<h4><?php echo $hub_article['headline']; ?></h4>
+									<h4><a href="<?php echo $hub_article['url']; ?>"><?php echo $hub_article['headline']; ?></a></h4>
 									<summary>
 										<p><?php echo $hub_article['subheadline']; 
 												 if (empty($hub_article['subheadline'])) { 
@@ -61,7 +58,6 @@
 										</p>
 									</summary>
 								</article>	
-							</a>
 						<?php } ?>					
 					</div>
 			<!-- ************END DEPARTMENT & HUB SECTION************* -->				
@@ -77,7 +73,7 @@
 										<?php if ( isset( $tweets->{0}->created_at ) ) : ?>
 										    <?php foreach ($tweets as $tweet) : ?>
 										        <?php echo '<img src="' . $tweet->entities->media[0]->media_url . '">' ;?>
-													<article>
+													<article id="post-<?php the_ID(); ?>">
 														<div class="row">
 															<div class="small-12 columns centered">														
 																<h4>Around Campus with Homewood Photography <a href="http://twitter.com/<?php echo $tweet->user->screen_name // Author display name ?>"><span class="fa fa-twitter-square"></span></a></h4>																		
@@ -187,11 +183,11 @@
 					<div class="small-12 columns" id="calendar_section">
 						<div class="banner blue_bg offset-gutter">
 							<h3>
-								<a class="dark_blue_bg" href="/news-events/events">Today's Events</a>
+								<a class="dark_blue_bg" href="/news-events/events">Upcoming Events</a>
 							</h3>
 						</div>
 						<div class="row">
-							<?php echo do_shortcode('[ai1ec view="agenda"]'); ?>
+							<?php echo do_shortcode('[ai1ec view="agenda" events_limit="5"]'); ?>
 						</div>	
 					</div>
 				</div>	

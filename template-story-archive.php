@@ -29,16 +29,21 @@ Template Name: Article Archive
 			<h1>News Articles</h1>
 			<?php locate_template('/parts/archive-navigation.php', true, false); ?>			
 			<?php while ($flagship_article_archive_query->have_posts()) : $flagship_article_archive_query->the_post(); ?>
-					<article class="medium-4 columns">
-						<a href="<?php the_permalink(); ?>">
-						<?php if (has_post_thumbnail()) {
-								 the_post_thumbnail('bullet', array('class' => 'floatleft')); 
-							} ?>								
+<article class="medium-6 columns" id="post-<?php the_ID(); ?>">
+						<header class="entry-header">
 							<time><?php echo get_the_date(); ?></time>
-							<h5><span class="fa fa-newspaper-o" aria-hidden="true"></span> <?php the_title(); ?></h5>
-							<summary><?php echo limit_words(get_the_excerpt(), '25'); ?><span class="blue">&nbsp;&nbsp;[Read More]</span></summary>
-						</a>
-					</article>			
+							<h1><span class="fa fa-newspaper-o" aria-hidden="true"></span>
+								<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+							</h1>
+						</header>	
+						<div class="entry-content">
+							<?php the_post_thumbnail('bullet', array('class' => 'floatleft')); ?>		
+							<summary>
+								<?php echo limit_words(get_the_excerpt(), '25'); ?>
+								<a href="<?php the_permalink(); ?>">[Read More]</a>
+							</summary>
+						</div>
+					</article>		
 			<?php endwhile; ?>
 			</div>
 		</div>
