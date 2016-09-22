@@ -125,9 +125,16 @@ h5.white{
 }
 
 .fushia {
-  background: #8e3a80;
+  background: $fushia;
   &.button:hover {
-    background: #8e3a80;
+    background: $fushia;
+  }
+}
+
+.aqua_bg {
+  background: $aqua;
+  &.button:hover {
+    background: $aqua;
   }
 }
 
@@ -139,9 +146,9 @@ h5.white{
 }
 
 .orange_bg {
-  background: #cc6600;
+  background: $orange;
   &.button:hover {
-    background: #cc6600;
+    background: $orange;
   }
 }
 

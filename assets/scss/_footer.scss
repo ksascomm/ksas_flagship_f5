@@ -24,12 +24,14 @@ footer {
     margin-top: -55px;
     background: none;
   }
+  .nav-bar>li>a:first-child {
+    color: #fff;
+  }
   li.has-flyout {
-    background: #d07b00;
+    background: #002D72;
     font-family: $font-subhead-book;
     font-weight: 400;
     font-style: normal;
-    color: #FFF;
     text-transform: uppercase;
     line-height: 38px;
     letter-spacing: 1px;

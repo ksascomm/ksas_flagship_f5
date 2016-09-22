@@ -57,22 +57,24 @@ Template Name: Front Page Normal
 							<button class="submit" type="submit" aria-label="submit"/>
 								<span class="fa fa-search"></span>
 							</button>
-					     	<input type="text" name="home_search" id="home_search" placeholder="Search fields of study by major, minor, interests, or name" />
+					     	<input type="text" name="home_search" id="home_search" placeholder="Search our fields of study by program type, the department name, and major/minor availabilty" />
 						     	<label for="home_search" class="screen-reader-text">
-									Search fields of study by major, minor, interests, or name
+									Search our fields of study by program type, the department name, and major/minor availabilty
 								</label>
 						</div>
 					</div>	
 					<div class="row" id="filters">
-						<ul class="inline-list hide-for-small-only" id="homepage_buttons">
-							<li class="button bright_blue_bg"><a href="academics/fields" data-filter="*" onclick="ga('send', 'event', 'Fields', 'Homepage', 'All');">View All</a></li>
-							<li class="button green_bg"><a href="academics/fields?filter=department" data-filter=".department" onclick="ga('send', 'event', 'Fields', 'Homepage', 'Department');">Departments</a></li>
-							<li class="button purple_bg"><a href="academics/fields?filter=interdisciplinary" data-filter=".interdisciplinary" onclick="ga('send', 'event', 'Fields', 'Homepage', 'Interdisciplinary');">Interdisciplinary</a></li>
-							<li class="button fushia"><a href="academics/fields?filter=arts" data-filter=".arts" onclick="ga('send', 'event', 'Fields', 'Homepage', 'Arts');">The Arts</a></li>
-							<li class="button yellow_bg"><a href="academics/fields?filter=humanities" data-filter=".humanities" onclick="ga('send', 'event', 'Fields', 'Homepage', 'Humanities');">Humanities</a></li>
-							<li class="button orange_bg"><a href="academics/fields?filter=natural" data-filter=".natural" onclick="ga('send', 'event', 'Fields', 'Homepage', 'Natural');">Natural Sciences</a></li>
-							<li class="button bright_blue_bg"><a href="academics/fields?filter=social" data-filter=".social" onclick="ga('send', 'event', 'Fields', 'Homepage', 'Social');">Social Sciences</a></li>
+						<ul class="hide-for-small-only" id="homepage_buttons">
+							<li class="button bright_blue_bg"><a href="academics/fields?filter=undergrad_program" data-filter=".undergrad_program" onclick="ga('send', 'event', 'Fields', 'Homepage', 'Department');">Undergraduate</a></li>
+							<li class="button fushia"><a href="academics/fields?filter=full_time_program" data-filter=".full_time_program" onclick="ga('send', 'event', 'Fields', 'Homepage', 'Interdisciplinary');">Full-Time Graduate</a></li>
+							<li class="button orange_bg"><a href="academics/fields?filter=part_time_program" data-filter=".part_time_program" onclick="ga('send', 'event', 'Fields', 'Homepage', 'Arts');">Part-Time Graduate</a></li>
+							
+							<li class="button green_bg"><a href="academics/departments-programs-and-centers" onclick="ga('send', 'event', 'Fields', 'Homepage', 'Natural');">Departments</a></li>
+							<li class="button aqua_bg"><a href="academics/majors-minors" onclick="ga('send', 'event', 'Fields', 'Homepage', 'Social');">Majors & Minors</a></li>
+
+							<!--<li class="button yellow_bg"><a href="http://pages.jh.edu/summer/" onclick="ga('send', 'event', 'Fields', 'Homepage', 'Social');">Summer Programs <span class="fa fa-external-link-square"></span></a></li>-->
 						</ul>
+						
 						<div class="small-9 columns show-for-small-only">
 							<div class="button bright_blue_bg"><a href="academics/fields" data-filter="*" onclick="ga('send', 'event', 'Fields', 'Homepage', 'All');">View All</a></div>
 							<div class="button green_bg"><a href="academics/fields?filter=department" data-filter=".department" onclick="ga('send', 'event', 'Fields', 'Homepage', 'Department');">Departments</a></div>
@@ -82,6 +84,7 @@ Template Name: Front Page Normal
 							<div class="button orange_bg"><a href="academics/fields?filter=natural" data-filter=".natural" onclick="ga('send', 'event', 'Fields', 'Homepage', 'Natural');">Natural Sciences</a></div>
 							<div class="button bright_blue_bg"><a href="academics/fields?filter=social" data-filter=".social" onclick="ga('send', 'event', 'Fields', 'Homepage', 'Social');">Social Sciences</a></div>
 						</div>
+						
 					</div>	    
 				</form>
 			</li>

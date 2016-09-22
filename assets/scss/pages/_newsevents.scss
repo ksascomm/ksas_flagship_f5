@@ -113,12 +113,8 @@ ul.photo_list {
     margin-bottom: 4px;
   }
   a {
-    color: #2c2c33;
+    color: $black;
   }
-}
-
-#archive article a {
-  color: #2c2c33;
 }
 
 ul.photo_list li:last-child {
@@ -129,9 +125,11 @@ ul.photo_list li:last-child {
   article:last-child {
     float: left !important;
   }
-  h5 {
+  h1 {
     margin-top: 3px;
     line-height: 1;
+    font-size: 1.125rem;
+    font-family: $font-subhead-book;
   }
   .four.columns .video_thumb .icon-play4:before {
     font-size: 36px;
@@ -163,6 +161,10 @@ span.article-title {
     font-weight: bold;
     line-height: 1.45;
     color: $black;
-    font-family: 'gentona-book',Arial,sans-serif;
+    font-family: $font-subhead-book;
     font-weight: 300;
+}
+
+#news-events .banner h3 a {
+border-bottom: none;
 }
