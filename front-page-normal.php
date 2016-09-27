@@ -57,9 +57,9 @@ Template Name: Front Page Normal
 							<button class="submit" type="submit" aria-label="submit"/>
 								<span class="fa fa-search"></span>
 							</button>
-					     	<input type="text" name="home_search" id="home_search" placeholder="Search our fields of study by program type, the department name, and major/minor availabilty" />
+					     	<input type="text" name="home_search" id="home_search" placeholder="Search our fields of study by program type, the department name, and major/minor availability" />
 						     	<label for="home_search" class="screen-reader-text">
-									Search our fields of study by program type, the department name, and major/minor availabilty
+									Search our fields of study by program type, the department name, and major/minor availability
 								</label>
 						</div>
 					</div>	
