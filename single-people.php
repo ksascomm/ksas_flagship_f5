@@ -2,7 +2,7 @@
 <div class="row wrapper radius10" id="page" role="main">
 	<div class="radius-left offset-topgutter">	
 		
-		<section class="content">
+		<div class="content">
 			<div class="row">
 				<div class="small-12 medium-5 medium-offset-7 columns">
 				<h6>Jump to Leadership Profile</h6>
@@ -125,7 +125,7 @@
 			</div>
 			</div>
 			<?php endwhile; endif; ?>	
-		</section>
+		</div>
 	</div>	<!-- End main content (left) section -->
 </div> <!-- End #page -->
 <?php get_footer(); ?>

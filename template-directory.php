@@ -26,21 +26,20 @@ Template Name: Dean's Directory
 					'order' => 'ASC',
 					'posts_per_page' => '-1'));
 					set_transient( 'flagship_dean_staff_query', $flagship_dean_staff_query, 2592000 ); }		 ?>
-<div class="row wrapper radius10">
-	<section class="row">
-	
-		<div class="medium-5 columns copy">
+
+<div class="row wrapper radius10" role="main">	
+		<div class="small-12 large-7 columns copy">
 		<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 			<h1><?php the_title();?></h1>
 			<p><?php the_content(); ?></p>
 		<?php endwhile; endif; ?>
 		</div>
 		
-		<div class="medium-7 columns" id="fields_search">
+		<div class="small-12 large-5 columns" id="fields_search">
 			<form action="#">
 				<fieldset class="radius10">
 					<div class="row">
-						<h6>Search the dean's directory:</h6>
+						<h2>Search the dean's directory:</h2>
 					</div>
 					
 					<div class="row">		
@@ -56,9 +55,9 @@ Template Name: Dean's Directory
 				</fieldset>
 			</form>	
 		</div>
-	</section>
+
 	
-	<section class="row" id="fields_container">
+	<div class="row" id="fields_container">
 		<ul class="large-12 columns" id="directory">
 		<?php while ($flagship_leadership_query->have_posts()) : $flagship_leadership_query->the_post(); ?>
 				<li class="person">
@@ -84,9 +83,9 @@ Template Name: Dean's Directory
 						</div>	
 					</div>
 				</li>		
-	<?php endwhile; ?>
-	
-	
+		<?php endwhile; ?>
+		
+		
 		<?php while ($flagship_dean_staff_query->have_posts()) : $flagship_dean_staff_query->the_post(); ?>
 				<li class="person">
 					<div class="row">
@@ -104,15 +103,13 @@ Template Name: Dean's Directory
 						</div>
 					</div>
 				</li>		
-	<?php endwhile; ?>
-	<div class="row" id="noresults">
-		<div class="small-12 medium-4 columns centered">
-			<h3> No matching results</h3>
-		</div>
+		<?php endwhile; ?>
+			<div class="row" id="noresults">
+				<div class="small-12 medium-4 columns centered">
+					<h3> No matching results</h3>
+				</div>
+			</div>
+		</ul>
 	</div>
-</ul>
-</section>
-
-
 </div> <!-- End content wrapper -->
 <?php get_footer(); ?>

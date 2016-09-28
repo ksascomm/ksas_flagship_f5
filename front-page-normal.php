@@ -13,7 +13,7 @@ Template Name: Front Page Normal
 ?>		
 
 	<div class="row">
-		<section class="small-12 large-7 columns end offset-top hide-for-small" id="evergreen" role="main">
+		<div class="small-12 large-7 columns end offset-top hide-for-small" id="evergreen" role="main">
 			<?php while ($flagship_evergreen_query->have_posts()) : $flagship_evergreen_query->the_post(); ?>
 				<!-- Set background image. Resolution varies based on size -- Desktop, Tablet, Mobile -->
 					<style>
@@ -34,10 +34,10 @@ Template Name: Front Page Normal
 						<a class="close-reveal-modal" aria-label="Close">&#215;</a>
 					</div>
 			<?php endwhile; ?>		
-		</section>
+		</div>
 	</div>
 
-	<section class="row" id="field_search" role="form">
+	<div class="row" id="field_search" role="form">
 		<dl class="tabs contained" data-tab>
 			<label for="field_search">
 				<dd class="active black_bg">
@@ -89,9 +89,9 @@ Template Name: Front Page Normal
 				</form>
 			</li>
 		</div>
-	</section>
+	</div>
 
-	<section class="row black_bg radius10" id="news_feed" role="complementary">
+	<div class="row black_bg radius10" id="news_feed" role="complementary">
 		<div class="small-12 columns">
 			<h2 class="hide-for-small-only white">Arts & Sciences News</h2>
 			<h2 class="hide-for-medium-up black">Arts & Sciences News</h2>
@@ -115,7 +115,7 @@ Template Name: Front Page Normal
 				<hr class="show-for-small-only">
 				<?php endwhile; endif; ?>
 		</div>
-	</section>
+	</div>
 
 
 

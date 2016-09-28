@@ -16,8 +16,8 @@ Template Name: Fields of Study
 
 		
 <div class="row wrapper radius10">
-	<div class="small-12 columns">
-		<section class="row">
+	<div class="small-12 columns" role="main">
+		<div class="row">
 		
 			<div class="small-12 large-9 columns copy">
 			<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
@@ -66,90 +66,90 @@ Template Name: Fields of Study
 					</fieldset>
 				</form>	
 			</div>
-		</section>
-	<section class="row" id="fields_container" role="main">
-		<?php while ($flagship_studyfields_query->have_posts()) : $flagship_studyfields_query->the_post(); 
-			//Pull discipline array (humanities, natural, social)
-			if(get_post_meta($post->ID, 'ecpt_discipline', true)) {
-				$discipline_array = get_post_meta($post->ID, 'ecpt_discipline', true);
-				$discipline = array_values($discipline_array);
-			}
-			$program_types = get_the_terms( $post->ID, 'program_type' );
-				if ( $program_types && ! is_wp_error( $program_types ) ) : 
-					$program_type_names = array();
-						foreach ( $program_types as $program_type ) {
-							$program_type_names[] = $program_type->slug;
-						}
-					$program_type_name = join( " ", $program_type_names );
-				endif;
-		?>
-		<?php if(is_mobile()) {  ?>	
-			<!-- Set mobile classes for isotype.js filter buttons -->
-			<div class="medium-6 large-4 columns mobile-field <?php echo $discipline[0] . ' '; if ( isset($discipline[1] )) { echo $discipline[1] . ' ';  } if ( isset($discipline[2] )) { echo $discipline[2] . ' ';  } echo get_post_meta($post->ID, 'ecpt_structure', true);?> <?php echo $program_type_name; ?>">
-				<a href="<?php the_permalink();?>" title="<?php the_title(); ?>" class="field">
-					<ul class="field">
-					<!-- Display ribbons for discipline taxonomy -->
-						<li class="blue"><?php the_title(); ?>
-						<span class="hide"><?php echo get_post_meta($post->ID, 'ecpt_keywords', true); ?></span>
-						</li>
-					</ul>
-				</a>
-			</div>
-		<?php } else { ?>
-			<!-- Set desktop classes for isotype.js filter buttons -->
-			<div class="medium-6 large-4 columns  mobile-field <?php echo $discipline[0] . ' '; if ( isset($discipline[1] )) { echo $discipline[1] . ' ';  } if ( isset($discipline[2] )) { echo $discipline[2] . ' ';  } echo get_post_meta($post->ID, 'ecpt_structure', true);?> <?php echo $program_type_name; ?>">
-			
-								
-					<div class="small-12 columns field <?php echo $program_type_name; ?>">
-					
-					<!-- Display ribbons for discipline taxonomy -->
-					<div class="row">	
-						<div class="small-12 columns disciplines">
-						</div>
-					</div>
-					
+		</div>
+		<div class="row" id="fields_container" role="main">
+			<?php while ($flagship_studyfields_query->have_posts()) : $flagship_studyfields_query->the_post(); 
+				//Pull discipline array (humanities, natural, social)
+				if(get_post_meta($post->ID, 'ecpt_discipline', true)) {
+					$discipline_array = get_post_meta($post->ID, 'ecpt_discipline', true);
+					$discipline = array_values($discipline_array);
+				}
+				$program_types = get_the_terms( $post->ID, 'program_type' );
+					if ( $program_types && ! is_wp_error( $program_types ) ) : 
+						$program_type_names = array();
+							foreach ( $program_types as $program_type ) {
+								$program_type_names[] = $program_type->slug;
+							}
+						$program_type_name = join( " ", $program_type_names );
+					endif;
+			?>
+			<?php if(is_mobile()) {  ?>	
+				<!-- Set mobile classes for isotype.js filter buttons -->
+				<div class="medium-6 large-4 columns mobile-field <?php echo $discipline[0] . ' '; if ( isset($discipline[1] )) { echo $discipline[1] . ' ';  } if ( isset($discipline[2] )) { echo $discipline[2] . ' ';  } echo get_post_meta($post->ID, 'ecpt_structure', true);?> <?php echo $program_type_name; ?>">
+					<a href="<?php the_permalink();?>" title="<?php the_title(); ?>" class="field">
+						<ul class="field">
+						<!-- Display ribbons for discipline taxonomy -->
+							<li class="blue"><?php the_title(); ?>
+							<span class="hide"><?php echo get_post_meta($post->ID, 'ecpt_keywords', true); ?></span>
+							</li>
+						</ul>
+					</a>
+				</div>
+			<?php } else { ?>
+				<!-- Set desktop classes for isotype.js filter buttons -->
+				<div class="medium-6 large-4 columns  mobile-field <?php echo $discipline[0] . ' '; if ( isset($discipline[1] )) { echo $discipline[1] . ' ';  } if ( isset($discipline[2] )) { echo $discipline[2] . ' ';  } echo get_post_meta($post->ID, 'ecpt_structure', true);?> <?php echo $program_type_name; ?>">
+				
+									
+						<div class="small-12 columns field <?php echo $program_type_name; ?>">
 						
-						<h3><a href="http://<?php echo get_post_meta($post->ID, 'ecpt_homepage', true); ?>" onclick="ga('send','event','Outgoing Links','<?php echo get_post_meta($post->ID, 'ecpt_homepage', true); ?>')"><?php the_title(); ?></a></h3>
-						<div class="row">
-							<div class="small-12 columns">
-								<p class="contact">
-									<?php echo get_post_meta($post->ID, 'ecpt_phonenumber', true); ?>
-									<span class="floatright">
-										<a href="mailto:<?php echo get_post_meta($post->ID, 'ecpt_emailaddress', true); ?>">
-											<?php echo get_post_meta($post->ID, 'ecpt_emailaddress', true); ?>
-										</a>
-									</span>
-								</p>
-								<ul class="fields-of-study">
-									<?php if (get_post_meta($post->ID, 'ecpt_majors', true)) : ?>
-										<li><strong>Majors:</strong>&nbsp;<?php echo get_post_meta($post->ID, 'ecpt_majors', true); ?>
-										</li>
-									<?php endif; ?>
-									<?php if (get_post_meta($post->ID, 'ecpt_minors', true)) : ?>
-										<li><strong>Minors:</strong>&nbsp;<?php echo get_post_meta($post->ID, 'ecpt_minors', true); ?></li>
-									<?php endif; ?>
-									<?php if (get_post_meta($post->ID, 'ecpt_degreesoffered', true)) : ?>
-										<li><strong>Degrees Offered:</strong>&nbsp;<?php echo get_post_meta($post->ID, 'ecpt_degreesoffered', true); ?></li>
-									<?php endif; ?>
-									<?php if (get_post_meta($post->ID, 'ecpt_pcitext', true)) : ?>
-										<p><?php echo get_post_meta($post->ID, 'ecpt_pcitext', true); ?></p>
-									<?php endif; ?>
-								</lu>
-							</div>	
+						<!-- Display ribbons for discipline taxonomy -->
+						<div class="row">	
+							<div class="small-12 columns disciplines">
+							</div>
 						</div>
-						<span class="hide"><?php echo get_post_meta($post->ID, 'ecpt_keywords', true); ?></span>
-					</div>
-				</a>
-			</div>
-		<?php } ?>	
-		<?php endwhile; ?>
-		
-		<div class="row" id="noresults">
-			<div class="small-4 columns centered">
-				<h3> No matching results</h3>
+						
+							
+							<h3><a href="http://<?php echo get_post_meta($post->ID, 'ecpt_homepage', true); ?>" onclick="ga('send','event','Outgoing Links','<?php echo get_post_meta($post->ID, 'ecpt_homepage', true); ?>')"><?php the_title(); ?></a></h3>
+							<div class="row">
+								<div class="small-12 columns">
+									<p class="contact">
+										<?php echo get_post_meta($post->ID, 'ecpt_phonenumber', true); ?>
+										<span class="floatright">
+											<a href="mailto:<?php echo get_post_meta($post->ID, 'ecpt_emailaddress', true); ?>">
+												<?php echo get_post_meta($post->ID, 'ecpt_emailaddress', true); ?>
+											</a>
+										</span>
+									</p>
+									<ul class="fields-of-study">
+										<?php if (get_post_meta($post->ID, 'ecpt_majors', true)) : ?>
+											<li><strong>Majors:</strong>&nbsp;<?php echo get_post_meta($post->ID, 'ecpt_majors', true); ?>
+											</li>
+										<?php endif; ?>
+										<?php if (get_post_meta($post->ID, 'ecpt_minors', true)) : ?>
+											<li><strong>Minors:</strong>&nbsp;<?php echo get_post_meta($post->ID, 'ecpt_minors', true); ?></li>
+										<?php endif; ?>
+										<?php if (get_post_meta($post->ID, 'ecpt_degreesoffered', true)) : ?>
+											<li><strong>Degrees Offered:</strong>&nbsp;<?php echo get_post_meta($post->ID, 'ecpt_degreesoffered', true); ?></li>
+										<?php endif; ?>
+										<?php if (get_post_meta($post->ID, 'ecpt_pcitext', true)) : ?>
+											<p><?php echo get_post_meta($post->ID, 'ecpt_pcitext', true); ?></p>
+										<?php endif; ?>
+									</lu>
+								</div>	
+							</div>
+							<span class="hide"><?php echo get_post_meta($post->ID, 'ecpt_keywords', true); ?></span>
+						</div>
+					</a>
+				</div>
+			<?php } ?>	
+			<?php endwhile; ?>
+			
+			<div class="row" id="noresults">
+				<div class="small-4 columns centered">
+					<h3> No matching results</h3>
+				</div>
 			</div>
 		</div>
-	</section>
 	</div>
 </div> <!-- End content wrapper -->
 <?php get_footer(); ?>

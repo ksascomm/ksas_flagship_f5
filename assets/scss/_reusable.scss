@@ -511,6 +511,9 @@ p.lead, .lead {
     padding-bottom: 5px;
     border: none;
   }
+  h2 {
+    font-size: 1.5rem;
+  }
   h5 {
     margin-top: 5px;
     margin-bottom: 5px;
@@ -566,4 +569,12 @@ img.featured {
   max-width: 110%;
   height: auto;
   display: block;
+}
+
+.newsletter-header h1 {
+  font-size: 1.75rem;
+}
+
+h2.newsletter.subheader {
+  font-size: 1.5rem;
 }
