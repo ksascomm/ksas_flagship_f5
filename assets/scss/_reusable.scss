@@ -560,3 +560,10 @@ p.lead, .lead {
       color: $grey;
     }  
 }
+
+img.featured {
+  float: right;
+  max-width: 110%;
+  height: auto;
+  display: block;
+}

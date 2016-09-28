@@ -8820,6 +8820,12 @@ p.lead, .lead {
   padding: 0;
   color: #E5E2E0; }
 
+img.featured {
+  float: right;
+  max-width: 110%;
+  height: auto;
+  display: block; }
+
 body {
   font-family: "gentona-light", Arial, sans-serif;
   font-weight: 400;
