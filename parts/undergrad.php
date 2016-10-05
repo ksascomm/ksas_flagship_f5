@@ -78,7 +78,7 @@
 		</main>
 	</div>	
 	
-	<aside class="small-12 medium-4 columns" role="navigation"> <!-- Begin Sidebar -->
+	<aside class="small-12 medium-4 columns" role="navigation" id="sidebar"> <!-- Begin Sidebar -->
 		<!--<a href="/admissions" class="button expand blue_bg cta">Apply Now!</a>-->
 		
 		<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
@@ -91,18 +91,18 @@
 			<div class="row">
 				<ul class="nav">
 					<?php if ( get_post_meta($post->ID, 'ecpt_homepage', true) ) : ?>
-						<li><span class="icon-arrow-right14"></span><a href="http://<?php echo get_post_meta($post->ID, 'ecpt_homepage', true); ?>" onclick="ga('send','event','Outgoing Links','<?php echo get_post_meta($post->ID, 'ecpt_homepage', true); ?>')"><?php the_title(); ?> Website</a></li>
+						<li><a href="http://<?php echo get_post_meta($post->ID, 'ecpt_homepage', true); ?>" onclick="ga('send','event','Outgoing Links','<?php echo get_post_meta($post->ID, 'ecpt_homepage', true); ?>')"><?php the_title(); ?> Website</a></li>
 					<?php endif; ?>
 					<?php if ( get_post_meta($post->ID, 'ecpt_facultypage', true) ) : ?>
-						<li><span class="icon-arrow-right14"></span><a href="http://<?php echo get_post_meta($post->ID, 'ecpt_facultypage', true); ?>">Faculty</a></li>
+						<li><a href="http://<?php echo get_post_meta($post->ID, 'ecpt_facultypage', true); ?>">Faculty</a></li>
 					<?php endif; ?>
 
 					<?php if ( get_post_meta($post->ID, 'ecpt_undergraduatepage', true) ) : ?>
-						<li><span class="icon-arrow-right14"></span><a href="http://<?php echo get_post_meta($post->ID, 'ecpt_undergraduatepage', true); ?>">Undergraduate</a></li>
+						<li><a href="http://<?php echo get_post_meta($post->ID, 'ecpt_undergraduatepage', true); ?>">Undergraduate</a></li>
 					<?php endif; ?>
 
 					<?php if ( get_post_meta($post->ID, 'ecpt_graduatepage', true) ) : ?>
-						<li><span class="icon-arrow-right14"></span><a href="http://<?php echo get_post_meta($post->ID, 'ecpt_graduatepage', true); ?>">Graduate</a></li>
+						<li><a href="http://<?php echo get_post_meta($post->ID, 'ecpt_graduatepage', true); ?>">Graduate</a></li>
 					<?php endif; ?>
 				</ul>
 			</div> <!--End Dept Nav Links -->

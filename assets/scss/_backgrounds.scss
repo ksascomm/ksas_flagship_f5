@@ -43,9 +43,9 @@ body {
   }
 }
 
-#sidebar_header, .widget_title {
+#sidebar_header, .sidebar_header, .widget_title {
   background: $blue;
-  padding: 12px 15px 10px 0;
+  padding: 10px 0;
   margin-bottom: 15px;
   a:hover {
     color: #FFF;

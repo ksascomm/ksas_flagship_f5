@@ -8394,8 +8394,7 @@ a {
     padding-right: 30px; }
 
 .sidebar_header h5 {
-  color: #FFF;
-  font-family: "gentona-book", Arial, sans-serif; }
+  color: #FFF; }
 
 .content {
   padding-right: 50px; }
@@ -9671,11 +9670,11 @@ body.about, body.single-people {
 body.home h1, body.home h2, body.home h3, body.home h4 {
   color: #F7f7f7; }
 
-#sidebar_header, .widget_title {
+#sidebar_header, .sidebar_header, .widget_title {
   background: #005eb8;
-  padding: 12px 15px 10px 0;
+  padding: 10px 0;
   margin-bottom: 15px; }
-  #sidebar_header a:hover, .widget_title a:hover {
+  #sidebar_header a:hover, .sidebar_header a:hover, .widget_title a:hover {
     color: #FFF; }
 
 #sidebar h5 {
