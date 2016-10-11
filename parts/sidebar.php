@@ -23,7 +23,7 @@
 									'theme_location' => 'main_nav', 
 									'menu_class' => 'nav',
 									'container_class' => 'offset-gutter',
-									'items_wrap' =>  '<div class="radius-topright" id="sidebar_header"><h5 class="white">Also in <span class="grey bold">' . $page_name . '</span></h5></div><ul class="%2$s" role="navigation" aria-label="Sidebar Menu">%3$s</ul>',				
+									'items_wrap' =>  '<div class="radius-topright sidebar_header"><h5 class="white">Also in <span class="grey bold">' . $page_name . '</span></h5></div><ul class="%2$s" role="navigation" aria-label="Sidebar Menu">%3$s</ul>',				
 									'submenu' => $page_name,
 									'depth' => 1,
 								));
@@ -36,7 +36,7 @@
 								$parent_name = $parent_page->post_title;
 							?>
 						<!--Below is displayed when on a child page -->	
-							<div class="offset-gutter radius-topright" id="sidebar_header">
+							<div class="offset-gutter radius-topright sidebar_header">
 								<h5 class="white">Also in <a href="<?php echo $parent_url;?>" class="grey bold"><?php echo $parent_name ?></a></h5>
 							</div>
 							<?php
