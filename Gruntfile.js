@@ -20,7 +20,7 @@ module.exports = function(grunt) {
       dist: {
         options: {
           outputStyle: 'compressed',
-          sourceMap: false,
+          sourceMap: true,
         },
         files: {
           'assets/css/app.min.css': 'assets/scss/app.scss',
