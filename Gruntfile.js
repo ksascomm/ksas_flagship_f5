@@ -87,18 +87,25 @@ module.exports = function(grunt) {
             src: ['assets/bower_components/fontawesome/fonts/*'],
             dest: 'assets/fonts'
         },
-        foundation: {
+foundation: {
             expand: true,
             flatten: true,
-            src: ['assets/bower_components/foundation/js/*'],
+            src: ['assets/bower_components/foundation/js/foundation/foundation.js'],
             dest: 'assets/js'
-        },
-       foundation_plugins: {
+        },    
+        foundation_plugins: {
             expand: true,
             flatten: true,
-            src: ['assets/bower_components/foundation/js/foundation/*'],
-            dest: 'assets/js/foundation'
-        },
+            src: [
+              'assets/bower_components/foundation/js/foundation/foundation.accordion.js',
+              'assets/bower_components/foundation/js/foundation/foundation.interchange.js',
+              'assets/bower_components/foundation/js/foundation/foundation.orbit.js',
+              'assets/bower_components/foundation/js/foundation/foundation.reveal.js',
+              'assets/bower_components/foundation/js/foundation/foundation.slider.js',
+              'assets/bower_components/foundation/js/foundation/foundation.tab.js'
+            ],
+            dest: 'assets/js/foundation_plugins'
+        },    
         modernizr: {
             expand: true,
             flatten: true,
@@ -117,11 +124,17 @@ module.exports = function(grunt) {
         files: {
           "assets/js/vendor/modernizr.min.js": ["assets/js/vendor/modernizr.js"],
           "assets/js/vendor/app.min.js": ["assets/js/vendor/app.js"],
-          "assets/js/vendor/offcanvas.min.js": ["assets/js/vendor/offcanvas.js"],
           "assets/js/vendor/page.directory.min.js": ["assets/js/vendor/page.directory.js"],
           "assets/js/vendor/page.fieldsofstudy.min.js": ["assets/js/vendor/page.fieldsofstudy.js"],
-
-        }
+          "assets/js/foundation.min.js": ["assets/js/foundation.js"],
+          "assets/js/foundation.plugins.min.js": [
+            "assets/js/foundation_plugins/foundation.accordion.js",
+            "assets/js/foundation_plugins/foundation.interchange.js",
+            "assets/js/foundation_plugins/foundation.orbit.js",
+            "assets/js/foundation_plugins/foundation.slider.js",
+            "assets/js/foundation_plugins/foundation.tab.js",
+          ]
+        },
       },
     },
 
