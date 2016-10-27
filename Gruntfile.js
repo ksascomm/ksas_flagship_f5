@@ -131,6 +131,7 @@ foundation: {
             "assets/js/foundation_plugins/foundation.accordion.js",
             "assets/js/foundation_plugins/foundation.interchange.js",
             "assets/js/foundation_plugins/foundation.orbit.js",
+            "assets/js/foundation_plugins/foundation.reveal.js",
             "assets/js/foundation_plugins/foundation.slider.js",
             "assets/js/foundation_plugins/foundation.tab.js",
           ]
