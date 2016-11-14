@@ -27,10 +27,11 @@ Template Name: Front Page Normal
 							<?php the_content();?>
 						</h1>
 					</a>
-					<div id="modal-caption" class="reveal-modal radius10" data-reveal aria-labelledby="modal-caption" aria-hidden="true" role="dialog">
+					<div id="modal-caption" class="reveal-modal radius10" data-reveal aria-labelledby="modal-caption-<?php the_ID(); ?>" aria-hidden="true" role="dialog">
 							<h4>About the Photo</h4>
-							<p class="white"><?php $caption = get_post_meta($post->ID, 'ecpt_caption_credit', true); 
-													echo apply_filters('the_content', $caption); ?></p>
+							<p class="white" id="modal-caption-<?php the_ID(); ?>">
+								<?php echo get_post_meta($post->ID, 'ecpt_caption_credit', true);  ?>
+							</p>
 						<a class="close-reveal-modal" aria-label="Close">&#215;</a>
 					</div>
 			<?php endwhile; ?>		
