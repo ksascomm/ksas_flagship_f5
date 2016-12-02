@@ -3,7 +3,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="date" content="<?php the_modified_date(); ?>" />
+  <meta name="date" itemprop="dateModified" content="<?php the_modified_date(); ?>" />
+  <title><?php create_page_title(); ?></title>
   <link rel="shortcut icon" href="<?php echo get_template_directory_uri() ?>/assets/images/favicon.ico" />
   <link rel="apple-touch-icon-precomposed" sizes="144x144" href="<?php echo get_template_directory_uri() ?>/assets/images/apple-touch-icon-144x144-precomposed.png" />
   <link rel="apple-touch-icon-precomposed" sizes="114x114" href="<?php echo get_template_directory_uri() ?>/assets/images/apple-touch-icon-114x114-precomposed.png" />
@@ -13,8 +14,7 @@
   <link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri() ?>/assets/css/app.min.css">
 
   <?php wp_head(); ?>
-
-  <?php include_once("analytics.php") ?> 
+<?php include_once("analytics.php") ?> 
 </head>
 
 <?php
@@ -43,8 +43,9 @@ if( is_page() ) {
 		<?php _e('You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.'); ?>	
 		</div>		
 	<![endif]-->
-<body <?php body_class($ancestorslug); ?>>
-	<header>
+<body <?php body_class($ancestorslug); ?> itemscope="itemscope" itemtype="http://schema.org/WebPage">
+	<header itemscope="itemscope" itemtype="http://schema.org/WPHeader" role="banner">
+		<meta itemprop="headline" content="<?php echo get_bloginfo( 'title' ); ?>">
 		<div id="mobile-nav">
 	  		<div class="row">
 		        <div class="small-12 columns">
@@ -56,7 +57,7 @@ if( is_page() ) {
 		<div id="desktop-nav">
 			<?php get_template_part( '/parts/offcanvas-nav' ); ?>
 
-			<div class="row hide-for-print" role="navigation">
+			<div class="row hide-for-print" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement" role="navigation">
 				<?php wp_nav_menu( array( 
 					'theme_location' => 'main_nav', 
 					'menu_class' => '', 

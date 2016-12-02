@@ -1,9 +1,11 @@
 <?php get_header(); ?>
 <div class="row sidebar_bg radius10" id="opp">
-	<main class="small-12 large-8 columns wrapper radius-left offset-topgutter">
+	<main class="small-12 large-8 columns wrapper radius-left offset-topgutter" itemprop="mainContentOfPage" itemscope="itemscope" itemtype="http://schema.org/Blog">
 			<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-				<h1><?php the_title();?></h1>
-				<p><?php the_content(); ?></p>
+			<article itemscope="itemscope" itemtype="http://schema.org/BlogPosting" itemprop="blogPost">	
+				<h1 itemprop="headline"><?php the_title();?></h1>
+				<p itemprop="text"><?php the_content(); ?></p>
+			</article>
 			<?php endwhile; endif; ?>
 			<div class="small-12 medium-10 columns no-lazy">	
 				<ul id="slider" data-orbit data-options="animation_speed:2000; timer:true; slide_number: false; timer_speed:3000; navigation_arrows:false; bullets:false;" class="no-gutter photo-page-right no-lazy">

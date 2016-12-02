@@ -10,4 +10,4 @@
             locate_template('single-default.php', true, false);
         }
 
- get_footer(); ?>
+get_footer(); ?>

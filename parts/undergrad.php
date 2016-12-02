@@ -6,9 +6,9 @@
 <?php } ?>	
 <div class="row sidebar_bg radius10" id="landing">
 	<div class="small-12 medium-8 columns wrapper radius-left offset-top-small">		
-		<main class="content">
+		<main class="content" itemprop="mainContentOfPage" itemscope="itemscope" itemtype="http://schema.org/Blog">	
 			<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-				<h1><?php the_title();?></h1>
+				<h1 itemprop="headline"><?php the_title();?></h1>
 				<?php if(!is_mobile()) {  ?>
 						<p class="contact"> <!-- Contact info line -->
 							<?php if ( get_post_meta($post->ID, 'ecpt_phonenumber', true) ) : ?>
@@ -78,8 +78,9 @@
 		</main>
 	</div>	
 	
-	<aside class="small-12 medium-4 columns" role="navigation" id="sidebar"> <!-- Begin Sidebar -->
-		<!--<a href="/admissions" class="button expand blue_bg cta">Apply Now!</a>-->
+	<aside class="small-12 medium-4 columns" role="navigation" id="sidebar" itemscope="itemscope" itemtype="http://schema.org/WPSideBar"> 
+	<!-- Begin Sidebar -->
+		<a href="/admissions" class="button expand blue_bg cta">Apply Now!</a>
 		
 		<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 			

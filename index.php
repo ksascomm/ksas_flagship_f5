@@ -11,7 +11,7 @@ $flagship_news_archive_query = new WP_Query(array(
        		)); 
 ?>
 
-<main class="row wrapper radius10" role="main">
+<main class="row wrapper radius10" role="main" itemprop="mainContentOfPage" itemscope="itemscope" itemtype="http://schema.org/Blog">
 	<div class="small-12 columns">
 		<div class="row">
 			<div class="small-12 columns" id="archive">
@@ -22,16 +22,20 @@ $flagship_news_archive_query = new WP_Query(array(
 					if ( false === $format ) { $format = 'standard'; }
 					if ( $format == 'standard' ) { ?>
 
-					<article class="medium-6 columns" id="post-<?php the_ID(); ?>">
+					<article class="medium-6 columns" id="post-<?php the_ID(); ?>"itemscope="itemscope" itemtype="http://schema.org/BlogPosting" itemprop="blogPost">
 						<header class="entry-header">
-							<time><?php echo get_the_date(); ?></time>
-							<h1><span class="fa fa-newspaper-o" aria-hidden="true"></span>
+							<time datetime="<?php the _time('c'); ?>" itemprop="datePublished"><?php echo get_the_date(); ?></time>
+							<h1 itemprop="headline"><span class="fa fa-newspaper-o" aria-hidden="true"></span>
 								<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
 							</h1>
+							<span class="hide" itemprop="author" itemscope itemtype="https://schema.org/Person">
+							    By <span itemprop="name">Krieger School of Arts & Sciences</span>
+							 </span>
+							<meta name="dateModified" itemprop="dateModified" content="<?php the_modified_date(); ?>" />							
 						</header>	
 						<div class="entry-content">
-							<?php the_post_thumbnail('bullet', array('class' => 'floatleft')); ?>		
-							<summary>
+							<?php the_post_thumbnail('bullet', array('class' => 'floatleft', 'itemprop' => 'image')); ?>	
+							<summary itemprop="text">
 								<?php echo limit_words(get_the_excerpt(), '25'); ?>
 								<a href="<?php the_permalink(); ?>">[Read More]</a>
 							</summary>
@@ -39,18 +43,22 @@ $flagship_news_archive_query = new WP_Query(array(
 					</article>
 					
 				<?php } if ( $format == 'video' ) { ?>
-					<article class="medium-6 columns" id="post-<?php the_ID(); ?>">
+					<article class="medium-6 columns" id="post-<?php the_ID(); ?>" itemscope="itemscope" itemtype="http://schema.org/BlogPosting" itemprop="blogPost">
 						<header class="entry-header">
-							<time><?php echo get_the_date(); ?></time>
-							<h1><span class="fa fa-video-camera" aria-hidden="true"></span>
+							<time datetime="<?php the _time('c'); ?>" itemprop="datePublished"><?php echo get_the_date(); ?></time>
+							<h1 itemprop="headline"><span class="fa fa-video-camera" aria-hidden="true"></span>
 								<a href="#" data-reveal-id="modal_home_<?php the_id(); ?>_video"><?php the_title(); ?></a>
 							</h1>
+							<span class="hide" itemprop="author" itemscope itemtype="https://schema.org/Person">
+							    By <span itemprop="name">Krieger School of Arts & Sciences</span>
+							 </span>
+							<meta name="dateModified" itemprop="dateModified" content="<?php the_modified_date(); ?>" />									
 						</header>	
 						<div class="entry-content">
 							<div class="video_thumb archive">
-								<?php the_post_thumbnail('bullet', array('class' => 'floatleft')); ?>
+								<?php the_post_thumbnail('bullet', array('class' => 'floatleft', 'itemprop' => 'image')); ?>
 							</div>
-							<summary>
+							<summary itemprop="text">
 								<?php echo limit_words(get_the_excerpt(), '25'); ?>
 								<a href="<?php the_permalink(); ?>">[Read More]</a>
 							</summary>
@@ -64,10 +72,14 @@ $flagship_news_archive_query = new WP_Query(array(
 							<h1><span class="fa fa-camera" aria-hidden="true"></span>
 								<a href="#" data-reveal-id="modal_home_<?php the_id(); ?>_image"><?php the_title(); ?></a>
 							</h1>
+							<span class="hide" itemprop="author" itemscope itemtype="https://schema.org/Person">
+							    By <span itemprop="name">Krieger School of Arts & Sciences</span>
+							 </span>
+							<meta name="dateModified" itemprop="dateModified" content="<?php the_modified_date(); ?>" />									
 						</header>	
 						<div class="entry-content">
-							<?php the_post_thumbnail('bullet', array('class' => 'floatleft')); ?>
-							<summary>
+							<?php the_post_thumbnail('bullet', array('class' => 'floatleft', 'itemprop' => 'image')); ?>
+							<summary itemprop="text">
 								<?php echo limit_words(get_the_excerpt(), '25'); ?>
 								<a href="<?php the_permalink(); ?>">[Read More]</a>
 							</summary>

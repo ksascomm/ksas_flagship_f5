@@ -16,13 +16,13 @@ Template Name: Fields of Study
 
 		
 <div class="row wrapper radius10">
-	<div class="small-12 columns" role="main">
+	<div class="small-12 columns" role="main" itemprop="mainContentOfPage" itemscope="itemscope" itemtype="http://schema.org/Blog">	
 		<div class="row">
 		
 			<div class="small-12 large-9 columns copy">
 			<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-				<h1><?php the_title();?></h1>
-				<p><?php the_content(); ?></p>
+				<h1 itemprop="headline"><?php the_title();?></h1>
+				<p itemprop="text"><?php the_content(); ?></p>
 			<?php endwhile; endif; ?>
 			</div>
 			<div class="small-12 columns" id="fields_search" role="search">

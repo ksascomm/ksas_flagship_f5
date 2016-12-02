@@ -1,4 +1,4 @@
-<footer>
+<footer itemscope="itemscope" itemtype="http://schema.org/WPFooter">
   	<div class="row hide-for-print">
   		<nav class="medium-3 columns hide-for-small" id="quicklinks" aria-label="Quicklinks Menu">
 			<?php wp_nav_menu( array( 
