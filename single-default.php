@@ -3,8 +3,8 @@
 <div class="row wrapper radius10" role="main" itemprop="mainContentOfPage" itemscope="itemscope" itemtype="http://schema.org/Blog">
 	<div class="small-12 columns">
 		<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-			<time datetime="<?php the _time('c'); ?>" itemprop="datePublished"><h6><?php echo get_the_date(); ?></h6></time>
-			<h1 itemprop="headline">><?php the_title();?></h1>
+			<time datetime="<?php the_time('c'); ?>" itemprop="datePublished"><h6><?php echo get_the_date(); ?></h6></time>
+			<h1 itemprop="headline"><?php the_title();?></h1>
 			<span class="hide" itemprop="author" itemscope itemtype="https://schema.org/Person">
 			By <span itemprop="name">Krieger School of Arts & Sciences</span>
 			</span>
