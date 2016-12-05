@@ -24,7 +24,7 @@ $flagship_news_archive_query = new WP_Query(array(
 
 					<article class="medium-6 columns" id="post-<?php the_ID(); ?>"itemscope="itemscope" itemtype="http://schema.org/BlogPosting" itemprop="blogPost">
 						<header class="entry-header">
-							<time datetime="<?php the _time('c'); ?>" itemprop="datePublished"><?php echo get_the_date(); ?></time>
+							<time datetime="<?php the_time('c'); ?>" itemprop="datePublished"><?php echo get_the_date(); ?></time>
 							<h1 itemprop="headline"><span class="fa fa-newspaper-o" aria-hidden="true"></span>
 								<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
 							</h1>
@@ -45,7 +45,7 @@ $flagship_news_archive_query = new WP_Query(array(
 				<?php } if ( $format == 'video' ) { ?>
 					<article class="medium-6 columns" id="post-<?php the_ID(); ?>" itemscope="itemscope" itemtype="http://schema.org/BlogPosting" itemprop="blogPost">
 						<header class="entry-header">
-							<time datetime="<?php the _time('c'); ?>" itemprop="datePublished"><?php echo get_the_date(); ?></time>
+							<time datetime="<?php the_time('c'); ?>" itemprop="datePublished"><?php echo get_the_date(); ?></time>
 							<h1 itemprop="headline"><span class="fa fa-video-camera" aria-hidden="true"></span>
 								<a href="#" data-reveal-id="modal_home_<?php the_id(); ?>_video"><?php the_title(); ?></a>
 							</h1>
