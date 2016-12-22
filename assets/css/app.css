@@ -7698,7 +7698,10 @@ body.research .orbit-wrapper {
 
 @media only screen and (max-width: 1023px) {
   html, body {
-    overflow-x: hidden; } }
+    overflow-x: hidden; }
+  #field_image {
+    min-height: inherit;
+    margin-top: -7px; } }
 
 @media only screen and (max-width: 767px) {
   #desktop-nav {

@@ -1,8 +1,8 @@
 <?php if(!is_mobile()) {  ?>
-<style>
-	#field_image { background: #000 url('<?php echo get_post_meta($post->ID, 'ecpt_image', true); ?>') no-repeat top center; }
-</style>
-<div class="row radius10" id="field_image"></div>
+<div class="row show-for-medium-up" id="field_image">
+	<?php $image_alt = get_post_meta( $image->id, '_wp_attachment_image_alt', true); ?>
+	<img src="<?php echo get_post_meta($post->ID, 'ecpt_image', true); ?>" alt="<?php echo $image_alt ;?>" class="radius10">
+</div>
 <?php } ?>	
 <div class="row sidebar_bg radius10" id="landing">
 	<div class="small-12 medium-8 columns wrapper radius-left offset-top-small">		
