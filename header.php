@@ -57,7 +57,7 @@ if( is_page() ) {
 		<div id="desktop-nav">
 			<?php get_template_part( '/parts/offcanvas-nav' ); ?>
 
-			<nav class="row hide-for-print" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement" role="navigation">
+			<nav class="row hide-for-print" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
 				<?php wp_nav_menu( array( 
 					'theme_location' => 'main_nav', 
 					'menu_class' => '', 
