@@ -48,7 +48,7 @@
             </li>
             <li role="menuitem">
                 <a href="http://krieger.jhu.edu/giving/" class="blue_bg button" onclick="ga('send', 'event', 'Offcanvas', 'ETC', 'Giving')"><span class="fa fa-gift"></span> Give Now!</a>
-                <form method="GET" action="<?php echo site_url('/search'); ?>" role="search" id="search-bar">
+                <form method="GET" action="<?php echo site_url('/search'); ?>" id="search-bar">
                       <input type="submit" class="search" value="&#xf002;" />
                       <label for="search" class="screen-reader-text">Search</label>
                       <input type="text" id="search" name="q" placeholder="Search this site" aria-label="search"/>

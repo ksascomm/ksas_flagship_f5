@@ -25,7 +25,7 @@ Template Name: Fields of Study
 				<p itemprop="text"><?php the_content(); ?></p>
 			<?php endwhile; endif; ?>
 			</div>
-			<div class="small-12 columns" id="fields_search" role="search">
+			<div class="small-12 columns" id="fields_search">
 				<form action="#">
 					<fieldset class="radius10">
 
@@ -67,7 +67,7 @@ Template Name: Fields of Study
 				</form>	
 			</div>
 		</div>
-		<div class="row" id="fields_container" role="main">
+		<div class="row" id="fields_container">
 			<?php while ($flagship_studyfields_query->have_posts()) : $flagship_studyfields_query->the_post(); 
 				//Pull discipline array (humanities, natural, social)
 				if(get_post_meta($post->ID, 'ecpt_discipline', true)) {
