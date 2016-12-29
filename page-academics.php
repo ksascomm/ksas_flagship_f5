@@ -2,10 +2,8 @@
 <div class="row sidebar_bg radius10" id="opp">
 	<main class="small-12 large-8 columns wrapper radius-left offset-topgutter" itemprop="mainContentOfPage" itemscope="itemscope" itemtype="http://schema.org/Blog">
 		<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-			<article itemscope="itemscope" itemtype="http://schema.org/BlogPosting" itemprop="blogPost">	
-				<h1 itemprop="headline"><?php the_title();?></h1>
-				<p itemprop="text"><?php the_content(); ?></p>
-			</article>
+			<h1><?php the_title();?></h1>
+			<p><?php the_content(); ?></p>
 		<?php endwhile; endif; ?>	
 
 	
@@ -27,7 +25,7 @@
 				if ( $student_voice_query->have_posts() ) : while ( $student_voice_query->have_posts() ) : $student_voice_query->the_post(); 
 
 		 ?>
-			<article class="small-12 medium-4 medium-offset-1 columns end rust_bg no-gutter voices">
+			<article class="small-12 medium-4 medium-offset-1 columns end rust_bg no-gutter voices" itemscope="itemscope" itemtype="http://schema.org/BlogPosting" itemprop="blogPost" aria-label="<?php the_title();?>" id="post-<?php the_ID(); ?>">
 				<a href="#" data-reveal-id="modal_home_<?php the_id(); ?>_video" onclick="ga('send', 'event', 'Video', 'Play', '<?php the_title(); ?>');">
 					<div class="video_thumb small">
 						<span class="icon-play4" aria-hidden="true"></span><?php the_post_thumbnail('full'); ?>
