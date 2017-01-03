@@ -79,7 +79,7 @@
 			</article>
 		</div>	
 		
-		<aside class="small-12 medium-4 columns" role="complementary" id="sidebar" itemscope="itemscope" itemtype="http://schema.org/WPSideBar"> 
+		<aside class="small-12 medium-4 columns" id="sidebar" itemscope="itemscope" itemtype="http://schema.org/WPSideBar"> 
 		<!-- Begin Sidebar -->
 			<!--<a href="/admissions" class="button expand blue_bg cta">Apply Now!</a>-->
 			
