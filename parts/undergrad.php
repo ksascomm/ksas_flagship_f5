@@ -81,7 +81,7 @@
 		
 		<aside class="small-12 medium-4 columns" role="complementary" id="sidebar" itemscope="itemscope" itemtype="http://schema.org/WPSideBar"> 
 		<!-- Begin Sidebar -->
-			<a href="/admissions" class="button expand blue_bg cta">Apply Now!</a>
+			<!--<a href="/admissions" class="button expand blue_bg cta">Apply Now!</a>-->
 			
 			<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 				

@@ -79,7 +79,7 @@
 		
 		<aside class="small-12 medium-4 columns" role="complimentary" id="sidebar" itemscope="itemscope" itemtype="http://schema.org/WPSideBar">  
 		<!-- Begin Sidebar -->
-			<a href="/admissions" class="button expand blue_bg cta">Apply Now!</a>
+			<!--<a href="/admissions" class="button expand blue_bg cta">Apply Now!</a>-->
 				<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 					<div class="blue_bg offset-gutter sidebar_header">
 							<h5 class="white">Explore <?php the_title();?></h5>
