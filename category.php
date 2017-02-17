@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-<div class="row wrapper radius10" role="main">
+<div class="row wrapper radius10" role="main" id="page">
 	<div class="small-12 columns">
 		<div class="row">
 			<div class="small-12 columns" id="archive">

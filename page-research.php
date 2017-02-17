@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<div class="row wrapper radius10">	
+<div class="row wrapper radius10" id="page">	
 	<main class="small-12 medium-6 columns" itemprop="mainContentOfPage" itemscope="itemscope" itemtype="http://schema.org/Blog">
 		<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 			<article itemscope="itemscope" itemtype="http://schema.org/BlogPosting" itemprop="blogPost">	

@@ -5,7 +5,7 @@ Template Name: Research Opp
 ?>
 <?php get_header(); ?>
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-<div class="row sidebar_bg radius10" id="opp">
+<div class="row sidebar_bg radius10" id="page">
 	<div class="small-8 columns wrapper radius-left offset-topgutter" role="main">		
 		<div class="content">
 				<h1><?php the_title();?></h1>

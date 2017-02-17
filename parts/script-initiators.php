@@ -78,10 +78,12 @@
 	<?php if ( is_singular('studyfields') || is_page_template('template-fieldsofstudy.php') ) : 
 			$academics_id = ksas_get_page_id('academics');
 			$fields_id = ksas_get_page_id('fields');
+			$archive_id = ksas_get_page_id('archive');
 	?>
 		<script>
 			var $k = jQuery.noConflict();
 			$k(document).ready(function(){
+				$k('li.page-id-<?php echo $archive_id; ?>').removeClass('current_page_parent');
 				$k('li.page-id-<?php echo $academics_id; ?>').addClass('current_page_ancestor');
 				$k('li.page-id-<?php echo $fields_id; ?>').addClass('current_page_parent');
 				});

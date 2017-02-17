@@ -22,7 +22,7 @@ Template Name: Photo Archive
 					set_transient( 'flagship_photo_archive_query_' . $paged, $flagship_photo_archive_query, 2592000 );
 			}	?>
 
-<div class="row wrapper radius10" role="main">
+<div class="row wrapper radius10" role="main" id="page">
 	<div class="row">
 		<div class="small-12 columns" id="archive">
 		<h1>This Week on Campus</h1>

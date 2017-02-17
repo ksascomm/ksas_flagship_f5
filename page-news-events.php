@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-<div class="row wrapper radius10 no-padding" id="news-events">
+<div class="row wrapper radius10 no-padding" id="page news-events">
 	<div class="small-12 columns">
 		<div class="row">
 		<!-- ************START NEWS & FEATURED VIDEO SECTION************* -->

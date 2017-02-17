@@ -23,7 +23,7 @@ Template Name: Student Voices
 					set_transient( 'flagship_student_voices_query_archive_' . $paged, $flagship_student_voices_query_archive, 2592000 );
 			} 	?>
 
-<main class="row wrapper radius10">
+<main class="row wrapper radius10" id="page">
 	<div class="small-12 columns">
 		<div class="row">
 			<div class="small-12 columns" id="archive">

@@ -15,7 +15,7 @@ Template Name: Fields of Study
 					set_transient( 'flagship_studyfields_query', $flagship_studyfields_query, 2592000 ); } ?>
 
 		
-<div class="row wrapper radius10">
+<div class="row wrapper radius10" id="page">
 	<div class="small-12 columns" role="main" itemprop="mainContentOfPage" itemscope="itemscope" itemtype="http://schema.org/Blog">	
 		<div class="row">
 		

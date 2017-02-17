@@ -5,7 +5,7 @@ Template Name: Quicklinks Listing
 ?>	
 <?php get_header(); ?>
 
-<div class="row wrapper radius10">
+<div class="row wrapper radius10" id="page">
 	<main class="small-12 columns no-gutter">
 		<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 			<?php if ( has_post_thumbnail()) { ?> 

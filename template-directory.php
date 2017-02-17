@@ -27,7 +27,7 @@ Template Name: Dean's Directory
 					'posts_per_page' => '-1'));
 					set_transient( 'flagship_dean_staff_query', $flagship_dean_staff_query, 2592000 ); }		 ?>
 
-<div class="row wrapper radius10" role="main">	
+<div class="row wrapper radius10" role="main" id="page">	
 		<div class="small-12 large-7 columns copy">
 		<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 			<h1><?php the_title();?></h1>

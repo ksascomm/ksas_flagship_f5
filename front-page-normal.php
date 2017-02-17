@@ -12,7 +12,7 @@ Template Name: Front Page Normal
 		'posts_per_page' => '1'));
 ?>		
 
-	<div class="row">
+	<div class="row" id="page">
 		<div class="small-12 large-7 columns end offset-top hide-for-small" id="evergreen" role="main" itemprop="mainContentOfPage" itemscope="itemscope" itemtype="http://schema.org/Blog">
 			<?php while ($flagship_evergreen_query->have_posts()) : $flagship_evergreen_query->the_post(); ?>
 				<!-- Set background image. Resolution varies based on size -- Desktop, Tablet, Mobile -->

@@ -1,4 +1,4 @@
-<main itemprop="mainContentOfPage" itemscope="itemscope" itemtype="http://schema.org/Blog">	
+<main itemprop="mainContentOfPage" itemscope="itemscope" itemtype="http://schema.org/Blog" id="page">	
 	
 	<?php if(!is_mobile()) {  ?>	
 	<div class="row show-for-medium-up" id="field_image">

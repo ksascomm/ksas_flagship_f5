@@ -461,6 +461,16 @@ p.lead, .lead {
     overflow: hidden;
 }
 
+a.skipLink {
+  position: absolute;
+  left: -9999px;
+  background: $white;
+  padding: 5px 10px;
+  &:focus, &:active, &:hover {
+    left: 0;
+  }
+}
+
 #sidebar {
   h6 {
     text-transform: inherit;

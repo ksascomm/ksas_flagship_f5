@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<div class="row wrapper radius10">
+<div class="row wrapper radius10" id="page">
 	<div class="small-12 columns">
 		<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 			<h1><?php the_title();?></h1>

@@ -5556,6 +5556,14 @@ p.lead, .lead {
   width: 1px;
   overflow: hidden; }
 
+a.skipLink {
+  position: absolute;
+  left: -9999px;
+  background: #FFFFFF;
+  padding: 5px 10px; }
+  a.skipLink:focus, a.skipLink:active, a.skipLink:hover {
+    left: 0; }
+
 #sidebar h6 {
   text-transform: inherit;
   letter-spacing: inherit; }

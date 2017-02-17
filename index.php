@@ -11,7 +11,7 @@ $flagship_news_archive_query = new WP_Query(array(
        		)); 
 ?>
 
-<main class="row wrapper radius10" role="main" itemprop="mainContentOfPage" itemscope="itemscope" itemtype="http://schema.org/Blog">
+<main class="row wrapper radius10" id="page" role="main" itemprop="mainContentOfPage" itemscope="itemscope" itemtype="http://schema.org/Blog">
 	<div class="small-12 columns">
 		<div class="row">
 			<div class="small-12 columns" id="archive">
