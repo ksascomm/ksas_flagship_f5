@@ -44,8 +44,8 @@ if( is_page() ) {
 		</div>		
 	<![endif]-->
 <body <?php body_class($ancestorslug); ?> itemscope="itemscope" itemtype="http://schema.org/WebPage">
-	<a href="#page" class="skipLink">Skip to main content</a>
 	<header itemscope="itemscope" itemtype="http://schema.org/WPHeader" role="banner">
+	<a href="#page" class="skipLink">Skip to main content</a>
 		<meta itemprop="headline" content="<?php echo get_bloginfo( 'title' ); ?>">
 		<div id="mobile-nav">
 	  		<div class="row">
