@@ -3,7 +3,7 @@
     <div class="offcanvas-top">
         <div class="o-content" aria-hidden="false" role="navigation" aria-label="Offcanvas menu">
           <ul class="small-block-grid-4" id="global-links">
-              <li class="black"><h3>Academics</h3>
+              <li><h3>Academics</h3>
                   <ul class="no-bullet" role="menu">
                     <li role="menuitem"><a href="http://krieger.jhu.edu/academics/departments-programs-and-centers/" onclick="ga('send', 'event', 'Offcanvas', 'Academics', 'Departments')";>Departments, Programs, and Centers</a></li>
                     <li role="menuitem"><a href="http://krieger.jhu.edu/about/faculty/" onclick="ga('send', 'event', 'Offcanvas', 'Academics', 'Faculty')">Faculty Directory</a></li>
@@ -18,7 +18,7 @@
                       </ul>
                   </ul>
               </li>
-              <li class="black"><h3>Student & Faculty Resources</h3>    
+              <li><h3>Student & Faculty Resources</h3>    
                   <ul class="no-bullet" role="menu">
                     <li role="menuitem"><a href="https://sis.jhu.edu/sswf/" onclick="ga('send', 'event', 'Offcanvas', 'Resources', 'ISIS')">Course Listings & Registration</a></li>
                     <li role="menuitem"><a href="https://www.jhu.edu/admissions/financial-aid/" onclick="ga('send', 'event', 'Offcanvas', 'Resources', 'Financial Aid')">Financial Aid</a></li>
@@ -37,7 +37,7 @@
                       </ul>
                   </ul>
               </li>
-              <li class="black"><h3>Across Campus</h3>
+              <li><h3>Across Campus</h3>
                 <ul class="no-bullet" role="menu">
                   <li role="menuitem"><a href="https://www.jhu.edu/admissions/" onclick="ga('send', 'event', 'Offcanvas', 'Campus', 'Admissions')">Admissions Information</a></li>
                   <li role="menuitem"><a href="https://www.jhu.edu/" onclick="ga('send', 'event', 'Offcanvas', 'Campus', 'JHU Home')">Johns Hopkins University Website</a></li>
