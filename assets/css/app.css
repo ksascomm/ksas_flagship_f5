@@ -47,6 +47,8 @@ html, body {
 *,
 *:before,
 *:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   box-sizing: border-box; }
 
 html,
@@ -796,7 +798,13 @@ input:not([type]), input[type="text"], input[type="password"], input[type="date"
   margin: 0 0 1rem 0;
   padding: 0.5rem;
   width: 100%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
+  -webkit-transition: border-color 0.15s linear, background 0.15s linear;
+  -moz-transition: border-color 0.15s linear, background 0.15s linear;
+  -ms-transition: border-color 0.15s linear, background 0.15s linear;
+  -o-transition: border-color 0.15s linear, background 0.15s linear;
   transition: border-color 0.15s linear, background 0.15s linear; }
   input:not([type]):focus, input[type="text"]:focus, input[type="password"]:focus, input[type="date"]:focus, input[type="datetime"]:focus, input[type="datetime-local"]:focus, input[type="month"]:focus, input[type="week"]:focus, input[type="email"]:focus, input[type="number"]:focus, input[type="search"]:focus, input[type="tel"]:focus, input[type="time"]:focus, input[type="url"]:focus, input[type="color"]:focus, textarea:focus {
     background: #fafafa;
@@ -1898,9 +1906,13 @@ label.error {
 @keyframes rotate {
   from {
     -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
     transform: rotate(0deg); }
   to {
     -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
     transform: rotate(360deg); } }
 
 /* Orbit Graceful Loading */
@@ -1924,14 +1936,10 @@ label.error {
       display: inline-block; }
   .slideshow-wrapper .preloader {
     border-radius: 1000px;
-    -webkit-animation-duration: 1.5s;
-            animation-duration: 1.5s;
-    -webkit-animation-iteration-count: infinite;
-            animation-iteration-count: infinite;
-    -webkit-animation-name: rotate;
-            animation-name: rotate;
-    -webkit-animation-timing-function: linear;
-            animation-timing-function: linear;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+    animation-name: rotate;
+    animation-timing-function: linear;
     border-color: #555555 #FFFFFF;
     border: solid 3px;
     display: block;
@@ -1954,6 +1962,9 @@ label.error {
     padding: 0;
     position: relative;
     -webkit-transform: translateZ(0);
+    -moz-transform: translateZ(0);
+    -ms-transform: translateZ(0);
+    -o-transform: translateZ(0);
     transform: translateZ(0); }
     .orbit-container .orbit-slides-container img {
       display: block;
@@ -3246,26 +3257,31 @@ th.hide-for-touch {
 .fa-rotate-90 {
   filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=1);
   -webkit-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
   transform: rotate(90deg); }
 
 .fa-rotate-180 {
   filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=2);
   -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
   transform: rotate(180deg); }
 
 .fa-rotate-270 {
   filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
   -webkit-transform: rotate(270deg);
+  -ms-transform: rotate(270deg);
   transform: rotate(270deg); }
 
 .fa-flip-horizontal {
   filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=0);
   -webkit-transform: scale(-1, 1);
+  -ms-transform: scale(-1, 1);
   transform: scale(-1, 1); }
 
 .fa-flip-vertical {
   filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=2);
   -webkit-transform: scale(1, -1);
+  -ms-transform: scale(1, -1);
   transform: scale(1, -1); }
 
 :root .fa-rotate-90,
@@ -3273,8 +3289,7 @@ th.hide-for-touch {
 :root .fa-rotate-270,
 :root .fa-flip-horizontal,
 :root .fa-flip-vertical {
-  -webkit-filter: none;
-          filter: none; }
+  filter: none; }
 
 .fa-stack {
   position: relative;
@@ -5354,6 +5369,8 @@ li.gallery-item {
   margin-bottom: 17px; }
 
 .radius10 {
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
   border-radius: 10px; }
 
 .radius-left {
@@ -6049,7 +6066,7 @@ a.off-canvas-submenu-call {
   .o-content h3 {
     font-size: .96rem;
     font-family: "quadon", Arial, sans-serif;
-    color: #2C2C33; }
+    color: #2C2C33 !important; }
 
 #global-links {
   margin-left: 16px; }
@@ -6222,6 +6239,8 @@ ul.flyout li.active a, .nav-bar li ul li.active a {
 
 #search-bar {
   background: #333;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
   border-radius: 10px;
   color: #ccc;
   text-transform: uppercase;
@@ -6296,6 +6315,8 @@ ul.flyout li.active a, .nav-bar li ul li.active a {
   height: 50px;
   float: right;
   overflow: hidden;
+  -webkit-transition: width 0.3s;
+  -moz-transition: width 0.3s;
   transition: width 0.3s;
   -webkit-backface-visibility: hidden; }
 
@@ -6428,6 +6449,8 @@ footer {
     left: 0px;
     width: 200px;
     z-index: 40;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
     box-shadow: none;
     display: none; }
   #quicklinks ul.flyout li {
@@ -7110,9 +7133,7 @@ ul.fields-of-study p {
   .isotope .isotope-item {
     /* change duration value to whatever you like */
     transition-duration: 0.8s;
-    transition-property: opacity, -webkit-transform;
-    transition-property: transform, opacity;
-    transition-property: transform, opacity, -webkit-transform; }
+    transition-property: transform, opacity; }
   .isotope h3 {
     color: #2C2C33; }
 
@@ -7884,4 +7905,5 @@ body.research .orbit-wrapper {
     display: none;
   }
 }*/
+
 /*# sourceMappingURL=app.css.map */
