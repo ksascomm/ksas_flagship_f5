@@ -46,8 +46,12 @@ if( is_page() ) {
 <body <?php body_class($ancestorslug); ?> itemscope="itemscope" itemtype="http://schema.org/WebPage">
 	<header itemscope="itemscope" itemtype="http://schema.org/WPHeader" role="banner">
 	<a href="#page" class="skipLink">Skip to main content</a>
+	<div class="print-only">
+		<img src="<?php echo get_template_directory_uri() ?>/assets/images/krieger.small.horizontal.blue.jpg" alt="krieger logo">
+		<h1><?php echo get_bloginfo ( 'description' ); ?> <?php echo get_bloginfo( 'title' ); ?></h1>
+	</div>	
 		<meta itemprop="headline" content="<?php echo get_bloginfo( 'title' ); ?>">
-		<div id="mobile-nav">
+		<div id="mobile-nav" class="hide-for-print">
 	  		<div class="row">
 		        <div class="small-12 columns">
 		  			<div class="mobile-logo centered"><a href="<?php echo network_site_url(); ?>" title="Johns Hopkins University"><img src="<?php echo get_template_directory_uri() ?>/assets/images/ksas-logo-horizontal.png" alt="jhu logo"></a></div>
@@ -55,7 +59,7 @@ if( is_page() ) {
 	  		</div>
 		</div>
 	
-		<div id="desktop-nav">
+		<div id="desktop-nav" class="hide-for-print">
 			<?php get_template_part( '/parts/offcanvas-nav' ); ?>
 
 			<nav class="row hide-for-print" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement" aria-label="Main Menu">

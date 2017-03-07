@@ -17,7 +17,7 @@ Template Name: Fields of Study
 		
 <div class="row wrapper radius10" id="page">
 	<div class="small-12 columns" role="main" itemprop="mainContentOfPage" itemscope="itemscope" itemtype="http://schema.org/Blog">	
-		<div class="row">
+		<div class="row hide-for-print">
 		
 			<div class="small-12 large-9 columns copy">
 			<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
@@ -67,7 +67,7 @@ Template Name: Fields of Study
 				</form>	
 			</div>
 		</div>
-		<div class="row" id="fields_container">
+		<div class="row hide-for-print" id="fields_container">
 			<?php while ($flagship_studyfields_query->have_posts()) : $flagship_studyfields_query->the_post(); 
 				//Pull discipline array (humanities, natural, social)
 				if(get_post_meta($post->ID, 'ecpt_discipline', true)) {
@@ -110,7 +110,7 @@ Template Name: Fields of Study
 						
 							
 							<h3><a href="http://<?php echo get_post_meta($post->ID, 'ecpt_homepage', true); ?>" onclick="ga('send','event','Outgoing Links','<?php echo get_post_meta($post->ID, 'ecpt_homepage', true); ?>')"><?php the_title(); ?></a></h3>
-							<div class="row">
+							<div class="row hide-for-small">
 								<div class="small-12 columns">
 									<p class="contact">
 										<?php echo get_post_meta($post->ID, 'ecpt_phonenumber', true); ?>

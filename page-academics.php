@@ -13,7 +13,7 @@
 			<p>Hear what current students have to say about Johns Hopkins and their academic experience</p>
 
 		
-		<div class="row" id="video_scroll">
+		<div class="row hide-for-print" id="video_scroll">
 			<div class="medium-1 columns spacer"></div>
 			<?php $student_voice_query = new WP_Query(array(
 					'post_type' => array('deptextra', 'post'),

@@ -12,7 +12,7 @@ Template Name: Front Page Normal
 		'posts_per_page' => '1'));
 ?>		
 
-	<div class="row" id="page">
+	<div class="row hide-for-print" id="page">
 		<div class="small-12 large-7 columns end offset-top hide-for-small" id="evergreen" role="main" itemprop="mainContentOfPage" itemscope="itemscope" itemtype="http://schema.org/Blog">
 			<?php while ($flagship_evergreen_query->have_posts()) : $flagship_evergreen_query->the_post(); ?>
 				<!-- Set background image. Resolution varies based on size -- Desktop, Tablet, Mobile -->
@@ -38,7 +38,7 @@ Template Name: Front Page Normal
 		</div>
 	</div>
 
-	<div class="row" id="field_search" role="form">
+	<div class="row hide-for-print" id="field_search" role="form">
 		<dl class="tabs contained" data-tab>
 			<label for="field_search">
 				<dd class="active black_bg">
@@ -84,7 +84,7 @@ Template Name: Front Page Normal
 
 	<div class="row black_bg radius10" id="news_feed" role="complementary">
 		<div class="small-12 columns">
-			<h2 class="hide-for-small-only white">Arts & Sciences News</h2>
+			<h2 class="hide-for-small-only white hide-for-print">Arts & Sciences News</h2>
 			<h2 class="hide-for-medium-up black">Arts & Sciences News</h2>
 				<?php
 					//Query news and department extras for Homepage category

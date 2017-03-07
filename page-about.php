@@ -7,7 +7,7 @@
 				<div itemprop="text"><?php the_content(); ?></div>
 			</article>
 			<?php endwhile; endif; ?>
-			<div class="small-12 medium-10 columns no-lazy">	
+			<div class="small-12 medium-10 columns no-lazy hide-for-print">	
 				<ul id="slider" data-orbit data-options="animation_speed:2000; timer:true; slide_number: false; timer_speed:3000; navigation_arrows:false; bullets:false;" class="no-gutter photo-page-right no-lazy">
 					<?php if ( false === ( $by_the_numbers_query = get_transient( 'by_the_numbers_query' ) ) ) {
 				// It wasn't there, so regenerate the data and save the transient

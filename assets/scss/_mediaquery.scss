@@ -215,6 +215,12 @@
     border: none;
     min-height: 10px;
   }
+  .full_time_program.undergrad_program {
+    border: none;
+    &:before {
+      border: none;
+    }
+  }
   .content {
     padding-right: 1px;
   }
@@ -287,15 +293,3 @@
     width: 100%;
   }
 }
-
-/*IE9 Queries
-@media (min-width: 1023px) {
-    #mobile-nav {
-    display: none !important;
-  }
-}
-@media (max-width: 1023px) {
-    #desktop-nav {
-    display: none;
-  }
-}*/

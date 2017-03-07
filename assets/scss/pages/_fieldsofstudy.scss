@@ -5,13 +5,14 @@
   min-width: 240px;
   border: .1875em solid black;
   border-width: .25em;
+
   p {
     color: $black;
     font-size: .9rem;
     line-height: 1.3;
     font-family: $font-subhead-book;
   }
-  p.contact{ 
+  p.contact {
     font-size: 13px;
     margin-bottom: 10px;
   }
@@ -20,35 +21,32 @@
     font-size: 1.4rem;
   }
 }
-
-.field {min-height: 255px;}
-ul.fields-of-study li {font-size: 16px;}
-ul.fields-of-study p {font-size: 16px; font-family: "gentona-light",Arial,sans-serif;}
-
+.field {
+  min-height: 255px;
+}
+ul.fields-of-study li {
+  font-size: 16px;
+}
+ul.fields-of-study p {
+  font-size: 16px;
+  font-family: $font-stack;
+}
 .field .floatright {
   margin-left: 0;
 }
-
-.isotope-item.department,.isotope-item.interdisciplinary, .isotope-item.arts,
-.isotope-item.undergrad_program,.isotope-item.part_time_program, .isotope-item.full_time_program,
-.isotope-item.full_time_program.undergrad_program,
-.isotope-item.full_time_program.undergrad_program:before {
+.isotope-item.department, .isotope-item.interdisciplinary, .isotope-item.arts, .isotope-item.undergrad_program, .isotope-item.part_time_program, .isotope-item.full_time_program, .isotope-item.full_time_program.undergrad_program, .isotope-item.full_time_program.undergrad_program:before {
   border: none;
 }
-
 .undergrad_program {
   border-top: .75em solid $skyblue;
 }
-
 .full_time_program {
- border-top: .75em solid $fushia;
+  border-top: .75em solid $fushia;
 }
-
 .full_time_program.undergrad_program {
   position: relative;
   border-top: .75em solid $skyblue;
 }
-
 .full_time_program.undergrad_program:before {
   content: "";
   position: absolute;
@@ -56,21 +54,16 @@ ul.fields-of-study p {font-size: 16px; font-family: "gentona-light",Arial,sans-s
   left: 0;
   border-top: .75em solid $fushia;
 }
-
 .part_time_program {
   border-top: .75em solid $orange;
 }
-
-
 .disciplines {
   height: 15px;
 }
-
 .ribbon {
   margin-left: 10px;
   float: right;
 }
-
 #humanities {
   width: 30px;
   height: 14px;
@@ -87,7 +80,6 @@ ul.fields-of-study p {font-size: 16px; font-family: "gentona-light",Arial,sans-s
     border-bottom-color: transparent;
   }
 }
-
 #natural {
   width: 30px;
   height: 14px;
@@ -104,7 +96,6 @@ ul.fields-of-study p {font-size: 16px; font-family: "gentona-light",Arial,sans-s
     border-bottom-color: transparent;
   }
 }
-
 #social {
   width: 30px;
   height: 14px;
@@ -121,33 +112,33 @@ ul.fields-of-study p {font-size: 16px; font-family: "gentona-light",Arial,sans-s
     border-bottom-color: transparent;
   }
 }
-
 .isotope-item {
   z-index: 2;
 }
-
 .isotope-hidden.isotope-item {
   pointer-events: none;
   z-index: 1;
 }
-
 .isotope {
+
   /* change duration value to whatever you like */
   transition-duration: 0.8s;
   transition-property: height, width;
+
   .isotope-item {
+
     /* change duration value to whatever you like */
     transition-duration: 0.8s;
     transition-property: transform, opacity;
   }
   h3 {
-  color: $black;
+    color: $black;
   }
 }
-
 .button {
   a {
     border-bottom: none;
+
     &:hover {
       border-bottom: none;
     }
@@ -165,9 +156,11 @@ ul.fields-of-study p {font-size: 16px; font-family: "gentona-light",Arial,sans-s
     padding: 6px;
     margin-right: 0;
     background-color: $blue;
+
     a {
       color: #2c2c33;
       padding: 5px;
+
       &.selected, &:hover {
         border-radius: 5px;
         background-color: $skyblue;
@@ -178,11 +171,11 @@ ul.fields-of-study p {font-size: 16px; font-family: "gentona-light",Arial,sans-s
 }
 
 /******* LANDING PAGES ******/
-
 #field_image {
   font-family: $font-subhead-book;
   font-weight: 400;
   font-style: normal;
+
   p {
     line-height: 1.7em;
   }
@@ -191,30 +184,27 @@ ul.fields-of-study p {font-size: 16px; font-family: "gentona-light",Arial,sans-s
     margin: 30px 0 15px 0;
   }
   min-height: 280px;
+
   .black_bg {
     min-height: 280px;
   }
 }
-
 #landing {
   h2, h3 {
     color: $blue;
   }
 }
-
 .degrees {
   li {
     font-size: 1em;
   }
 }
-
 p.contact, #landing p.contact a {
   font-size: 14px;
   margin-bottom: 25px;
   color: $black;
   line-height: 2em;
 }
-
 p.contact {
   span {
     margin-right: 0px;
@@ -227,14 +217,15 @@ p.contact {
     margin-right: 0px;
   }
 }
-
 ul.nav {
   list-style: none;
+
   li {
     border-top: 1px solid #999;
     font-size: 16px;
     padding: 10px 0 8px 10px;
     letter-spacing: 1px;
+
     [class^="icon-"]:before, [class*="icon-"]:before {
       margin-right: 10px;
       color: #999;
@@ -242,18 +233,15 @@ ul.nav {
     }
   }
 }
-
 .sidebar_bg ul.nav li a {
   font-family: $font-subhead-book;
   font-weight: 400;
   font-style: normal;
   color: $blue;
 }
-
 ul.nav:last-child {
   border-bottom: 1px solid #999;
 }
-
 .jumpmenu {
   form {
     margin: 0 0 30px 30px;
@@ -265,6 +253,7 @@ ul.nav:last-child {
     font-size: inherit;
     text-indent: 15px;
     height: 35px;
+
     option {
       &:nth-child(1) {
         color: #FFF;
@@ -273,7 +262,6 @@ ul.nav:last-child {
     }
   }
 }
-
 #landing .grey_bg {
   h3 {
     margin: 5px 15px;
@@ -287,7 +275,6 @@ ul.nav:last-child {
     font-size: 12px;
   }
 }
-
 .content {
   li {
     padding-left: 15px;
