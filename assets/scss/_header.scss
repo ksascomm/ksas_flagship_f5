@@ -212,3 +212,55 @@ input[type="search"].sb-search-input {
 .sb-search.sb-search-open .sb-search-submit, .no-js .sb-search .sb-search-submit {
   z-index: 90;
 }
+
+.rave-alert {
+  color: #fff;
+  font-size: 1.2rem;
+  line-height: 2;
+  a, &.no-link {
+    transition: background-color 250ms ease-in-out 0s;
+  }
+  a {
+    border-bottom: medium none;
+    color: inherit;
+    display: block;
+    text-decoration: none;
+    width: 100%;
+    text-align: center;
+  }
+  &.red {
+    font-weight: 700;
+    a, &.no-link {
+      background-color: #e03c31;
+    }
+    a:hover, &.no-link:hover {
+      background-color: #ab231a;
+    }
+  }
+  &.green {
+    a, &.no-link {
+      background-color: #007a53;
+    }
+    a:hover, &.no-link:hover {
+      background-color: #00ad76;
+    }
+  }
+  &.yellow {
+    color: #000;
+    a, &.no-link {
+      background-color: #ffcd00;
+    }
+    a:hover, &.no-link:hover {
+      background-color: #ffe166;
+    }
+  }
+  &.site {
+    font-weight: 700;
+    a, &.no-link {
+      background-color: #55abf4;
+    }
+    a:hover, &.no-link:hover {
+      background-color: #015CB9;
+    }
+  }
+}

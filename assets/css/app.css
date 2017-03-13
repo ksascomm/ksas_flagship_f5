@@ -6386,6 +6386,42 @@ input[type="search"].sb-search-input {
 .sb-search.sb-search-open .sb-search-submit, .no-js .sb-search .sb-search-submit {
   z-index: 90; }
 
+.rave-alert {
+  color: #fff;
+  font-size: 1.2rem;
+  line-height: 2; }
+  .rave-alert a, .rave-alert.no-link {
+    transition: background-color 250ms ease-in-out 0s; }
+  .rave-alert a {
+    border-bottom: medium none;
+    color: inherit;
+    display: block;
+    text-decoration: none;
+    width: 100%;
+    text-align: center; }
+  .rave-alert.red {
+    font-weight: 700; }
+    .rave-alert.red a, .rave-alert.red.no-link {
+      background-color: #e03c31; }
+    .rave-alert.red a:hover, .rave-alert.red.no-link:hover {
+      background-color: #ab231a; }
+  .rave-alert.green a, .rave-alert.green.no-link {
+    background-color: #007a53; }
+  .rave-alert.green a:hover, .rave-alert.green.no-link:hover {
+    background-color: #00ad76; }
+  .rave-alert.yellow {
+    color: #000; }
+    .rave-alert.yellow a, .rave-alert.yellow.no-link {
+      background-color: #ffcd00; }
+    .rave-alert.yellow a:hover, .rave-alert.yellow.no-link:hover {
+      background-color: #ffe166; }
+  .rave-alert.site {
+    font-weight: 700; }
+    .rave-alert.site a, .rave-alert.site.no-link {
+      background-color: #55abf4; }
+    .rave-alert.site a:hover, .rave-alert.site.no-link:hover {
+      background-color: #015CB9; }
+
 footer {
   background: #000;
   padding-top: 25px; }
