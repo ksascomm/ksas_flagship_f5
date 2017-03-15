@@ -46,7 +46,7 @@ if( is_page() ) {
 <body <?php body_class($ancestorslug); ?> itemscope="itemscope" itemtype="http://schema.org/WebPage">
 	<header itemscope="itemscope" itemtype="http://schema.org/WPHeader" role="banner">
 	<a href="#page" class="skipLink">Skip to main content</a>
-	<div class="rave-alert yellow"><a href="https://www.jhu.edu/alert">Storm-related information</a></div>
+	<!--<div class="rave-alert yellow"><a href="https://www.jhu.edu/alert">Storm-related information</a></div>-->
 	<div class="print-only">
 		<img src="<?php echo get_template_directory_uri() ?>/assets/images/krieger.small.horizontal.blue.jpg" alt="krieger logo">
 		<h1><?php echo get_bloginfo ( 'description' ); ?> <?php echo get_bloginfo( 'title' ); ?></h1>
