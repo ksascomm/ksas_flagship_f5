@@ -40,7 +40,7 @@
 							</h3>
 						</div>
 						<?php
-						$hub_url = 'http://api.hub.jhu.edu/articles?v=0&key=bed3238d428c2c710a65d813ebfb2baa664a2fef&return_format=json&divisions=426&per_page=3';
+						$hub_url = 'https://api.hub.jhu.edu/articles?v=0&key=bed3238d428c2c710a65d813ebfb2baa664a2fef&return_format=json&divisions=426&per_page=3';
 						if ( false === ( $hub_call = get_transient( 'flagship_hub_query' ) ) ) {							
 							$hub_call = wp_remote_get($hub_url);
 						set_transient( 'flagship_hub_query', $hub_call, 86400 ); }
@@ -48,7 +48,7 @@
 						$hub_articles = $hub_results['_embedded'];						
 						foreach($hub_articles['articles'] as $hub_article) { ?>
 								<article id="post-<?php the_ID(); ?>">
-									<img src="<?php echo $hub_article['_embedded']['image_thumbnail'][0]['sizes']['impact_small']; ?>" alt="From The Hub" />
+									<img src="<?php echo $hub_article['_embedded']['image_thumbnail'][0]['sizes']['thumbnail']; ?>" alt="From The Hub" />
 									<h4><a href="<?php echo $hub_article['url']; ?>"><?php echo $hub_article['headline']; ?></a></h4>
 									<summary>
 										<p><?php echo $hub_article['subheadline']; 
