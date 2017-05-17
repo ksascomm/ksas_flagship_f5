@@ -10,7 +10,7 @@ get_header(); ?>
 <div class="row wrapper radius10" id="page">
 	<main class="large-12 columns">
 		<h1>Search Results</h1>
-        <p>You are currently searching the Krieger network. Try searching the <a href="https://www.jhu.edu/search/">JHU network</a> for websites beyond KSAS.</p>
+     
             <?php 
             try {
                 $search = new KSAS_GoogleSearch();
@@ -29,6 +29,7 @@ get_header(); ?>
             ?>
 
             <?php if ($hits > 0) { ?>
+               <p>You are currently searching the Krieger network. Try searching the <a href="https://www.jhu.edu/search/">JHU network</a> for websites beyond KSAS.</p>
                 <form class="search-form" action="<?php echo site_url('/search'); ?>" method="get">
                     <fieldset>
                         <label>
@@ -94,7 +95,7 @@ get_header(); ?>
             <p class="notice"><?php echo $notice ?></p>
          <?php } ?>
              
-             <h3 class="black">There are no pages matching your search.</h3>
+             <p>Sorry, No Results. Try your search again on <a href="https://www.jhu.edu/search/">JHU.edu</a>, or enter a new search term below:</p>
                 <form class="search-form" action="<?php echo site_url('/search'); ?>" method="get">
                     <fieldset>
                         <label>
