@@ -109,7 +109,7 @@ Template Name: Fields of Study
 						</div>
 						
 							
-							<h3><a href="http://<?php echo get_post_meta($post->ID, 'ecpt_homepage', true); ?>" onclick="ga('send','event','Outgoing Links','<?php echo get_post_meta($post->ID, 'ecpt_homepage', true); ?>')"><?php the_title(); ?></a></h3>
+							<h3><a href="http://<?php echo get_post_meta($post->ID, 'ecpt_homepage', true); ?>" onclick="ga('send','event','Outgoing Links','<?php echo get_post_meta($post->ID, 'ecpt_homepage', true); ?>')" target="_blank"><?php the_title(); ?></a></h3>
 							<div class="row hide-for-small">
 								<div class="small-12 columns">
 									<p class="contact">
