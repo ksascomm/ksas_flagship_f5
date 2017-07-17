@@ -7,6 +7,18 @@ function flagship_theme_support() {
 	add_image_size( 'rss', 300, 150, true );
 	add_image_size( 'bullet', 95, 95, true );
 	add_image_size( 'directory', 90, 130, true );
+
+	add_image_size( 'featured-small', 640, 200, true ); // name, width, height, crop
+	add_image_size( 'featured-medium', 1280, 400, true );
+	add_image_size( 'featured-large', 1440, 400, true );
+	add_image_size( 'featured-xlarge', 1920, 400, true );
+
+	// Add additional image sizes
+	add_image_size( 'fp-small', 640 );
+	add_image_size( 'fp-medium', 1024 );
+	add_image_size( 'fp-large', 1200 );
+	add_image_size( 'fp-xlarge', 1920 );
+
 	add_theme_support( 'automatic-feed-links' ); // rss thingy
 	add_theme_support( 'post-formats',      // post formats
 		array( 

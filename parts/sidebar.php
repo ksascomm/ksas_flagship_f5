@@ -2,7 +2,6 @@
 	<?php 
 		if ( is_page() && has_post_thumbnail()  ) : 
 			wp_reset_query();
-				the_post_thumbnail('full', array('class'	=> "offset-gutter radius-topright show-for-large-up featured")); 
 
 		 endif; ?>
 
